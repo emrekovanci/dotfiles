@@ -1,0 +1,19 @@
+// Documentation at https://www.sublimetext.com/docs/color_schemes.html
+{
+	"variables":
+	{
+
+	},
+	"globals":
+	{
+		"caret": "#FFBF00",
+	},
+	"rules":
+	[
+		{
+			"name": "Comment",
+			"scope": "comment, punctuation.definition.comment",
+			"font_style": "italic",
+		},
+	]
+}

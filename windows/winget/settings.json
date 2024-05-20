@@ -1,0 +1,17 @@
+{
+    // For documentation on these settings, see: https://aka.ms/winget-settings
+    // pwsh: `winget settings`
+    "$schema": "https://aka.ms/winget-settings.schema.json",
+    "telemetry": {
+        "disable": true
+    },
+    "source": {
+        "autoUpdateIntervalInMinutes": 180
+    },
+    "visual": {
+        "progressBar": "rainbow"
+    },
+    "uninstallBehavior": {
+        "purgePortablePackage": true
+    }
+}

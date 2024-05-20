@@ -1,0 +1,35 @@
+[user]
+    name = Emre Kovanci
+    email = kovanciemre@gmail.com
+
+[init]
+    defaultBranch = master
+
+[core]
+    autocrlf = false
+    ignorecase = false
+
+[fetch]
+    prune = false
+
+[alias]
+    aliases = --list-cmds=alias
+    s = status
+    who = shortlog --summary --numbered --email
+    logs = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    branches = branch --all
+    last-commit-diff = diff HEAD^
+
+[color "branch"]
+    current = green bold
+    local = green
+    remote = yellow
+
+[filter "lfs"]
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+
+[include]
+    path = ~/Documents/GitHub/dotfiles/config/delta.gitconfig

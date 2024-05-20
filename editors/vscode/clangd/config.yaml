@@ -1,0 +1,98 @@
+# Path: C:\Users\<UserName>\AppData\Local\clangd\config.yaml
+
+CompileFlags:
+  Add: [-ferror-limit=0, -D__INTELLISENSE__]
+
+---
+
+If:
+  PathMatch: .*/Microsoft Visual Studio/.*
+Diagnostics:
+  Suppress: '*'
+  UnusedIncludes: None
+  MissingIncludes: None
+InlayHints:
+  Enabled: Yes
+  BlockEnd: Yes
+  Designators: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
+  TypeNameLimit: 24
+
+---
+
+If:
+  PathMatch: .*/Windows Kits/10/Include/.*
+Diagnostics:
+  Suppress: '*'
+  UnusedIncludes: None
+  MissingIncludes: None
+InlayHints:
+  Enabled: Yes
+  BlockEnd: Yes
+  Designators: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
+  TypeNameLimit: 24
+
+---
+
+If:
+  PathMatch: .*/LLVM/.*
+Diagnostics:
+  Suppress: '*'
+  UnusedIncludes: None
+  MissingIncludes: None
+InlayHints:
+  Enabled: Yes
+  BlockEnd: Yes
+  Designators: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
+  TypeNameLimit: 24
+
+---
+
+If:
+  PathMatch: .*/EpicGames/.*
+#CompileFlags:
+#  CompilationDatabase: C:/EpicGames/UE_5.4
+Diagnostics:
+  Suppress: '*'
+  UnusedIncludes: None
+  MissingIncludes: None
+InlayHints:
+  Enabled: Yes
+  BlockEnd: Yes
+  Designators: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
+  TypeNameLimit: 24
+
+---
+
+If:
+  PathMatch: .*/EpicGames/UE_5.4/Engine/Plugins/.*
+Index:
+  Background: Skip
+
+---
+
+If:
+  PathMatch: .*/EpicGames/UE_5.4/Engine/Source/ThirdParty/.*
+Index:
+  Background: Skip
+
+---
+
+If:
+  PathMatch: .*/EpicGames/UE_5.4/Engine/Source/Developer/.*
+Index:
+  Background: Skip
+
+---
+
+If:
+  PathMatch: .*/EpicGames/UE_5.4/Engine/Source/Programs/.*
+Index:
+  Background: Skip

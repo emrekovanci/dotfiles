@@ -1,0 +1,90 @@
+{
+	// ignored packages
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+
+	// appearance
+	"ui_scale": 1.25,
+	"file_tab_style": "angled",
+	"bold_folder_labels": true,
+	"inactive_sheet_dimming": false,
+	"animation_enabled": false,
+	"mini_diff": false,
+
+	// general
+	"hot_exit": "disabled",
+	"drag_text": false,
+	"scroll_past_end": false,
+	"close_windows_when_empty": false,
+	"spell_check": true,
+	"save_on_focus_lost": true,
+	"preview_on_click": false,
+	"open_tabs_after_current": false,
+	"enable_tab_scrolling": false,
+	"scroll_speed": 0,
+	"match_brackets": false,
+
+	// title bar
+	"show_full_path": false,
+	"show_rel_path": true,
+	"show_project_first": true,
+
+	// gutter
+	"margin": 12,
+	"fold_buttons": false,
+
+	// status bar
+	"show_line_column": "compact",
+	"show_encoding": true,
+	"show_line_endings": true,
+	"show_indentation": true,
+	"show_syntax": true,
+	"show_spelling_errors": false,
+
+	// side bar
+	"show_sidebar_button": false,
+
+	// theme & customization
+	"color_scheme": "Monokai.sublime-color-scheme",
+	"theme": "Default Dark.sublime-theme",
+	"themed_title_bar": false, // for adaptive themes
+
+	// font
+	"font_face": "JetBrains Mono",
+	"font_size": 12,
+	"font_options": ["bold"],
+
+	// line
+	"line_padding_top": 3,
+	"line_padding_bottom": 3,
+
+	// highlights
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+
+	// indexing (change for vcpkg)
+	"index_files": true,
+	"goto_anything_exclude_gitignore": false,
+	"index_exclude_gitignore": true,
+
+	// tabs & spaces & line endings
+	"tab_size": 4,
+	"trim_trailing_white_space_on_save": true,
+	"translate_tabs_to_spaces": true,
+	"default_line_ending": "unix",
+
+	// caret
+	"caret_style": "blink",
+	"caret_extra_width": 2,
+
+	// whitespace
+	"draw_white_space": [
+		"leading_mixed",
+		"isolated_mixed"
+	],
+
+	// indent guides
+	"draw_indent_guides": false,
+}

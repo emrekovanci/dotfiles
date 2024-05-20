@@ -1,0 +1,44 @@
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+[delta]
+    # https://dandavison.github.io/delta/introduction.html
+    # use n and N to move between diff sections
+    navigate = true
+    dark = true
+    hyperlinks = false
+
+    # file
+    file-style = "#DDDDDD"
+    file-decoration-style = "#3A3A3A"
+    file-added-label = [+]
+    file-copied-label = [C]
+    file-modified-label = [M]
+    file-removed-label = [-]
+    file-renamed-label = [R]
+
+    # line numbers
+    line-numbers = true
+    line-numbers-minus-style = brightred
+    line-numbers-plus-style = brightgreen
+    line-numbers-left-format = "{nm:>2}|"
+    line-numbers-left-style = "#3A3A3A"
+    line-numbers-right-format = "{np:>2}|"
+    line-numbers-right-style = "#3A3A3A"
+
+    # no hunk headers
+    hunk-header-style = omit
+
+    # blame
+    blame-format = "{author:<15} {commit:<15} {timestamp:<15}"
+    blame-palette = "#000000" "#1d2021" "#282828" "#3c3836"
+    blame-code-style = syntax

@@ -1,0 +1,455 @@
+{
+    // ---- Security ----
+    "security.workspace.trust.enabled": false,
+    "security.promptForLocalFileProtocolHandling": false,
+
+    // ---- Telemetry ----
+    "telemetry.telemetryLevel": "off",
+
+    // ---- Extensions ----
+    "extensions.autoUpdate": "onlyEnabledExtensions",
+    "extensions.ignoreRecommendations": true,
+
+    // ---- Search ----
+    "search.showLineNumbers": true,
+    "search.collapseResults": "alwaysCollapse",
+    "search.sortOrder": "countDescending",
+
+    // ---- Error Lens ----
+    "errorLens.fontSize": "16",
+    "errorLens.margin": "2ch",
+    "errorLens.messageTemplate": "$message ($source)",
+    "errorLens.delayMode": "debounce",
+    "errorLens.enabledDiagnosticLevels": [ "error", "warning", "info", "hint" ],
+
+    // ---- Problems ----
+    "problems.decorations.enabled": false,
+
+    // ---- Explorer ----
+    "explorer.decorations.badges": false,
+    "explorer.autoReveal": false,
+    "explorer.compactFolders": false,
+
+    // ---- Window ----
+    "window.titleBarStyle": "custom",
+    "window.titleSeparator": " > ",
+    "window.title": "${rootName}",
+    "window.openFoldersInNewWindow": "default",
+    "window.dialogStyle": "custom",
+    "window.zoomLevel": 1,
+
+    // ---- Files ----
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 5000,
+    "files.autoSaveWorkspaceFilesOnly": true,
+    "files.associations": {
+        "*.sublime-theme": "jsonc",
+        "*.sublime-keymap": "jsonc",
+        "*.sublime-settings": "jsonc",
+        "*.sublime-color-scheme": "jsonc",
+    },
+    "files.readonlyInclude": {
+        "**/Program Files/Microsoft Visual Studio/**": true,
+        "**/Program Files (x86)/Windows Kits/**": true,
+        "**/Program Files/LLVM/**": true,
+        "C:/EpicGames/**": true,
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/.vscode/.cache": true,
+        "**/.vscode/cpptools_cache": true,
+        "**/.vscode/TMPDIR": true,
+    },
+
+    // ---- BreadCrumbs ----
+    "breadcrumbs.enabled": false,
+
+    // ---- Editor ----
+    // https://github.com/microsoft/vscode/blob/main/src/vs/editor/common/config/editorOptions.ts
+    // "editor.lineDecorationsWidth": 10, // [undocumented] removes space between editor and line numbers
+    "editor.inlayHints.padding": true,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.occurrencesHighlight": "off",
+    "editor.matchBrackets": "near",
+    "editor.linkedEditing": true,
+    "editor.definitionLinkOpensInPeek": true,
+    "editor.scrollBeyondLastLine": false,
+    "editor.roundedSelection": false,
+    "editor.folding": false,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.lineNumbers": "on",
+    "editor.scrollbar.vertical": "visible",
+    "editor.scrollbar.verticalScrollbarSize": 20,
+    "editor.fontVariations": false,
+    "editor.fontSize": 18,
+    "editor.fontLigatures": "'cv03', 'cv06', 'cv07', 'cv12', 'cv16'",
+    "editor.fontWeight": 500,
+    "editor.fontFamily": "'JetBrains Mono', Consolas, 'Courier New', monospace",
+    "editor.lineHeight": 1.7,
+    "editor.guides.indentation": false,
+    "editor.codeLens": false,
+    "editor.codeLensFontFamily": "'JetBrains Mono', Consolas",
+    "editor.columnSelection": false,
+    "editor.smoothScrolling": true,
+    "editor.tabCompletion": "off",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.suggestSelection": "first",
+    "editor.cursorStyle": "block",
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorWidth": 3,
+    "editor.cursorSurroundingLines": 10,
+    "editor.inlineSuggest.enabled": true,
+    "editor.renderWhitespace": "trailing",
+    "editor.minimap.enabled": false,
+    "editor.minimap.maxColumn": 80,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.showSlider": "always",
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.overviewRulerBorder": false,
+    "editor.glyphMargin": true,
+    "editor.hover.delay": 300,
+    "editor.stickyScroll.enabled": false,
+    "editor.find.addExtraSpaceOnTop": false,
+    "editor.quickSuggestionsDelay": 10,
+    "editor.quickSuggestions": {
+        "other": "on",
+        "comments": "off",
+        "strings": "on"
+    },
+    "editor.tokenColorCustomizations": {
+        "[Default Dark Modern]": {
+            "comments": {
+                "foreground": "#555555",
+                "fontStyle": "italic"
+            },
+            "textMateRules": [
+                {
+                    "scope": [
+                        "keyword.other.unit",
+                        "variable.language.this.cpp",
+                        "storage.type.template.cpp",
+                        "storage.type.template.argument.typename.cpp",
+                        "storage.type.template.argument.class.cpp",
+                        "storage.type.class.cpp",
+                        "storage.type.struct.cpp",
+                        "storage.type.enum.cpp",
+                        "storage.type.enum.enum-key.class.cpp",
+                        "storage.type.rust",
+                    ],
+                    "settings": { "fontStyle": "italic bold" }
+                },
+                {
+                    "scope": "entity.name.function.preprocessor.cpp",
+                    "settings": { "foreground": "#BEB7FF" }
+                },
+                {
+                    "scope": "constant.character.escape.cpp",
+                    "settings": { "fontStyle": "bold" }
+                },
+            ],
+        },
+    },
+
+    // ---- Workbench ----
+    // "workbench.settings.useSplitJSON": true,
+    "workbench.settings.editor": "json",
+    "workbench.activityBar.iconClickBehavior": "focus", // to disable toggle explorer side
+    "workbench.commandPalette.history": 10,
+    "workbench.list.smoothScrolling": true,
+    "workbench.editor.decorations.badges": false, // also disables read-only decoration
+    "workbench.editor.labelFormat": "default",
+    "workbench.editor.tabSizing": "fixed",
+    "workbench.editor.tabSizingFixedMaxWidth": 200,
+    "workbench.editor.closeOnFileDelete": true,
+    "workbench.editor.untitled.labelFormat": "name",
+    "workbench.editor.openPositioning": "first",
+    "workbench.editor.limit.value": 7,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.enablePreviewFromCodeNavigation": false,
+    "workbench.editor.editorActionsLocation": "titleBar",
+    "workbench.tree.indent": 15,
+    "workbench.tree.renderIndentGuides": "none",
+    "workbench.tree.enableStickyScroll": false,
+    "workbench.startupEditor": "none",
+    "workbench.iconTheme": "a-file-icon-vscode",
+    "workbench.productIconTheme": "icons-carbon",
+    "workbench.view.alwaysShowHeaderActions": true,
+    "workbench.layoutControl.enabled": false,
+    "workbench.colorCustomizations": {
+        "[Default Dark Modern]": {
+            // ---- ErrorLens ----
+            "errorLens.hintForeground": "#D473D4",
+
+            // ---- Hide Focus Outlines ----
+            "focusBorder": "#121212",
+            "statusBar.focusBorder": "#121212",
+
+            // ---- Cursors ----
+            "editorCursor.foreground": "#FFBF00",
+            "terminalCursor.foreground": "#00B9E8",
+
+            // ---- Line Number ----
+            "editorLineNumber.activeForeground": "#868686",
+            "editorLineNumber.foreground": "#3c3c3c",
+
+            // ---- Gutter ----
+            "editorGutter.background": "#151515",
+
+            // ---- Line Highlight ----
+            "editor.lineHighlightBackground": "#202020",
+            "editor.lineHighlightBorder": "#303030",
+
+            // ---- Background ----
+            "editor.background": "#121212",
+
+            // ---- Explorer|Extensions ----
+            "activityBar.border": "#121212",
+            "activityBar.background": "#121212",
+            "activityBar.foreground": "#0078d4",
+            "activityBar.activeBackground": "#121212",
+            "activityBar.activeBorder": "#121212",
+
+            // ---- Folder Tree ----
+            "sideBar.background": "#121212",
+            "sideBar.foreground": "#bababa",
+            "sideBar.border": "#121212",
+            "sideBarSectionHeader.background": "#121212",
+            "sideBarSectionHeader.border": "#121212",
+
+            // ---- List ----
+            "list.hoverBackground": "#202020",
+            //"list.activeSelectionIconForeground": "#ff0000",
+            //"list.activeSelectionBackground": "#121212",
+            "list.inactiveSelectionBackground": "#121212",
+
+            // ---- Problems|DebugConsole|Terminal ----
+            "panel.background": "#121212",
+            "panelInput.border": "#121212",
+
+            // ---- Buttom Bar ----
+            "statusBar.background": "#121212",
+            "statusBar.foreground": "#bababa",
+            "statusBar.debuggingBackground": "#990e2a",
+            "statusBarItem.remoteBackground": "#121212",
+            "statusBarItem.remoteForeground": "#bababa",
+
+            // ---- Title Bar ----
+            "titleBar.activeBackground": "#121212",
+            "titleBar.activeForeground": "#bababa",
+            "titleBar.border":"#121212",
+
+            // ---- Comman Center ----
+            "commandCenter.background": "#181818",
+            "commandCenter.border": "#363636",
+
+            // [Tabs]
+            "editorGroupHeader.tabsBackground": "#121212",
+            "editorGroupHeader.border": "#121212",
+            "tab.border": "#121212",
+            "tab.activeBorder": "#12121200",
+            "tab.lastPinnedBorder": "#121212",
+            "tab.activeBorderTop": "#12121200",
+            "tab.activeModifiedBorder": "#12121200",
+
+            // ---- Git ----
+            "gitDecoration.stageModifiedResourceForeground": "#72A0C1",
+            "gitDecoration.untrackedResourceForeground": "#50C878",
+            "gitDecoration.addedResourceForeground": "#50C878",
+            "gitDecoration.modifiedResourceForeground": "#72A0C1",
+
+            // ---- Integrated Terminal ----
+            "terminal.background": "#121212",
+
+            // ---- Disable Shadows ----
+            "scrollbar.shadow": "#12121200",
+            "widget.shadow": "#12121200"
+        },
+    },
+
+    // ---- Debug Console ----
+    "debug.console.fontSize": 14,
+    "debug.console.fontFamily": "'JetBrainsMono Nerd Font Mono', Consolas",
+    "debug.console.wordWrap": false,
+    "debug.terminal.clearBeforeReusing": true,
+
+    // ---- Output ----
+    "[Log]": {
+        "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', Consolas, 'Courier New', monospace",
+        "editor.fontSize": 14,
+        "editor.wordWrap": "off",
+    },
+
+    // ---- Terminal ----
+    "terminal.explorerKind": "external",
+    "terminal.external.windowsExec": "wt",
+    "terminal.sourceControlRepositoriesKind": "external",
+    "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+    "terminal.integrated.tabs.focusMode": "singleClick",
+    "terminal.integrated.cursorStyleInactive": "line",
+    "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.persistentSessionReviveProcess": "never",
+    "terminal.integrated.cursorStyle": "block",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorWidth": 3,
+    "terminal.integrated.confirmOnExit": "hasChildProcesses",
+    "terminal.integrated.lineHeight": 1.5,
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font Mono', Consolas",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.allowChords": false,
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell",
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash",
+            "overrideName": true,
+        },
+        "Ubuntu (WSL)": {
+            "path": "${env:windir}\\System32\\wsl.exe",
+            "args": [
+                "-d",
+                "Ubuntu"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+    // ---- Rust ----
+    "rust-analyzer.inlayHints.reborrowHints.enable": "always",
+    "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "always",
+    "rust-analyzer.inlayHints.implicitDrops.enable": true,
+
+    // ---- Unity3D-Snippets ----
+    "unity-code-snippets.usePrivateKeyword": true,
+    "unity-code-snippets.style": "allman",
+
+    // ---- C# ----
+    "csharp.debug.console": "externalTerminal",
+    "[csharp]": {
+        // "editor.codeLens": false,
+        "editor.semanticHighlighting.enabled": "configuredByTheme",
+        "editor.formatOnSave": true,
+    },
+
+    // ----.Net Install Tool ----
+    "dotnetAcquisitionExtension.enableTelemetry": false,
+    "dotnetAcquisitionExtension.existingDotnetPath": [
+        {
+            "extensionId": "ms-dotnettools.csharp",
+            "path": "${env:programfiles}\\dotnet\\dotnet.exe"
+        }
+    ],
+
+    // ---- C_Cpp ----
+    "C_Cpp.autocomplete": "disabled",
+    "C_Cpp.formatting": "disabled",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "C_Cpp.errorSquiggles": "disabled",
+    "C_Cpp.enhancedColorization": "disabled",
+    "C_Cpp.hover": "disabled",
+    "C_Cpp.intelliSenseCachePath": "${workspaceFolder}/.vscode/cpptools_cache",
+    "C_Cpp.intelliSenseUpdateDelay": 500,
+    "C_Cpp.codeAnalysis.runAutomatically": false,
+    "C_Cpp.codeAnalysis.updateDelay": 1000,
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.default.browse.databaseFilename": "${workspaceFolder}/.vscode/cpptools_cache/VC.DB",
+    //"C_Cpp.default.compilerPath": "C:/Program Files/LLVM/bin/clang-cl.exe",
+    //"C_Cpp.default.intelliSenseMode": "windows-clang-x64",
+    //"C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    //"C_Cpp.codeAnalysis.clangTidy.enabled": true,
+    //"C_Cpp.intelliSenseEngineFallback": "disabled",
+
+    // ---- CMake ----
+    "cmake.configureOnOpen": false,
+    "cmake.launchBehavior": "breakAndReuseTerminal",
+    "cmake.debugConfig": { "console": "newExternalWindow" },
+    "cmake.showOptionsMovedNotification": false,
+    "cmake.showConfigureWithDebuggerNotification": false,
+
+    // ---- clangd ----
+    "clangd.checkUpdates": false,
+    "clangd.path": "${env:programfiles}\\LLVM\\bin\\clangd.exe",
+
+    // ---- Godot ----
+    "godotTools.editorPath.godot3": "C:\\Users\\kovan\\Desktop\\Godot\\Godot_v4.2.1-stable_win64.exe",
+    "godotTools.editorPath.godot4": "C:\\Users\\kovan\\Desktop\\Godot\\Godot_v4.2.1-stable_win64.exe",
+    "godotTools.lsp.serverPort": 6005,
+
+    // ---- Intellicode ----
+    "vsintellicode.java.completionsEnabled": false,
+    "vsintellicode.typescript.completionsEnabled": false,
+    "vsintellicode.sql.completionsEnabled": false,
+
+    // ---- SCM ----
+    "scm.alwaysShowRepositories": false,
+    "scm.alwaysShowActions": false,
+    "scm.defaultViewMode": "tree",
+    "scm.diffDecorations": "none",
+
+    // ---- Git ----
+    "git.enableStatusBarSync": false,
+    "git.autofetch": true,
+    "git.decorations.enabled": true,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": true,
+    "git.autoStash": true,
+    "git.fetchOnPull": true,
+    "git.openRepositoryInParentFolders": "never",
+
+    // ---- Diff Editor ----
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+
+    // ---- Git Graph ----
+    "git-graph.commitDetailsView.location": "Docked to Bottom",
+    "git-graph.commitDetailsView.fileView.fileTree.compactFolders": false,
+    "git-graph.repository.commits.fetchAvatars": true,
+
+    // ---- Markdown ----
+    "markdown.occurrencesHighlight.enabled": true,
+    "markdown.preview.fontFamily": "JetBrains Mono, -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+    "markdown.preview.fontSize": 16,
+    "markdown.preview.lineHeight": 1.5,
+    "markdown.preview.markEditorSelection": false, // to disable vertical lines
+    "markdown.validate.enabled": false,
+
+    // ---- Others ----
+    "html.format.enable": false,
+
+    // ---- Sync ----
+    "settingsSync.ignoredExtensions": [
+        "vscode.theme-abyss",
+        "vscode.theme-kimbie-dark",
+        "vscode.theme-monokai-dimmed",
+        "vscode.theme-monokai",
+        "vscode.theme-solarized-dark",
+        "vscode.theme-red",
+        "vscode.theme-tomorrow-night-blue"
+    ],
+    "settingsSync.ignoredSettings": [
+        "-window.zoomLevel",
+        "-clangd.path",
+        "-C_Cpp.intelliSenseCacheSize",
+        "-C_Cpp.intelliSenseCachePath",
+        "-C_Cpp.default.browse.databaseFilename"
+    ],
+}
