@@ -17,7 +17,6 @@
     who = shortlog --summary --numbered --email
     logs = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     branches = branch --all
-    last-commit-diff = diff HEAD^
 
 [color "branch"]
     current = green bold
