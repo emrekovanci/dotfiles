@@ -26,7 +26,7 @@ return {
                 find_command = { "fd", "--type", "f", "--strip-cwd-prefix=always" },
             },
             git_files = { previewer = false },
-            buffers = { sort_lastused = true },
+            buffers = { sort_lastused = true, sort_mru = true },
         },
     },
     keys = {
