@@ -35,5 +35,6 @@ return {
         { "<leader>lg", function() require("telescope.builtin").live_grep() end, desc = "Live Grep" },
         { "<leader>fb", function() require("telescope.builtin").buffers() end, desc = "Find Buffers" },
         { "<leader>ht", function() require("telescope.builtin").help_tags() end, desc = "Help Tags" },
+        { "<leader>.", function() require("telescope.builtin").find_files({ cwd = vim.fn.expand("%:p:h")}) end, desc = "Find siblings" },
     },
 }
