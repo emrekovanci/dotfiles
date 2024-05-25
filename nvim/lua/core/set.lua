@@ -46,9 +46,11 @@ opt.commentstring = "// %s"
 vim.filetype.add({
     extension = {
         ["code-workspace"] = "jsonc",   -- VSCode
-        uproject = "json",              -- Unreal Engine
-        uplugin = "json",               -- Unreal Engine
-        codespellrc = "dosini",         -- C++ Codespell
+        ["sublime-keymap"] = "jsonc",   -- Sublime Text
+        ["sublime-theme"]  = "jsonc",   -- Sublime Text
+        uproject           = "json",    -- Unreal Engine
+        uplugin            = "json",    -- Unreal Engine
+        codespellrc        = "dosini",  -- C++ Codespell
     },
 })
 
