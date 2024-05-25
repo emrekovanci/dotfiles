@@ -442,8 +442,11 @@
         "vscode.theme-monokai-dimmed",
         "vscode.theme-monokai",
         "vscode.theme-solarized-dark",
+        "vscode.theme-solarized-light",
         "vscode.theme-red",
-        "vscode.theme-tomorrow-night-blue"
+        "vscode.theme-tomorrow-night-blue",
+        "vscode.theme-quietlight",
+        "vscode.vscode-theme-seti",
     ],
     "settingsSync.ignoredSettings": [
         "-window.zoomLevel",
