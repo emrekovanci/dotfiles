@@ -22,6 +22,7 @@ require("lazy").setup({
         version = false,
     },
     checker = { enabled = false },
+    custom_keys = nil,
     performance = {
         rtp = {
             disabled_plugins = {
