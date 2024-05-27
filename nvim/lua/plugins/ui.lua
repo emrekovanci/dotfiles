@@ -28,7 +28,7 @@ return {
                     lualine_x = {
                         { "encoding" },
                         { "fileformat", icons_enabled = true, symbols = { unix = "LF", dos = "CRLF", mac = "CR" } },
-                        { "filetype", icon_only = true },
+                        { "filetype", icons_enabled = false },
                     },
                     lualine_y = { "location" },
                     lualine_z = { "progress" },
