@@ -23,7 +23,7 @@ return {
         pickers = {
             find_files = {
                 previewer = false,
-                find_command = { "fd", "--type", "f", "--strip-cwd-prefix=always" },
+                find_command = { "fd", "--type", "file", "--hidden", "--no-ignore", "--exclude", ".git", "--strip-cwd-prefix=always" },
             },
             git_files = { previewer = false },
             buffers = { sort_lastused = true, sort_mru = true },
