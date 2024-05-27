@@ -7,7 +7,7 @@
 # aliases
 Set-Alias -Name vi -Value nvim
 Set-Alias -Name vim -Value nvim
-Set-Alias -Name grep -Value findstr
+Set-Alias -Name grep -Value rg
 
 # env variables
 $ENV:STARSHIP_CONFIG = "$HOME\Documents\GitHub\dotfiles\config\starship.toml"
