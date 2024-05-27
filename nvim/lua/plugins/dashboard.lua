@@ -15,9 +15,6 @@ return {
 
         local opts = {
             theme = "doom",
-            hide = {
-                statusline = true,
-            },
             config = {
                 header = vim.split(logo, "\n"),
                 center = {
