@@ -10,14 +10,13 @@ winget install -e --id 7zip.7zip -s winget
 winget install -e --id AntibodySoftware.WizTree -s winget
 winget install -e --id Windscribe.Windscribe -s winget
 
-# terminal with streoids
+# terminal with streoids [~37mb]
 winget install -e --id Starship.Starship -s winget
 winget install -e --id ajeetdsouza.zoxide -s widget
 winget install -e --id AlDanial.Cloc -s winget
 winget install -e --id BurntSushi.ripgrep.MSVC -s winget
 winget install -e --id dandavison.delta -s winget
 winget install -e --id sharkdp.fd -s winget
-winget install -e --id JesseDuffield.lazygit -s winget
 
 # dev tools (sublime install will not add context action)
 winget install -e --id Git.Git -s winget
