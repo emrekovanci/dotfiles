@@ -2,21 +2,26 @@ return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
+        local is_windows = vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1
+        -- ensure_installed = ..., adds a bunch of startup time.
+        -- manually install required languages on windows
+        local ensure_installed_list = is_windows and { } or {
+            "bash",
+            "c",
+            "cpp",
+            "cmake",
+            "c_sharp",
+            "glsl",
+            "lua",
+            "rust",
+            "toml",
+            "vimdoc",
+            "yaml",
+        }
+
         require("nvim-treesitter.configs").setup({
             -- A list of parser names, or "all"
-            ensure_installed = {
-                "bash",
-                "c",
-                "cpp",
-                "cmake",
-                "c_sharp",
-                "glsl",
-                "lua",
-                "rust",
-                "toml",
-                "vimdoc",
-                "yaml",
-            },
+            ensure_installed = ensure_installed_list,
 
             -- Install parsers synchronously (only applied to `ensure_installed`)
             sync_install = false,
