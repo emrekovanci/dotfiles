@@ -27,6 +27,7 @@ return {
             },
             git_files = { previewer = false },
             buffers = { sort_lastused = true, sort_mru = true },
+            colorscheme = { enable_preview = true },
         },
     },
     keys = {
