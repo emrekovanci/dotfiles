@@ -23,7 +23,6 @@
 	"preview_on_click": false,
 	"open_tabs_after_current": false,
 	"enable_tab_scrolling": false,
-	"scroll_speed": 0,
 	"match_brackets": false,
 
 	// title bar
@@ -54,7 +53,7 @@
 	// font
 	"font_face": "JetBrains Mono",
 	"font_size": 12,
-	"font_options": ["bold"],
+	"font_options": ["bold", "ss02"],
 
 	// line
 	"line_padding_top": 3,
@@ -76,7 +75,8 @@
 	"default_line_ending": "unix",
 
 	// caret
-	"caret_style": "blink",
+	"caret_style": "smooth",
+	"block_caret": true,
 	"caret_extra_width": 2,
 
 	// whitespace
