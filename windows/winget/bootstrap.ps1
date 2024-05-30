@@ -8,7 +8,6 @@ winget install -e --id Skillbrains.Lightshot -s winget
 # utils
 winget install -e --id 7zip.7zip -s winget
 winget install -e --id AntibodySoftware.WizTree -s winget
-winget install -e --id Windscribe.Windscribe -s winget
 
 # terminal with streoids [~37mb]
 winget install -e --id Starship.Starship -s winget
