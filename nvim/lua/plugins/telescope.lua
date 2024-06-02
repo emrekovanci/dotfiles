@@ -31,11 +31,16 @@ return {
         },
     },
     keys = {
+        -- general
         { "<leader>ff", function() require("telescope.builtin").find_files() end, desc = "Find Files" },
         { "<leader>gf", function() require("telescope.builtin").git_files() end, desc = "Git Files" },
         { "<leader>lg", function() require("telescope.builtin").live_grep() end, desc = "Live Grep" },
         { "<leader>fb", function() require("telescope.builtin").buffers() end, desc = "Find Buffers" },
         { "<leader>ht", function() require("telescope.builtin").help_tags() end, desc = "Help Tags" },
         { "<leader>.", function() require("telescope.builtin").find_files({ cwd = vim.fn.expand("%:p:h")}) end, desc = "Find siblings" },
+
+        -- grep
+        { "<leader>ws", function() require("telescope.builtin").grep_string({ search = vim.fn.expand("<cword>") }) end },
+        { "<leader>Ws", function() require("telescope.builtin").grep_string({ search = vim.fn.expand("<cWORD>") }) end },
     },
 }
