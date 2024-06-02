@@ -13,8 +13,6 @@ Set-Alias -Name grep -Value rg
 $ENV:STARSHIP_CONFIG = "$HOME\Documents\GitHub\dotfiles\config\starship.toml"
 $ENV:RIPGREP_CONFIG_PATH = "$HOME\Documents\GitHub\dotfiles\config\.ripgreprc"
 $ENV:XDG_CONFIG_HOME = "$HOME\Documents\GitHub\dotfiles\"
-$ENV:POWERSHELL_TELEMETRY_OPTOUT = 1
-$ENV:DOTNET_CLI_TELEMETRY_OPTOUT = 1
 
 # https://github.com/starship/starship
 Invoke-Expression (&starship init powershell)
