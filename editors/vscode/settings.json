@@ -305,7 +305,7 @@
     "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font Mono', Consolas",
     "terminal.integrated.defaultProfile.linux": "bash",
     "terminal.integrated.allowChords": false,
-    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.copyOnSelection": false,
     "terminal.integrated.profiles.windows": {
         "PowerShell": {
             "source": "PowerShell",
