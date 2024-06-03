@@ -16,8 +16,9 @@ return {
             },
             sorting_strategy = "ascending",
             winblend = 0,
-            prompt_prefix = " ",
-            selection_caret = "  ",
+            prompt_prefix = "  ",
+            selection_caret = "  ",
+            entry_prefix = "  ",
             results_title = false,
         },
         pickers = {
