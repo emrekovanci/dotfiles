@@ -32,6 +32,8 @@ require("lazy").setup({
                 "matchparen",
                 "netrwPlugin",
                 "osc52",
+                "rplugin",
+                "spellfile",
                 "tarPlugin",
                 "tohtml",
                 "tutor",
