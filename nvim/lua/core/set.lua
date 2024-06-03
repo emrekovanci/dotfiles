@@ -55,8 +55,9 @@ vim.filetype.add({
 })
 
 -- others
+opt.history = 1000
 opt.undofile = true
 opt.swapfile = false
 opt.backup = false
-opt.updatetime = 750
+opt.updatetime = 200
 opt.confirm = true
