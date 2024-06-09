@@ -16,7 +16,7 @@
     "search.sortOrder": "countDescending",
 
     // ---- Error Lens ----
-    "errorLens.fontSize": "16",
+    "errorLens.fontSize": "14",
     "errorLens.margin": "2ch",
     "errorLens.messageTemplate": "$message ($source)",
     "errorLens.delayMode": "debounce",
@@ -80,7 +80,7 @@
     "editor.definitionLinkOpensInPeek": true,
     "editor.scrollBeyondLastLine": false,
     "editor.roundedSelection": false,
-    "editor.folding": false,
+    "editor.folding": true,
     "editor.formatOnSaveMode": "modificationsIfAvailable",
     "editor.lineNumbers": "on",
     "editor.scrollbar.vertical": "visible",
@@ -388,11 +388,6 @@
     // ---- clangd ----
     "clangd.checkUpdates": false,
     "clangd.path": "${env:programfiles}\\LLVM\\bin\\clangd.exe",
-
-    // ---- Godot ----
-    "godotTools.editorPath.godot3": "C:\\Users\\kovan\\Desktop\\Godot\\Godot_v4.2.1-stable_win64.exe",
-    "godotTools.editorPath.godot4": "C:\\Users\\kovan\\Desktop\\Godot\\Godot_v4.2.1-stable_win64.exe",
-    "godotTools.lsp.serverPort": 6005,
 
     // ---- Intellicode ----
     "vsintellicode.java.completionsEnabled": false,
