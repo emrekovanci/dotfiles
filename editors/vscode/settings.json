@@ -428,6 +428,7 @@
     "markdown.preview.fontSize": 16,
     "markdown.preview.lineHeight": 1.5,
     "markdown.preview.markEditorSelection": false, // to disable vertical lines
+    "markdown.preview.doubleClickToSwitchToEditor": false,
     "markdown.validate.enabled": false,
 
     // ---- Others ----
