@@ -158,6 +158,9 @@
     // ---- Workbench ----
     // "workbench.settings.useSplitJSON": true,
     "workbench.settings.editor": "json",
+    "workbench.editorAssociations": {
+        "*.md": "vscode.markdown.preview.editor",
+    },
     "workbench.activityBar.iconClickBehavior": "focus", // to disable toggle explorer side
     "workbench.commandPalette.history": 10,
     "workbench.list.smoothScrolling": true,
