@@ -13,6 +13,7 @@ return {
             "c_sharp",
             "glsl",
             "lua",
+            "php",
             "rust",
             "toml",
             "vimdoc",
