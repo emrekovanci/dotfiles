@@ -9,6 +9,12 @@ winget install -e --id Skillbrains.Lightshot -s winget
 winget install -e --id 7zip.7zip -s winget
 winget install -e --id AntibodySoftware.WizTree -s winget
 
+# network
+# instances of cloudflared do not automatically update on Windows
+# need to perform manual updates: "cloudflared update"
+winget install -e --id Cloudflare.Warp -s winget
+winget install -e --id Cloudflare.cloudflared -s winget
+
 # terminal with streoids [~37mb]
 winget install -e --id Starship.Starship -s winget
 winget install -e --id ajeetdsouza.zoxide -s widget
