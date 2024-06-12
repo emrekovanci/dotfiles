@@ -30,6 +30,7 @@ winget install -e --id LLVM.LLVM -s winget
 winget install -e --id Kitware.CMake -s winget
 winget install -e --id SublimeHQ.SublimeText.4 -s winget
 winget install -e --id Microsoft.VisualStudioCode -s winget
+winget install -e --id HeidiSQL.HeidiSQL -s winget
 
 # other dev tools
 winget install -e --id Hex-Rays.IDA.Free -s winget
