@@ -12,6 +12,11 @@ return {
                 sidebars = "transparent",
                 floats = "transparent",
             },
+            on_highlights = function(hl, col)
+                hl.EndOfBuffer = {
+                    fg = col.cyan,
+                }
+            end,
         })
 
         vim.cmd("colorscheme tokyonight")
