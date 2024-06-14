@@ -11,6 +11,7 @@ return {
             "cpp",
             "cmake",
             "c_sharp",
+            "dockerfile",
             "glsl",
             "lua",
             "php",
