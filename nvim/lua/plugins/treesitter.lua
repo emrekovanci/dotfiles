@@ -6,19 +6,27 @@ return {
         -- ensure_installed = ..., adds a bunch of startup time.
         -- manually install required languages on windows
         local ensure_installed_list = is_windows and { } or {
+            -- general
             "bash",
+            "lua",
+            "toml",
+            "yaml",
+            "vimdoc",
+
+            -- main
             "c",
             "cpp",
             "cmake",
             "c_sharp",
+            "rust",
             "dockerfile",
             "glsl",
-            "lua",
+
+            -- web
             "php",
-            "rust",
-            "toml",
-            "vimdoc",
-            "yaml",
+            "css",
+            "html",
+            "javascript",
         }
 
         require("nvim-treesitter.configs").setup({
@@ -33,7 +41,7 @@ return {
             auto_install = false,
 
             indent = {
-                enable = true
+                enable = true,
             },
 
             highlight = {

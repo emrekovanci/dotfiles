@@ -52,6 +52,9 @@ vim.filetype.add({
         uplugin            = "json",    -- Unreal Engine
         codespellrc        = "dosini",  -- C++ Codespell
     },
+    pattern = {
+        [".*%.blade%.php"] = "html",
+    }
 })
 
 -- others
