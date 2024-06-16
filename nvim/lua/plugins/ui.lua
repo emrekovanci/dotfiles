@@ -47,13 +47,7 @@ return {
         },
         cmd = "Oil",
         keys = {
-            {
-                "-",
-                function()
-                    return require("oil").open()
-                end,
-                desc = "Open parent directory",
-            },
+            { "-", function() return require("oil").open() end, desc = "Open parent directory" },
         },
         -- https://github.com/folke/lazy.nvim/issues/533
         init = function()
