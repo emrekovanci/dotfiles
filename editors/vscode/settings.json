@@ -131,14 +131,14 @@
                 {
                     "scope": [
                         "keyword.other.unit",
-                        "variable.language.this.cpp",
+                        "variable.language.this",
                         "storage.type.template.cpp",
                         "storage.type.template.argument.typename.cpp",
                         "storage.type.template.argument.class.cpp",
-                        "storage.type.class.cpp",
-                        "storage.type.struct.cpp",
-                        "storage.type.enum.cpp",
-                        "storage.type.enum.enum-key.class.cpp",
+                        "storage.type.class",
+                        "storage.type.struct",
+                        "storage.type.enum",
+                        "storage.type.enum.enum-key.class",
                         "storage.type.rust",
                     ],
                     "settings": { "fontStyle": "italic bold" }
@@ -415,7 +415,7 @@
 
     // ---- Diff Editor ----
     "diffEditor.ignoreTrimWhitespace": false,
-    "diffEditor.hideUnchangedRegions.enabled": true,
+    "diffEditor.hideUnchangedRegions.enabled": false,
 
     // ---- Git Graph ----
     "git-graph.commitDetailsView.location": "Docked to Bottom",
@@ -425,10 +425,10 @@
     // ---- Markdown ----
     "markdown.occurrencesHighlight.enabled": true,
     "markdown.preview.fontFamily": "JetBrains Mono, -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
-    "markdown.preview.fontSize": 16,
+    "markdown.preview.fontSize": 14,
     "markdown.preview.lineHeight": 1.5,
     "markdown.preview.markEditorSelection": false, // to disable vertical lines
-    "markdown.preview.doubleClickToSwitchToEditor": false,
+    "markdown.preview.doubleClickToSwitchToEditor": true,
     "markdown.validate.enabled": false,
 
     // ---- Others ----
