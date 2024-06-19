@@ -44,6 +44,9 @@ return {
             view_options = {
                 show_hidden = true,
             },
+            keymaps = {
+                 ["?"] = "actions.cd",
+            },
         },
         cmd = "Oil",
         keys = {
