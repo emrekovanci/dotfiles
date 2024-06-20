@@ -45,12 +45,13 @@ opt.commentstring = "// %s"
 -- filetypes (default filetypes: <Neovim_Install_Dir>/share/nvim/runtime/lua/vim/filetype.lua)
 vim.filetype.add({
     extension = {
-        ["code-workspace"] = "jsonc",   -- VSCode
-        ["sublime-keymap"] = "jsonc",   -- Sublime Text
-        ["sublime-theme"]  = "jsonc",   -- Sublime Text
-        uproject           = "json",    -- Unreal Engine
-        uplugin            = "json",    -- Unreal Engine
-        codespellrc        = "dosini",  -- C++ Codespell
+        ["code-workspace"]   = "jsonc",   -- VSCode
+        ["sublime-keymap"]   = "jsonc",   -- Sublime Text
+        ["sublime-theme"]    = "jsonc",   -- Sublime Text
+        ["sublime-settings"] = "jsonc", -- Sublime Text
+        uproject             = "json",    -- Unreal Engine
+        uplugin              = "json",    -- Unreal Engine
+        codespellrc          = "dosini",  -- C++ Codespell
     },
     pattern = {
         [".*%.blade%.php"] = "html",

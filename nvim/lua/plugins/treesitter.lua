@@ -11,6 +11,8 @@ return {
         local ensure_installed_list = is_windows and { } or {
             -- general
             "bash",
+            "json",
+            "jsonc",
             "lua",
             "toml",
             "yaml",
