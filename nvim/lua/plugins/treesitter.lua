@@ -1,6 +1,9 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    dependencies = {
+        "HiPhish/rainbow-delimiters.nvim",
+    },
     config = function()
         local is_windows = vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1
         -- ensure_installed = ..., adds a bunch of startup time.
