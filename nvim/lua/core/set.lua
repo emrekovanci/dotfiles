@@ -48,7 +48,7 @@ vim.filetype.add({
         ["code-workspace"]   = "jsonc",   -- VSCode
         ["sublime-keymap"]   = "jsonc",   -- Sublime Text
         ["sublime-theme"]    = "jsonc",   -- Sublime Text
-        ["sublime-settings"] = "jsonc", -- Sublime Text
+        ["sublime-settings"] = "jsonc",   -- Sublime Text
         uproject             = "json",    -- Unreal Engine
         uplugin              = "json",    -- Unreal Engine
         codespellrc          = "dosini",  -- C++ Codespell
