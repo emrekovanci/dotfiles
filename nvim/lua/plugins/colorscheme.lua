@@ -12,9 +12,12 @@ return {
                 sidebars = "transparent",
                 floats = "transparent",
             },
-            on_highlights = function(hl, col)
+            on_colors = function(colors)
+                colors.bg_statusline = ""
+            end,
+            on_highlights = function(hl, colors)
                 hl.EndOfBuffer = {
-                    fg = col.cyan,
+                    fg = colors.cyan,
                 }
             end,
         })

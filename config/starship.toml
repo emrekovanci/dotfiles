@@ -27,7 +27,7 @@ use_os_path_sep = false
 
 [git_branch]
 format = "on [$symbol$branch(:$remote_branch)]($style) "
-symbol = ""
+symbol = " "
 
 [git_state]
 format = "\\([$state( $progress_current/$progress_total)]($style)\\) "
