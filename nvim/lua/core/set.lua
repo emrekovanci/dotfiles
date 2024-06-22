@@ -29,6 +29,7 @@ opt.splitright = true           -- Put new windows right of current
 opt.splitbelow = true           -- Put new windows below current
 
 -- appearance
+opt.pumheight = 10              -- Make popup menu smaller
 opt.guicursor = ""
 opt.termguicolors = true        -- True color support
 opt.background = "dark"

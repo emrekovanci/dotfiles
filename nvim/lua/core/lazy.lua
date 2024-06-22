@@ -33,7 +33,6 @@ require("lazy").setup({
                 "netrwPlugin",
                 "osc52",
                 "rplugin",
-                "spellfile",
                 "tarPlugin",
                 "tohtml",
                 "tutor",
