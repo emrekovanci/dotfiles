@@ -17,4 +17,4 @@ Set-ExecutionPolicy RemoteSigned
 - [Tools](https://learn.microsoft.com/en-us/sysinternals/downloads/)
 - [Autoruns](https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns)
 - [Process Explorer](https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer)
-- [https://github.com/hellzerg/optimizer](Optimizer)
+- [Optimizer](https://github.com/hellzerg/optimizer)
