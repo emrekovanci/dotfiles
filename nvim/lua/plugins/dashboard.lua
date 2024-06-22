@@ -13,15 +13,17 @@ return {
 
         logo = string.rep("\n", 8) .. logo .. "\n\n"
 
+        local nvim_config_action = "execute 'cd " .. vim.fn.stdpath("config") .. "' | Telescope find_files"
+
         local opts = {
             theme = "doom",
             config = {
                 header = vim.split(logo, "\n"),
                 center = {
-                    { action = "ene | startinsert",     desc = " New File",        icon = "", key = "n" },
-                    { action = "Telescope oldfiles",    desc = " Recent Files",    icon = "󰋚", key = "r" },
-                    { action = "Telescope live_grep",   desc = " Find Text",       icon = "", key = "g" },
-                    { action = "qa",                    desc = " Quit",            icon = "", key = "q" },
+                    { action = "ene | startinsert",  desc = " New File",     icon = "", key = "n" },
+                    { action = "Telescope oldfiles", desc = " Recent Files", icon = "", key = "r" },
+                    { action = nvim_config_action,   desc = " Config",       icon = "", key = "c" },
+                    { action = "qa",                 desc = " Quit",         icon = "", key = "q" },
                 },
                 footer = {}
             },
