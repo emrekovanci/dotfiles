@@ -17,6 +17,8 @@ opt.tabstop = 4                 -- Number of spaces tabs count for
 opt.softtabstop = 4
 opt.expandtab = true            -- Use spaces instead of tabs
 opt.autoindent = true
+
+-- invisible characters
 opt.list = true                 -- Show some invisible characters (tabs...
 opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
@@ -29,7 +31,7 @@ opt.splitright = true           -- Put new windows right of current
 opt.splitbelow = true           -- Put new windows below current
 
 -- appearance
-opt.pumheight = 10              -- Make popup menu smaller
+opt.pumheight = 12              -- Make popup menu smaller
 opt.guicursor = ""
 opt.termguicolors = true        -- True color support
 opt.background = "dark"
@@ -41,7 +43,8 @@ opt.showmode = false            -- Lualine shows mode, so disable default
 opt.laststatus = 3              -- Global status line
 
 -- workflow
-opt.commentstring = "// %s"
+opt.virtualedit = "block"       -- Allow currsor to move where there is no text in visual block mode
+opt.mouse = "a"                 -- Enable mouse mode
 
 -- filetypes (default filetypes: <Neovim_Install_Dir>/share/nvim/runtime/lua/vim/filetype.lua)
 vim.filetype.add({
@@ -55,7 +58,7 @@ vim.filetype.add({
         codespellrc          = "dosini",  -- C++ Codespell
     },
     pattern = {
-        [".*%.blade%.php"] = "html",
+        [".*%.blade%.php"]   = "html",
     }
 })
 
