@@ -43,6 +43,7 @@ opt.showmode = false            -- Lualine shows mode, so disable default
 opt.laststatus = 3              -- Global status line
 
 -- workflow
+opt.autowrite = true
 opt.virtualedit = "block"       -- Allow currsor to move where there is no text in visual block mode
 opt.mouse = "a"                 -- Enable mouse mode
 
