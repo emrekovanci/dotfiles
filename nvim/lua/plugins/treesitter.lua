@@ -24,9 +24,13 @@ return {
             "json",
             "jsonc",
             "lua",
+            "markdown",
+            "markdown_inline",
+            "regex",
             "toml",
-            "yaml",
             "vimdoc",
+            "xml",
+            "yaml",
 
             -- main
             "c",
