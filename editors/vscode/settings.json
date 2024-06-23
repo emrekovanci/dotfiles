@@ -19,7 +19,6 @@
     "errorLens.fontSize": "14",
     "errorLens.margin": "2ch",
     "errorLens.messageTemplate": "$message ($source)",
-    "errorLens.delayMode": "debounce",
     "errorLens.enabledDiagnosticLevels": [ "error", "warning", "info", "hint" ],
 
     // ---- Problems ----
