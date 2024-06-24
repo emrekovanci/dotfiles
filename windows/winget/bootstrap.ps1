@@ -15,13 +15,15 @@ winget install -e --id AntibodySoftware.WizTree -s winget
 winget install -e --id Cloudflare.Warp -s winget
 winget install -e --id Cloudflare.cloudflared -s winget
 
-# terminal with streoids [~37mb]
+# terminal with streoids
 winget install -e --id Starship.Starship -s winget
 winget install -e --id ajeetdsouza.zoxide -s widget
 winget install -e --id AlDanial.Cloc -s winget
 winget install -e --id BurntSushi.ripgrep.MSVC -s winget
 winget install -e --id dandavison.delta -s winget
 winget install -e --id sharkdp.fd -s winget
+winget install -e --id junegunn.fzf -s winget
+winget install -e --id ms-jpq.sad -s winget
 
 # dev tools (sublime install will not add context action)
 winget install -e --id Git.Git -s winget
@@ -34,6 +36,7 @@ winget install -e --id HeidiSQL.HeidiSQL -s winget
 
 # other dev tools
 winget install -e --id Hex-Rays.IDA.Free -s winget
+winget install -e --id horsicq.DIE-engine -s winget
 
 # chat
 winget install -e --id Discord.Discord -s winget
