@@ -23,7 +23,7 @@ winget install -e --id BurntSushi.ripgrep.MSVC -s winget
 winget install -e --id dandavison.delta -s winget
 winget install -e --id sharkdp.fd -s winget
 winget install -e --id junegunn.fzf -s winget
-winget install -e --id ms-jpq.sad -s winget
+winget install -e --id chmln.sd -s winget
 
 # dev tools (sublime install will not add context action)
 winget install -e --id Git.Git -s winget
