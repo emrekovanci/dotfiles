@@ -48,8 +48,13 @@ require("lazy").setup({
         title = " Lazy Plugin Manager ",
     },
     pkg = {
-        enabled = true,
+        enabled = false,
         cache = vim.fn.stdpath("state") .. "/lazy/pkg-cache.lua",
-        sources = { "lazy" },
+        sources = { "lazy", "rockspec", "packspec" },
+    },
+    rocks = {
+        enabled = false,
+        root = vim.fn.stdpath("data") .. "/lazy-rocks",
+        server = "https://nvim-neorocks.github.io/rocks-binaries/",
     },
 })
