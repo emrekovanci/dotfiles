@@ -47,4 +47,9 @@ require("lazy").setup({
         border = "rounded",
         title = " Lazy Plugin Manager ",
     },
+    pkg = {
+        enabled = true,
+        cache = vim.fn.stdpath("state") .. "/lazy/pkg-cache.lua",
+        sources = { "lazy" },
+    },
 })
