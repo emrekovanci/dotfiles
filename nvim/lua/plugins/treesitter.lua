@@ -18,39 +18,15 @@ return {
         local is_windows = vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1
         -- ensure_installed = ..., adds a bunch of startup time.
         -- manually install required languages on windows
-        local ensure_installed_list = is_windows and { } or {
-            -- general
-            "bash",
-            "json",
-            "jsonc",
-            "lua",
-            "markdown",
-            "markdown_inline",
-            "regex",
-            "toml",
-            "vimdoc",
-            "xml",
-            "yaml",
-
-            -- main
-            "c",
-            "cpp",
-            "cmake",
-            "c_sharp",
-            "rust",
-            "dockerfile",
-            "glsl",
-
-            -- web
-            "php",
-            "css",
-            "html",
-            "javascript",
-        }
+        local ensure_installed_list = vim.iter({
+            { "bash", "json", "jsonc", "markdown", "markdown_inline", "regex", "toml", "vimdoc", "xml", "yaml" },
+            { "lua", "c", "cpp", "cmake", "c_sharp", "rust", "dockerfile", "glsl" },
+            { "php", "css", "html", "javascript" },
+        }):flatten():totable()
 
         require("nvim-treesitter.configs").setup({
             -- A list of parser names, or "all"
-            ensure_installed = ensure_installed_list,
+            ensure_installed = is_windows and { } or ensure_installed_list,
 
             -- Install parsers synchronously (only applied to `ensure_installed`)
             sync_install = false,
@@ -74,5 +50,14 @@ return {
                 additional_vim_regex_highlighting = false,
             },
         })
+
+        vim.keymap.set(
+            "n",
+            "<leader>ti",
+            function()
+                vim.cmd("TSUpdate " .. table.concat(ensure_installed_list, " "))
+            end,
+            { desc = "Install common parsers" }
+        )
     end,
 }
