@@ -46,8 +46,8 @@ return {
                         { "fileformat", icons_enabled = true, symbols = { unix = "LF", dos = "CRLF", mac = "CR" } },
                         { "filetype", icons_enabled = false },
                     },
-                    lualine_y = { "location" },
-                    lualine_z = { "progress" },
+                    lualine_y = { { "location", color = { bg = "none" } }, { "progress", color = { bg = "none" } } },
+                    lualine_z = { },
                 },
                 extensions = { "lazy" },
             }
