@@ -31,7 +31,7 @@ return {
                 },
                 sections = {
                     lualine_a = { "mode" },
-                    lualine_b = { { "branch", icon = "" } },
+                    lualine_b = { { "branch", icon = "", color = { bg = "none" }, padding = { left = 1, right = 0 } } },
                     lualine_c = {
                         {
                             "filename",
