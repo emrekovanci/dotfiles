@@ -53,17 +53,6 @@
         "**/Program Files/LLVM/**": true,
         "C:/EpicGames/**": true,
     },
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/Thumbs.db": true,
-        "**/.vscode/.cache": true,
-        "**/.vscode/cpptools_cache": true,
-        "**/.vscode/TMPDIR": true,
-    },
 
     // ---- BreadCrumbs ----
     "breadcrumbs.enabled": false,
@@ -163,7 +152,7 @@
     "workbench.activityBar.iconClickBehavior": "focus", // to disable toggle explorer side
     "workbench.commandPalette.history": 10,
     "workbench.list.smoothScrolling": true,
-    "workbench.editor.decorations.badges": false, // also disables read-only decoration
+    "workbench.editor.decorations.badges": true, // also disables read-only decoration
     "workbench.editor.labelFormat": "default",
     "workbench.editor.tabSizing": "fixed",
     "workbench.editor.tabSizingFixedMaxWidth": 200,
@@ -385,8 +374,8 @@
     "cmake.configureOnOpen": false,
     "cmake.launchBehavior": "breakAndReuseTerminal",
     "cmake.debugConfig": { "console": "newExternalWindow" },
-    "cmake.showOptionsMovedNotification": false,
     "cmake.showConfigureWithDebuggerNotification": false,
+    "cmake.useVsDeveloperEnvironment": "auto",
 
     // ---- clangd ----
     "clangd.checkUpdates": false,
