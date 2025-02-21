@@ -62,6 +62,7 @@
     // "editor.lineDecorationsWidth": 10, // [undocumented] removes space between editor and line numbers
     "editor.inlayHints.padding": true,
     "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.inlayHints.fontSize": 14,
     "editor.occurrencesHighlight": "off",
     "editor.matchBrackets": "near",
     "editor.linkedEditing": true,
