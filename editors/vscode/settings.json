@@ -70,12 +70,12 @@
     "editor.scrollBeyondLastLine": false,
     "editor.roundedSelection": false,
     "editor.folding": true,
-    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.formatOnSaveMode": "file",
     "editor.lineNumbers": "on",
     "editor.scrollbar.vertical": "visible",
     "editor.scrollbar.verticalScrollbarSize": 20,
     "editor.fontVariations": false,
-    "editor.fontSize": 18,
+    "editor.fontSize": 16,
     "editor.fontLigatures": "'cv03', 'cv06', 'cv07', 'cv12', 'cv16'",
     "editor.fontWeight": 500,
     "editor.fontFamily": "'JetBrains Mono', Consolas, 'Courier New', monospace",
@@ -202,6 +202,11 @@
             // ---- Background ----
             "editor.background": "#121212",
 
+            // ---- Selection / Editor----
+            "editor.selectionHighlightBackground": "#05341e69",
+            "editor.selectionHighlightBorder": "#07bb1c",
+            "editor.selectionBackground": "#08643969",
+
             // ---- Explorer|Extensions ----
             "activityBar.border": "#121212",
             "activityBar.background": "#121212",
@@ -246,7 +251,7 @@
             "editorGroupHeader.tabsBackground": "#121212",
             "editorGroupHeader.border": "#121212",
             "tab.border": "#121212",
-            "tab.activeBorder": "#12121200",
+            "tab.activeBorder": "#0088c8",
             "tab.lastPinnedBorder": "#121212",
             "tab.activeBorderTop": "#12121200",
             "tab.activeModifiedBorder": "#12121200",
