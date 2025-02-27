@@ -9,7 +9,7 @@
     autocrlf = false
 
 [fetch]
-    prune = false
+    prune = true
 
 [alias]
     aliases = --list-cmds=alias
