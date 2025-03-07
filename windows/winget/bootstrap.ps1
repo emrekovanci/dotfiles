@@ -20,7 +20,6 @@ winget install -e --id Starship.Starship -s winget
 winget install -e --id ajeetdsouza.zoxide -s widget
 winget install -e --id AlDanial.Cloc -s winget
 winget install -e --id BurntSushi.ripgrep.MSVC -s winget
-winget install -e --id dandavison.delta -s winget
 winget install -e --id sharkdp.fd -s winget
 winget install -e --id junegunn.fzf -s winget
 winget install -e --id chmln.sd -s winget
