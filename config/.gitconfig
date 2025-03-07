@@ -8,8 +8,19 @@
 [core]
     autocrlf = false
 
+[branch]
+    sort = -committerdate
+
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
+
 [fetch]
     prune = true
+    pruneTags = true
+    all = true
 
 [alias]
     aliases = --list-cmds=alias
@@ -29,5 +40,3 @@
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
 
-[include]
-    path = ~/Documents/GitHub/dotfiles/config/delta.gitconfig
