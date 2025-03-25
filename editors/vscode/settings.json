@@ -35,7 +35,7 @@
     "window.title": "${rootName}",
     "window.openFoldersInNewWindow": "default",
     "window.dialogStyle": "custom",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 1.5,
 
     // ---- Files ----
     "files.autoSave": "afterDelay",
@@ -66,7 +66,7 @@
     "editor.occurrencesHighlight": "off",
     "editor.matchBrackets": "near",
     "editor.linkedEditing": true,
-    "editor.definitionLinkOpensInPeek": true,
+    //"editor.definitionLinkOpensInPeek": true,
     "editor.scrollBeyondLastLine": false,
     "editor.roundedSelection": false,
     "editor.folding": true,
@@ -77,7 +77,7 @@
     "editor.fontVariations": false,
     "editor.fontSize": 16,
     "editor.fontLigatures": "'cv03', 'cv06', 'cv07', 'cv12', 'cv16'",
-    "editor.fontWeight": 500,
+    "editor.fontWeight": 700,
     "editor.fontFamily": "'JetBrains Mono', Consolas, 'Courier New', monospace",
     "editor.lineHeight": 1.7,
     "editor.guides.indentation": false,
@@ -150,6 +150,7 @@
     "workbench.editorAssociations": {
         "*.md": "vscode.markdown.preview.editor",
     },
+    "workbench.navigationControl.enabled": false,
     "workbench.activityBar.iconClickBehavior": "focus", // to disable toggle explorer side
     "workbench.commandPalette.history": 10,
     "workbench.list.smoothScrolling": true,
@@ -181,8 +182,8 @@
             "errorLens.hintForeground": "#D473D4",
 
             // ---- Hide Focus Outlines ----
-            "focusBorder": "#121212",
-            "statusBar.focusBorder": "#121212",
+            "focusBorder": "#181818",
+            "statusBar.focusBorder": "#181818",
 
             // ---- Cursors ----
             "editorCursor.foreground": "#FFBF00",
@@ -193,14 +194,14 @@
             "editorLineNumber.foreground": "#3c3c3c",
 
             // ---- Gutter ----
-            "editorGutter.background": "#151515",
+            "editorGutter.background": "#181818",
 
             // ---- Line Highlight ----
             "editor.lineHighlightBackground": "#202020",
             "editor.lineHighlightBorder": "#303030",
 
             // ---- Background ----
-            "editor.background": "#121212",
+            "editor.background": "#181818",
 
             // ---- Selection / Editor----
             "editor.selectionHighlightBackground": "#05341e69",
@@ -208,53 +209,53 @@
             "editor.selectionBackground": "#08643969",
 
             // ---- Explorer|Extensions ----
-            "activityBar.border": "#121212",
-            "activityBar.background": "#121212",
+            "activityBar.border": "#181818",
+            "activityBar.background": "#181818",
             "activityBar.foreground": "#0078d4",
-            "activityBar.activeBackground": "#121212",
-            "activityBar.activeBorder": "#121212",
+            "activityBar.activeBackground": "#181818",
+            "activityBar.activeBorder": "#181818",
 
             // ---- Folder Tree ----
-            "sideBar.background": "#121212",
+            "sideBar.background": "#181818",
             "sideBar.foreground": "#bababa",
-            "sideBar.border": "#121212",
-            "sideBarSectionHeader.background": "#121212",
-            "sideBarSectionHeader.border": "#121212",
+            "sideBar.border": "#181818",
+            "sideBarSectionHeader.background": "#181818",
+            "sideBarSectionHeader.border": "#181818",
 
             // ---- List ----
             "list.hoverBackground": "#202020",
             //"list.activeSelectionIconForeground": "#ff0000",
             //"list.activeSelectionBackground": "#121212",
-            "list.inactiveSelectionBackground": "#121212",
+            "list.inactiveSelectionBackground": "#181818",
 
             // ---- Problems|DebugConsole|Terminal ----
-            "panel.background": "#121212",
-            "panelInput.border": "#121212",
+            "panel.background": "#181818",
+            "panelInput.border": "#181818",
 
             // ---- Buttom Bar ----
-            "statusBar.background": "#121212",
+            "statusBar.background": "#181818",
             "statusBar.foreground": "#bababa",
             "statusBar.debuggingBackground": "#990e2a",
-            "statusBarItem.remoteBackground": "#121212",
+            "statusBarItem.remoteBackground": "#181818",
             "statusBarItem.remoteForeground": "#bababa",
 
             // ---- Title Bar ----
-            "titleBar.activeBackground": "#121212",
+            "titleBar.activeBackground": "#181818",
             "titleBar.activeForeground": "#bababa",
-            "titleBar.border":"#121212",
+            "titleBar.border":"#181818",
 
             // ---- Comman Center ----
             "commandCenter.background": "#181818",
             "commandCenter.border": "#363636",
 
             // [Tabs]
-            "editorGroupHeader.tabsBackground": "#121212",
-            "editorGroupHeader.border": "#121212",
-            "tab.border": "#121212",
+            "editorGroupHeader.tabsBackground": "#181818",
+            "editorGroupHeader.border": "#181818",
+            "tab.border": "#181818",
             "tab.activeBorder": "#0088c8",
-            "tab.lastPinnedBorder": "#121212",
-            "tab.activeBorderTop": "#12121200",
-            "tab.activeModifiedBorder": "#12121200",
+            "tab.lastPinnedBorder": "#181818",
+            "tab.activeBorderTop": "#18181800",
+            "tab.activeModifiedBorder": "#18181800",
 
             // ---- Git ----
             "gitDecoration.stageModifiedResourceForeground": "#72A0C1",
@@ -263,11 +264,11 @@
             "gitDecoration.modifiedResourceForeground": "#72A0C1",
 
             // ---- Integrated Terminal ----
-            "terminal.background": "#121212",
+            "terminal.background": "#181818",
 
             // ---- Disable Shadows ----
-            "scrollbar.shadow": "#12121200",
-            "widget.shadow": "#12121200"
+            "scrollbar.shadow": "#18181800",
+            "widget.shadow": "#18181800"
         },
     },
 
@@ -280,7 +281,7 @@
     // ---- Output ----
     "[Log]": {
         "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', Consolas, 'Courier New', monospace",
-        "editor.fontSize": 14,
+        "editor.fontSize": 12,
         "editor.wordWrap": "on",
     },
 
@@ -299,7 +300,7 @@
     "terminal.integrated.cursorWidth": 3,
     "terminal.integrated.confirmOnExit": "hasChildProcesses",
     "terminal.integrated.lineHeight": 1.5,
-    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.fontSize": 13,
     "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font Mono', Consolas",
     "terminal.integrated.defaultProfile.linux": "bash",
     "terminal.integrated.allowChords": false,
@@ -457,7 +458,4 @@
     "zenMode.centerLayout": false,
     "zenMode.showTabs": "none",
     "zenMode.hideLineNumbers": false,
-
-    // ---- Copilot ----
-    "chat.commandCenter.enabled": true,
 }
