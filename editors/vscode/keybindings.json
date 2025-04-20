@@ -14,5 +14,10 @@
         "key": "ctrl+d",
         "command": "editor.action.deleteLines",
         "when": "editorTextFocus && !editorReadonly"
-    }
+    },
+    {
+        "key": "ctrl+alt+d",
+        "command": "github.copilot.completions.toggle",
+        "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused"
+    },
 ]
