@@ -16,10 +16,20 @@
     "search.sortOrder": "countDescending",
 
     // ---- Error Lens ----
-    "errorLens.fontSize": "14",
+    "errorLens.messageEnabled": true,
+    "errorLens.fontSize": "12",
     "errorLens.margin": "2ch",
-    "errorLens.messageTemplate": "$message ($source)",
+    "errorLens.padding": "1px 1ch",
+    "errorLens.messageTemplate": "$message [$source]",
     "errorLens.enabledDiagnosticLevels": [ "error", "warning", "info", "hint" ],
+    "errorLens.messageBackgroundMode": "line",
+    "errorLens.borderRadius": "1em",
+    "errorLens.border": [
+        "1px solid",
+        "1px dotted",
+        "1px dashed",
+        "1px solid #00000040",
+    ],
 
     // ---- Problems ----
     "problems.decorations.enabled": false,
@@ -81,7 +91,7 @@
     "editor.fontFamily": "'JetBrains Mono', Consolas, 'Courier New', monospace",
     "editor.lineHeight": 1.7,
     "editor.guides.indentation": false,
-    "editor.codeLens": false,
+    "editor.codeLens": true,
     "editor.codeLensFontFamily": "'JetBrains Mono', Consolas",
     "editor.columnSelection": false,
     "editor.smoothScrolling": true,
@@ -173,7 +183,6 @@
     "workbench.tree.enableStickyScroll": false,
     "workbench.startupEditor": "none",
     "workbench.iconTheme": "a-file-icon-vscode",
-    "workbench.productIconTheme": "icons-carbon",
     "workbench.view.alwaysShowHeaderActions": true,
     "workbench.layoutControl.enabled": false,
     "workbench.colorCustomizations": {
@@ -182,8 +191,8 @@
             "errorLens.hintForeground": "#D473D4",
 
             // ---- Hide Focus Outlines ----
-            "focusBorder": "#181818",
-            "statusBar.focusBorder": "#181818",
+            "focusBorder": "#151515",
+            "statusBar.focusBorder": "#151515",
 
             // ---- Cursors ----
             "editorCursor.foreground": "#FFBF00",
@@ -194,14 +203,15 @@
             "editorLineNumber.foreground": "#3c3c3c",
 
             // ---- Gutter ----
-            "editorGutter.background": "#181818",
+            "editorGutter.background": "#151515",
+
 
             // ---- Line Highlight ----
             "editor.lineHighlightBackground": "#202020",
             "editor.lineHighlightBorder": "#303030",
 
             // ---- Background ----
-            "editor.background": "#181818",
+            "editor.background": "#151515",
 
             // ---- Selection / Editor----
             "editor.selectionHighlightBackground": "#05341e69",
@@ -209,18 +219,18 @@
             "editor.selectionBackground": "#08643969",
 
             // ---- Explorer|Extensions ----
-            "activityBar.border": "#181818",
-            "activityBar.background": "#181818",
+            "activityBar.border": "#151515",
+            "activityBar.background": "#151515",
             "activityBar.foreground": "#0078d4",
-            "activityBar.activeBackground": "#181818",
-            "activityBar.activeBorder": "#181818",
+            "activityBar.activeBackground": "#151515",
+            "activityBar.activeBorder": "#151515",
 
             // ---- Folder Tree ----
-            "sideBar.background": "#181818",
+            "sideBar.background": "#151515",
             "sideBar.foreground": "#bababa",
-            "sideBar.border": "#181818",
-            "sideBarSectionHeader.background": "#181818",
-            "sideBarSectionHeader.border": "#181818",
+            "sideBar.border": "#151515",
+            "sideBarSectionHeader.background": "#151515",
+            "sideBarSectionHeader.border": "#151515",
 
             // ---- List ----
             "list.hoverBackground": "#202020",
@@ -229,33 +239,33 @@
             "list.inactiveSelectionBackground": "#181818",
 
             // ---- Problems|DebugConsole|Terminal ----
-            "panel.background": "#181818",
-            "panelInput.border": "#181818",
+            "panel.background": "#151515",
+            "panelInput.border": "#151515",
 
-            // ---- Buttom Bar ----
-            "statusBar.background": "#181818",
+            // ---- Bottom Bar ----
+            "statusBar.background": "#151515",
             "statusBar.foreground": "#bababa",
             "statusBar.debuggingBackground": "#990e2a",
             "statusBarItem.remoteBackground": "#181818",
             "statusBarItem.remoteForeground": "#bababa",
 
             // ---- Title Bar ----
-            "titleBar.activeBackground": "#181818",
+            "titleBar.activeBackground": "#151515",
             "titleBar.activeForeground": "#bababa",
-            "titleBar.border":"#181818",
+            "titleBar.border":"#151515",
 
             // ---- Comman Center ----
-            "commandCenter.background": "#181818",
+            "commandCenter.background": "#151515",
             "commandCenter.border": "#363636",
 
             // [Tabs]
-            "editorGroupHeader.tabsBackground": "#181818",
-            "editorGroupHeader.border": "#181818",
-            "tab.border": "#181818",
+            "editorGroupHeader.tabsBackground": "#151515",
+            "editorGroupHeader.border": "#151515",
+            "tab.border": "#151515",
             "tab.activeBorder": "#0088c8",
-            "tab.lastPinnedBorder": "#181818",
-            "tab.activeBorderTop": "#18181800",
-            "tab.activeModifiedBorder": "#18181800",
+            "tab.lastPinnedBorder": "#151515",
+            "tab.activeBorderTop": "#15151500",
+            "tab.activeModifiedBorder": "#15151500",
 
             // ---- Git ----
             "gitDecoration.stageModifiedResourceForeground": "#72A0C1",
@@ -264,11 +274,11 @@
             "gitDecoration.modifiedResourceForeground": "#72A0C1",
 
             // ---- Integrated Terminal ----
-            "terminal.background": "#181818",
+            "terminal.background": "#151515",
 
             // ---- Disable Shadows ----
-            "scrollbar.shadow": "#18181800",
-            "widget.shadow": "#18181800"
+            "scrollbar.shadow": "#15151500",
+            "widget.shadow": "#15151500"
         },
     },
 
@@ -289,6 +299,7 @@
     "terminal.explorerKind": "external",
     "terminal.external.windowsExec": "wt",
     "terminal.sourceControlRepositoriesKind": "external",
+    "terminal.integrated.stickyScroll.enabled": false,
     "terminal.integrated.suggest.enabled": true,
     "terminal.integrated.shellIntegration.decorationsEnabled": "never",
     "terminal.integrated.tabs.focusMode": "singleClick",
@@ -388,10 +399,10 @@
     "clangd.checkUpdates": false,
     "clangd.path": "${env:programfiles}\\LLVM\\bin\\clangd.exe",
 
-    // ---- Intellicode ----
-    "vsintellicode.java.completionsEnabled": false,
-    "vsintellicode.typescript.completionsEnabled": false,
-    "vsintellicode.sql.completionsEnabled": false,
+    // ---- PHP ----
+    "[php]": {
+        "editor.defaultFormatter": "laravel.vscode-laravel"
+    },
 
     // ---- SCM ----
     "scm.alwaysShowRepositories": false,
@@ -458,4 +469,14 @@
     "zenMode.centerLayout": false,
     "zenMode.showTabs": "none",
     "zenMode.hideLineNumbers": false,
+
+    // ---- AI ----
+    "chat.disableAIFeatures": true,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "cpp": true
+    },
 }
