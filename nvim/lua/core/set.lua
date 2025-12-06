@@ -46,6 +46,7 @@ opt.laststatus = 3              -- Global status line
 opt.autowrite = true
 opt.virtualedit = "block"       -- Allow currsor to move where there is no text in visual block mode
 opt.mouse = "a"                 -- Enable mouse mode
+opt.completeopt:append({ "noselect", "menuone" })
 
 -- filetypes (default filetypes: <Neovim_Install_Dir>/share/nvim/runtime/lua/vim/filetype.lua)
 vim.filetype.add({
@@ -69,4 +70,5 @@ opt.undofile = true
 opt.swapfile = false
 opt.backup = false
 opt.updatetime = 200
+opt.timeoutlen = 200
 opt.confirm = true

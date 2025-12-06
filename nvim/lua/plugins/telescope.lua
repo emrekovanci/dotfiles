@@ -34,6 +34,7 @@ return {
     },
     keys = {
         -- general
+        { "<leader>t",  function() require("telescope.builtin").builtin() end, desc = "Telescope" },
         { "<leader>ff", function() require("telescope.builtin").find_files() end, desc = "Find Files" },
         { "<leader>gf", function() require("telescope.builtin").git_files() end, desc = "Git Files" },
         { "<leader>lg", function() require("telescope.builtin").live_grep() end, desc = "Live Grep" },
@@ -47,5 +48,6 @@ return {
 
         -- lsp
         { "<leader>wd", function() require("telescope.builtin").diagnostics() end, desc = "Workspace Diagnostics" },
+        { "<leader>ds", function() require("telescope.builtin").lsp_document_symbols() end, desc = "Document Symbols" }
     },
 }
