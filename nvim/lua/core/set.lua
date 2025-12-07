@@ -7,47 +7,51 @@ g["loaded_python3_provider"] = 0
 g["loaded_perl_provider"] = 0
 g["loaded_ruby_provider"] = 0
 
--- line number
 opt.number = true              -- Print line number
 opt.relativenumber = true      -- Relative line numbers
+opt.cursorline = true          -- Highlight current line
+opt.wrap = false               -- Disable line wrap
+opt.scrolloff = 10             -- Keep 10 lines above/below cursor
+opt.sidescrolloff = 8          -- Keep 8 columns left/right of cursor
 
--- tabs, spaces & indents
+-- indentation
 opt.shiftwidth = 4              -- Size of an indent
 opt.tabstop = 4                 -- Number of spaces tabs count for
-opt.softtabstop = 4
+opt.softtabstop = 4             -- Soft tab stop
 opt.expandtab = true            -- Use spaces instead of tabs
-opt.autoindent = true
+opt.autoindent = true           -- Copy indent from current line
+opt.smartindent = true          -- Smart auto-indenting
+opt.shiftround = true           -- Round indent
+
+-- search
+opt.ignorecase = true           -- Ignore case
+opt.smartcase = true            -- Don't ignore case with capitals
+opt.incsearch = true            -- Show matches as you type
+opt.hlsearch = false            -- Don't highlight search results
 
 -- invisible characters
 opt.list = true                 -- Show some invisible characters (tabs...
 opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
--- search
-opt.ignorecase = true           -- Ignore case
-opt.smartcase = true            -- Don't ignore case with capitals
-
--- split windows
+-- split
 opt.splitright = true           -- Put new windows right of current
 opt.splitbelow = true           -- Put new windows below current
+opt.splitkeep = "screen"
 
--- appearance
-opt.pumheight = 12              -- Make popup menu smaller
-opt.guicursor = ""
-opt.termguicolors = true        -- True color support
-opt.background = "dark"
+-- visual
+opt.termguicolors = true        -- Enable 24-bit colors
 opt.signcolumn = "yes"          -- Always show the signcolumn, otherwise it would shift the text each time
-opt.wrap = false                -- Disable line wrap
-opt.cursorline = true           -- Enable highlighting of the current line
-opt.scrolloff = 10              -- Lines of context
+opt.pumheight = 12              -- Make popup menu smaller
+opt.background = "dark"
 opt.showmode = false            -- Lualine shows mode, so disable default
 opt.laststatus = 3              -- Global status line
 opt.winborder = "rounded"
+opt.confirm = true
 
 -- workflow
-opt.autowrite = true
 opt.virtualedit = "block"       -- Allow currsor to move where there is no text in visual block mode
 opt.mouse = "a"                 -- Enable mouse mode
-opt.completeopt:append({ "noselect", "menuone" })
+opt.completeopt:append({ "noselect", "menuone", "popup" })
 
 -- filetypes (default filetypes: <Neovim_Install_Dir>/share/nvim/runtime/lua/vim/filetype.lua)
 vim.filetype.add({
@@ -65,11 +69,13 @@ vim.filetype.add({
     }
 })
 
--- others
-opt.history = 1000
-opt.undofile = true
-opt.swapfile = false
-opt.backup = false
-opt.updatetime = 200
-opt.timeoutlen = 300
-opt.confirm = true
+-- file handling
+opt.backup = false       -- Don't create backup files
+opt.writebackup = false  -- Don't create backup before writing
+opt.swapfile = false     -- Don't create swap files
+opt.undofile = true      -- Persistent undo
+opt.updatetime = 200     -- Faster completion
+opt.timeoutlen = 300     -- Lower than default (1000) to quickly trigger which-key
+opt.ttimeoutlen = 0      -- Key code timeout
+opt.autoread = true      -- Auto reload files changed outside vim
+opt.autowrite = true     -- Auto save
