@@ -19,6 +19,9 @@ return {
                 hl.EndOfBuffer = {
                     fg = colors.cyan,
                 }
+                hl.WinSeparator = {
+                    fg = colors.terminal_black,
+                }
             end,
         })
 

@@ -41,6 +41,7 @@ opt.cursorline = true           -- Enable highlighting of the current line
 opt.scrolloff = 10              -- Lines of context
 opt.showmode = false            -- Lualine shows mode, so disable default
 opt.laststatus = 3              -- Global status line
+opt.winborder = "rounded"
 
 -- workflow
 opt.autowrite = true
