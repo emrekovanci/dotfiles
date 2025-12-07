@@ -19,9 +19,7 @@ opt.shiftwidth = 4              -- Size of an indent
 opt.tabstop = 4                 -- Number of spaces tabs count for
 opt.softtabstop = 4             -- Soft tab stop
 opt.expandtab = true            -- Use spaces instead of tabs
-opt.autoindent = true           -- Copy indent from current line
 opt.smartindent = true          -- Smart auto-indenting
-opt.shiftround = true           -- Round indent
 
 -- search
 opt.ignorecase = true           -- Ignore case
