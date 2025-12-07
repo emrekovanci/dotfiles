@@ -57,3 +57,8 @@ map("n", "<leader>Y", [["+Y]])          -- yank the current line to the system c
 
 -- search/replace
 map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- ══════
+-- OTHERS
+-- ══════
+map("n", "<leader>la", "<cmd>Lazy<CR>", { desc = "Open Lazy.nvim menu" })
