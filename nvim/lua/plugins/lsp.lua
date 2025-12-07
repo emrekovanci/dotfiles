@@ -14,6 +14,7 @@ return {
                         [vim.diagnostic.severity.HINT] = "󰌶 ",
                     },
                 },
+                float = { source = "always", header = "" },
             },
         }
 
