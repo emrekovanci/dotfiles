@@ -20,7 +20,7 @@ return {
         -- manually install required languages on windows
         local ensure_installed_list = vim.iter({
             { "bash", "json", "jsonc", "markdown", "markdown_inline", "regex", "toml", "vimdoc", "xml", "yaml" },
-            { "lua", "c", "cpp", "cmake", "c_sharp", "rust", "dockerfile", "glsl" },
+            { "lua", "c", "cpp", "cmake", "c_sharp", "rust", "dockerfile", "glsl", "hlsl" },
             { "php", "css", "html", "javascript" },
         }):flatten():totable()
 

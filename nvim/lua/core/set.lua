@@ -70,5 +70,5 @@ opt.undofile = true
 opt.swapfile = false
 opt.backup = false
 opt.updatetime = 200
-opt.timeoutlen = 200
+opt.timeoutlen = 300
 opt.confirm = true
