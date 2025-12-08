@@ -23,7 +23,8 @@ return {
                     fg = colors.terminal_black,
                 }
                 hl.Comment = {
-                    fg = colors.green
+                    fg = colors.green,
+                    italic = true,
                 }
             end,
         })
