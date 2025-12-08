@@ -8,7 +8,7 @@ return {
             transparent = true,
             styles = {
                 comments = { italic = true },
-                keywords = { italic = true },
+                keywords = { italic = false },
                 sidebars = "transparent",
                 floats = "transparent",
             },
