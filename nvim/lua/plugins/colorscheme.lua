@@ -22,6 +22,9 @@ return {
                 hl.WinSeparator = {
                     fg = colors.terminal_black,
                 }
+                hl.Comment = {
+                    fg = colors.green
+                }
             end,
         })
 
