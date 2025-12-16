@@ -31,7 +31,7 @@ return {
                 },
                 sections = {
                     lualine_a = { "mode" },
-                    lualine_b = { { "branch", icon = "", color = { bg = "none" }, padding = { left = 1, right = 1 } } },
+                    lualine_b = { { "branch", icon = "", padding = { left = 1, right = 1 }, color = { bg = "#0a3a3a" } } },
                     lualine_c = {
                         {
                             "filename",
@@ -46,7 +46,7 @@ return {
                         { "fileformat", icons_enabled = true, symbols = { unix = "LF", dos = "CRLF", mac = "CR" } },
                         { "filetype", icons_enabled = false },
                     },
-                    lualine_y = { { "location", color = { bg = "none" } }, { "progress", color = { bg = "none" } } },
+                    lualine_y = { { "location" }, { "progress", color = { bg = "#0a3a3a" } } },
                     lualine_z = { },
                 },
                 extensions = { "lazy" },
