@@ -43,6 +43,7 @@ opt.pumheight = 12              -- Make popup menu smaller
 opt.background = "dark"
 opt.showmode = false            -- Lualine shows mode, so disable default
 opt.laststatus = 3              -- Global status line
+opt.statuscolumn = "%s%r %l "
 opt.winborder = "rounded"
 opt.confirm = true
 
