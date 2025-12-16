@@ -31,13 +31,13 @@ return {
                 },
                 sections = {
                     lualine_a = { "mode" },
-                    lualine_b = { { "branch", icon = "", color = { bg = "none" }, padding = { left = 1, right = 1 } } },
+                    lualine_b = { { "branch", icon = "", color = { bg = "none" }, padding = { left = 1, right = 1 } } },
                     lualine_c = {
                         {
                             "filename",
                             file_status = true,
                             newfile_status = true,
-                            symbols = { modified = "[]", readonly = "[󰌾]" },
+                            symbols = { modified = "[$]", readonly = "[󰌾]" },
                             path = 1,
                         },
                     },
