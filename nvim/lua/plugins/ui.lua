@@ -58,33 +58,6 @@ return {
 
     {
         "stevearc/oil.nvim",
-        opts = {
-            view_options = {
-                is_hidden_file = function(name, buffr)
-                    local ignored_ext = {
-                        ".log",
-                        ".tmp",
-                        ".bak",
-                        ".swp",
-                        ".meta",
-                    }
-
-                    -- hidden files
-                    if name:match("^%.") then
-                        return true
-                    end
-
-                    -- extension ignore
-                    for _, ext in ipairs(ignored_ext) do
-                        if name:sub(-#ext) == ext then
-                            return true
-                        end
-                    end
-
-                    return false
-                end,
-            },
-        },
         dependencies = { "nvim-tree/nvim-web-devicons" },
         -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
         lazy = false,

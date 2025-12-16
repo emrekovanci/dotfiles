@@ -43,7 +43,6 @@ opt.pumheight = 12              -- Make popup menu smaller
 opt.background = "dark"
 opt.showmode = false            -- Lualine shows mode, so disable default
 opt.laststatus = 3              -- Global status line
-opt.statuscolumn = "%s%r %l "
 opt.winborder = "rounded"
 opt.confirm = true
 
@@ -69,6 +68,7 @@ vim.filetype.add({
 })
 
 -- file handling
+opt.shadafile = "NONE"
 opt.backup = false       -- Don't create backup files
 opt.writebackup = false  -- Don't create backup before writing
 opt.swapfile = false     -- Don't create swap files
