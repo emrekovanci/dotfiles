@@ -26,3 +26,19 @@ vim.api.nvim_create_autocmd("TextYankPost", {
         vim.highlight.on_yank { higroup = "IncSearch", timeout = 250 }
     end,
 })
+
+-- Activate treesitter
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "c", "cpp", "cmake" },
+    callback = function()
+        -- syntax highlighting, provided by Neovim
+        vim.treesitter.start()
+
+        -- folds, provided by Neovim
+        vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+        vim.wo.foldmethod = "expr"
+
+        -- indentation, provided by nvim-treesitter
+        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end,
+})
