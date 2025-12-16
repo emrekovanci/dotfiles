@@ -47,7 +47,7 @@ return {
         { "<leader>Ws", function() require("telescope.builtin").grep_string({ search = vim.fn.expand("<cWORD>") }) end },
 
         -- lsp
-        { "<leader>wd", function() require("telescope.builtin").diagnostics() end, desc = "Workspace Diagnostics" },
-        { "<leader>ds", function() require("telescope.builtin").lsp_document_symbols() end, desc = "Document Symbols" }
+        -- { "<leader>wd", function() require("telescope.builtin").diagnostics() end, desc = "Workspace Diagnostics" },
+        -- { "<leader>ds", function() require("telescope.builtin").lsp_document_symbols() end, desc = "Document Symbols" },
     },
 }
