@@ -1,18 +1,20 @@
 return {
-    "nvim-mini/mini.base16",
-    lazy = false,
-    priority = 1000,
-    config = function()
-        vim.api.nvim_create_autocmd("ColorScheme", {
-            pattern = "minicyan",
-            callback = function()
-                local set_hl = vim.api.nvim_set_hl
-                set_hl(0, "LineNrAbove", { bg = "NONE" })
-                set_hl(0, "LineNrBelow", { bg = "NONE" })
-                set_hl(0, "StatusLine", { bg = "#0a2a2a" })
-            end,
-        })
+  "wnkz/monoglow.nvim",
+  lazy = false,
+  priority = 1000,
+  config = function()
+      require("monoglow").setup({
+          on_colors = function(colors)
+              colors.glow = "#d29922"
+          end,
 
-        vim.cmd("colorscheme minicyan")
-    end,
+          on_highlights = function(hl, c)
+              hl.FloatBorder = { fg = c.glow }
+              hl.TelescopePromptBorder = { fg = c.glow }
+              hl.TelescopeBorder = { fg = c.glow }
+          end
+      })
+
+    vim.cmd("colorscheme monoglow-lack")
+  end,
 }

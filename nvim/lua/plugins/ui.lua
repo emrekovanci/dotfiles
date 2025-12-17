@@ -24,6 +24,13 @@ return {
 
             local opts = {
                 options = {
+                    theme  = {
+                        normal = {
+                            b = { bg = "#753e04", fg = "#ffffff" },
+                            c = { bg = "#753e04", fg = "#ffffff" },
+                            a = { bg = "#753e04", fg = "#ffffff" },
+                        }
+                    },
                     component_separators = { left = "", right = "" },
                     section_separators = { left = "", right = "" },
                     globalstatus = true,
@@ -31,7 +38,7 @@ return {
                 },
                 sections = {
                     lualine_a = { "mode" },
-                    lualine_b = { { "branch", icon = "", padding = { left = 1, right = 1 }, color = { bg = "#0a3a3a" } } },
+                    lualine_b = { { "branch", icon = "", padding = { left = 1, right = 1 } } },
                     lualine_c = {
                         {
                             "filename",
@@ -46,10 +53,10 @@ return {
                         { "fileformat", icons_enabled = true, symbols = { unix = "LF", dos = "CRLF", mac = "CR" } },
                         { "filetype", icons_enabled = false },
                     },
-                    lualine_y = { { "location" }, { "progress", color = { bg = "#0a3a3a" } } },
+                    lualine_y = { { "location" }, { "progress" } },
                     lualine_z = { },
                 },
-                extensions = { "lazy" },
+                extensions = { },
             }
 
             return opts
