@@ -38,13 +38,13 @@ return {
                 },
                 sections = {
                     lualine_a = { "mode" },
-                    lualine_b = { { "branch", icon = "", padding = { left = 1, right = 1 } } },
+                    lualine_b = { { "branch", icon = "◇", padding = { left = 1, right = 1 } } },
                     lualine_c = {
                         {
                             "filename",
                             file_status = true,
                             newfile_status = true,
-                            symbols = { modified = "[$]", readonly = "[󰌾]" },
+                            symbols = { modified = "[•]", readonly = "[󰌾]" },
                             path = 1,
                         },
                     },
@@ -56,7 +56,7 @@ return {
                     lualine_y = { { "location" }, { "progress" } },
                     lualine_z = { },
                 },
-                extensions = { },
+                extensions = { "lazy", "oil" },
             }
 
             return opts
