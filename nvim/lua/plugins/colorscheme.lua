@@ -12,6 +12,9 @@ return {
               hl.FloatBorder = { fg = c.glow }
               hl.TelescopePromptBorder = { fg = c.glow }
               hl.TelescopeBorder = { fg = c.glow }
+
+              hl.Boolean = { fg = c.glow }
+              hl.String = { fg = c.glow }
           end
       })
 
