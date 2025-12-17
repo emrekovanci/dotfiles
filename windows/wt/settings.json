@@ -1,36 +1,32 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
+    "actions":
     [
         {
-            "command": 
+            "command":
             {
                 "action": "copy",
                 "singleLine": false
             },
-            "id": "User.copy.644BA8F2",
-            "keys": "ctrl+shift+c"
+            "id": "User.copy.644BA8F2"
         },
         {
             "command": "paste",
-            "id": "User.paste",
-            "keys": "ctrl+shift+v"
+            "id": "User.paste"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "splitPane",
                 "split": "auto",
                 "splitMode": "duplicate"
             },
-            "id": "User.splitPane.A6751878",
-            "keys": "alt+shift+d"
+            "id": "User.splitPane.A6751878"
         },
         {
             "command": "toggleFocusMode",
-            "id": "User.toggleFocusMode",
-            "keys": "ctrl+f12"
+            "id": "User.toggleFocusMode"
         }
     ],
     "alwaysShowNotificationIcon": false,
@@ -39,46 +35,74 @@
     "copyOnSelect": false,
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
     "disableAnimations": false,
-    "initialCols": 140,
-    "newTabMenu": 
+    "initialCols": 150,
+    "initialRows": 40,
+    "keybindings":
+    [
+        {
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+shift+c"
+        },
+        {
+            "id": "User.paste",
+            "keys": "ctrl+shift+v"
+        },
+        {
+            "id": "User.splitPane.A6751878",
+            "keys": "alt+shift+d"
+        },
+        {
+            "id": "User.toggleFocusMode",
+            "keys": "ctrl+f12"
+        }
+    ],
+    "newTabMenu":
     [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": 
+    "profiles":
     {
-        "defaults": 
+        "defaults":
         {
             "antialiasingMode": "cleartype",
             "bellStyle": "taskbar",
             "closeOnExit": "automatic",
-            "colorScheme": "One Half Dark (modified)",
+            "colorScheme": "kovanci",
             "cursorShape": "filledBox",
-            "font": 
+            "font":
             {
-                "face": "JetBrainsMono Nerd Font Mono",
-                "features": 
+                "face": "Maple Mono NF",
+                "features":
                 {
+                    "calt": 0,
+                    "cv01": 1,
+                    "cv02": 1,
                     "cv03": 1,
-                    "cv06": 1,
+                    "cv06": 0,
                     "cv07": 1,
                     "cv12": 1,
                     "cv16": 1
                 },
-                "size": 15,
                 "weight": "semi-bold"
             },
-            "scrollbarState": "hidden",
-            "useAcrylic": true
+            "scrollbarState": "hidden"
         },
-        "list": 
+        "list":
         [
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoLogo",
+                "experimental.retroTerminalEffect": false,
+                "font":
+                {
+                    "face": "Maple Mono NF CN",
+                    "weight": "semi-bold"
+                },
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
-                "name": "Windows PowerShell"
+                "name": "Windows PowerShell",
+                "scrollbarState": "hidden"
             },
             {
                 "commandline": "%SystemRoot%\\System32\\cmd.exe /k",
@@ -100,41 +124,35 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "guid": "{162866ef-308d-52d8-b7da-5bc642f2be67}",
-                "hidden": false,
-                "name": "Developer Command Prompt for VS 2022",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{c6109b22-507f-59cc-9c74-d165976577c2}",
-                "hidden": false,
-                "name": "Developer PowerShell for VS 2022",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
-                "hidden": true,
-                "name": "Visual Studio Debug Console",
-                "source": "VSDebugConsole"
-            },
-            {
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                "hidden": false,
-                "name": "Ubuntu",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
                 "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
                 "hidden": false,
                 "name": "Git Bash",
                 "source": "Git"
+            },
+            {
+                "guid": "{267f8561-4e3e-5245-a575-8e0849401ca7}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "Microsoft.WSL"
+            },
+            {
+                "guid": "{3e7a8c12-458a-5723-8d5e-fabbfe9ce8d3}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 18",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{081fda77-ecca-5864-ac69-dbcf1ac5fa9e}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 18",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
-    "schemes": 
+    "schemes":
     [
         {
-            "background": "#121212",
+            "background": "#0F0F0F",
             "black": "#282C34",
             "blue": "#61AFEF",
             "brightBlack": "#5A6374",
@@ -145,11 +163,11 @@
             "brightRed": "#E06C75",
             "brightWhite": "#DCDFE4",
             "brightYellow": "#E5C07B",
-            "cursorColor": "#FFBF00",
+            "cursorColor": "#D29922",
             "cyan": "#56B6C2",
             "foreground": "#DCDFE4",
             "green": "#98C379",
-            "name": "One Half Dark (modified)",
+            "name": "kovanci",
             "purple": "#C678DD",
             "red": "#E06C75",
             "selectionBackground": "#FFFFFF",
