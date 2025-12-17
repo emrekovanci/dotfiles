@@ -15,6 +15,7 @@ return {
 
               hl.Boolean = { fg = c.glow }
               hl.String = { fg = c.glow }
+              hl["@keyword"] = { fg = c.glow }
           end
       })
 
