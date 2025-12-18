@@ -45,6 +45,7 @@ opt.showmode = false            -- Lualine shows mode, so disable default
 opt.laststatus = 3              -- Global status line
 opt.winborder = "shadow"
 opt.confirm = true
+opt.foldlevel = 99
 
 -- workflow
 opt.virtualedit = "block"       -- Allow currsor to move where there is no text in visual block mode
