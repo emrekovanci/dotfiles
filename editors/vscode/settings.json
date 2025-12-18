@@ -118,7 +118,7 @@
             "textMateRules": [
                 {
                     "scope": [
-                        "string",
+                        "string.quoted",
                         "punctuation.definition.string.begin",
                         "punctuation.definition.string.end",
                         "punctuation.separator.pointer-access",
