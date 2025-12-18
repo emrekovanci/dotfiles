@@ -67,4 +67,8 @@ map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 -- ══════
 -- OTHERS
 -- ══════
+
 map("n", "<leader>la", "<cmd>Lazy<CR>", { desc = "Open Lazy.nvim menu" })
+
+-- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua#L49-L53
+map({ "i", "n", "s" }, "<esc>", function() vim.cmd("noh") return "<esc>" end, { expr = true, desc = "Escape and Clear hlsearch" })

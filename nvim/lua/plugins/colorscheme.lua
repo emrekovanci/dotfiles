@@ -15,6 +15,7 @@ return {
 
               hl.Boolean = { fg = c.glow }
               hl.String = { fg = c.glow }
+              hl.Search = { fg = "#753e04" }
               hl["@keyword"] = { fg = c.glow }
           end
       })
