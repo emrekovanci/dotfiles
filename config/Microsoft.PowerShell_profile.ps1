@@ -10,9 +10,9 @@ Set-Alias -Name vim -Value nvim
 Set-Alias -Name grep -Value rg
 
 # env variables
+$ENV:XDG_CONFIG_HOME = "$HOME\Documents\GitHub\dotfiles\"
 $ENV:STARSHIP_CONFIG = "$HOME\Documents\GitHub\dotfiles\config\starship.toml"
 $ENV:RIPGREP_CONFIG_PATH = "$HOME\Documents\GitHub\dotfiles\config\.ripgreprc"
-$ENV:XDG_CONFIG_HOME = "$HOME\Documents\GitHub\dotfiles\"
 
 # https://github.com/starship/starship
 Invoke-Expression (&starship init powershell)
@@ -50,4 +50,16 @@ function sview()
     } else {
         Set-PSReadLineOption -PredictionViewStyle InlineView
     }
+}
+
+# https://learn.microsoft.com/en-us/windows/terminal/tutorials/new-tab-same-directory
+function Invoke-Starship-PreCommand
+{
+    $loc = $executionContext.SessionState.Path.CurrentLocation;
+    $prompt = "$([char]27)]9;12$([char]7)"
+    if ($loc.Provider.Name -eq "FileSystem")
+    {
+        $prompt += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
+    }
+    $host.ui.Write($prompt)
 }
