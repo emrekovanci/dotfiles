@@ -7,9 +7,10 @@ g["loaded_python3_provider"] = 0
 g["loaded_perl_provider"] = 0
 g["loaded_ruby_provider"] = 0
 
+vim.cmd("colorscheme murphy")
 opt.number = true              -- Print line number
 opt.relativenumber = true      -- Relative line numbers
-opt.cursorline = true          -- Highlight current line
+opt.cursorline = false         -- Don't highlight current line
 opt.wrap = false               -- Disable line wrap
 opt.scrolloff = 10             -- Keep 10 lines above/below cursor
 opt.sidescrolloff = 8          -- Keep 8 columns left/right of cursor
@@ -46,6 +47,14 @@ opt.laststatus = 3              -- Global status line
 opt.winborder = "shadow"
 opt.confirm = true
 opt.foldlevel = 99
+opt.fillchars = {
+    foldopen = "",
+    foldclose = "",
+    fold = " ",
+    foldsep = " ",
+    diff = "╱",
+    eob = " ",
+}
 
 -- workflow
 opt.virtualedit = "block"       -- Allow currsor to move where there is no text in visual block mode

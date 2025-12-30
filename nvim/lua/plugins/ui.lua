@@ -22,13 +22,33 @@ return {
             local lualine_require = require("lualine_require")
             lualine_require.require = require
 
+            local mode_map = {
+                ["NORMAL"]    = "N",
+                ["O-PENDING"] = "N?",
+                ["INSERT"]    = "I",
+                ["VISUAL"]    = "V",
+                ["V-BLOCK"]   = "VB",
+                ["V-LINE"]    = "VL",
+                ["V-REPLACE"] = "VR",
+                ["REPLACE"]   = "R",
+                ["COMMAND"]   = "!",
+                ["SHELL"]     = "SH",
+                ["TERMINAL"]  = "T",
+                ["EX"]        = "X",
+                ["S-BLOCK"]   = "SB",
+                ["S-LINE"]    = "SL",
+                ["SELECT"]    = "S",
+                ["CONFIRM"]   = "Y?",
+                ["MORE"]      = "M",
+            }
+
             local opts = {
                 options = {
                     theme  = {
                         normal = {
-                            b = { bg = "#753e04", fg = "#ffffff" },
-                            c = { bg = "#753e04", fg = "#ffffff" },
-                            a = { bg = "#753e04", fg = "#ffffff" },
+                           -- b = { bg = "#753e04", fg = "#ffffff" },
+                           -- c = { bg = "#753e04", fg = "#ffffff" },
+                           -- a = { bg = "#753e04", fg = "#ffffff" },
                         }
                     },
                     component_separators = { left = "", right = "" },
@@ -37,8 +57,8 @@ return {
                     disabled_filetypes = { statusline = { "dashboard" } },
                 },
                 sections = {
-                    lualine_a = { "mode" },
-                    lualine_b = { { "branch", icon = "◇", padding = { left = 1, right = 1 } } },
+                    lualine_a = { { "mode", padding = 0, fmt = function(s) return "[" .. mode_map[s] .. "]" or s end } },
+                    lualine_b = { },
                     lualine_c = {
                         {
                             "filename",
@@ -49,6 +69,7 @@ return {
                         },
                     },
                     lualine_x = {
+                        { "branch", icons_enabled = false },
                         { "encoding" },
                         { "fileformat", icons_enabled = true, symbols = { unix = "LF", dos = "CRLF", mac = "CR" } },
                         { "filetype", icons_enabled = false },
