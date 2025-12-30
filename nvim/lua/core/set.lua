@@ -7,7 +7,6 @@ g["loaded_python3_provider"] = 0
 g["loaded_perl_provider"] = 0
 g["loaded_ruby_provider"] = 0
 
-vim.cmd("colorscheme murphy")
 opt.number = true              -- Print line number
 opt.relativenumber = true      -- Relative line numbers
 opt.cursorline = false         -- Don't highlight current line
@@ -44,7 +43,8 @@ opt.pumheight = 12              -- Make popup menu smaller
 opt.background = "dark"
 opt.showmode = false            -- Lualine shows mode, so disable default
 opt.laststatus = 3              -- Global status line
-opt.winborder = "shadow"
+opt.winborder = "rounded"
+opt.pumborder = "rounded"
 opt.confirm = true
 opt.foldlevel = 99
 opt.fillchars = {
@@ -64,10 +64,6 @@ opt.completeopt:append({ "noselect", "menuone", "popup" })
 -- filetypes (default filetypes: <Neovim_Install_Dir>/share/nvim/runtime/lua/vim/filetype.lua)
 vim.filetype.add({
     extension = {
-        ["code-workspace"]   = "jsonc",   -- VSCode
-        ["sublime-keymap"]   = "jsonc",   -- Sublime Text
-        ["sublime-theme"]    = "jsonc",   -- Sublime Text
-        ["sublime-settings"] = "jsonc",   -- Sublime Text
         uproject             = "json",    -- Unreal Engine
         uplugin              = "json",    -- Unreal Engine
         codespellrc          = "dosini",  -- C++ Codespell
