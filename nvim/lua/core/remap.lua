@@ -68,6 +68,7 @@ map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 -- OTHERS
 -- ══════
 
+map("t", "<ESC>", "<C-\\><C-n>")
 map("n", "<leader>la", "<cmd>Lazy<CR>", { desc = "Open Lazy.nvim menu" })
 
 -- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua#L49-L53
