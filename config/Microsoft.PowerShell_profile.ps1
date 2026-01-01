@@ -5,6 +5,11 @@
 # Default: New-Item -Path ~\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 -ItemType SymbolicLink -Value ~\Documents\GitHub\dotfiles\config\Microsoft.PowerShell_profile.ps1
 # PWSH 7+: New-Item -Path ~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 -ItemType SymbolicLink -Value ~\Documents\GitHub\dotfiles\config\Microsoft.PowerShell_Profile.ps1
 
+if ($PSVersionTable.PSVersion.Major -ge 7)
+{
+    $PSStyle.FileInfo.Directory = $PSStyle.Background.FromRgb(20, 70, 50) + $PSStyle.Foreground.White
+}
+
 # aliases
 Set-Alias -Name vi -Value nvim
 Set-Alias -Name vim -Value nvim
