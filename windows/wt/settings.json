@@ -1,39 +1,11 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions":
-    [
-        {
-            "command":
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "id": "User.copy.644BA8F2"
-        },
-        {
-            "command": "paste",
-            "id": "User.paste"
-        },
-        {
-            "command":
-            {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "id": "User.splitPane.A6751878"
-        },
-        {
-            "command": "toggleFocusMode",
-            "id": "User.toggleFocusMode"
-        }
-    ],
     "alwaysShowNotificationIcon": false,
     "centerOnLaunch": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "defaultProfile": "{8da5f3f5-632f-4b5d-a72a-2f8e6c5cc726}",
     "disableAnimations": false,
     "initialCols": 150,
     "initialRows": 40,
@@ -52,8 +24,16 @@
             "keys": "alt+shift+d"
         },
         {
+            "id": "Terminal.ResizePaneDown",
+            "keys": "ctrl+down"
+        },
+        {
             "id": "User.toggleFocusMode",
             "keys": "ctrl+f12"
+        },
+        {
+            "id": "Terminal.ResizePaneUp",
+            "keys": "ctrl+up"
         }
     ],
     "newTabMenu":
@@ -73,7 +53,7 @@
             "cursorShape": "filledBox",
             "font":
             {
-                "face": "Maple Mono NF",
+                "face": "Lilex",
                 "features":
                 {
                     "calt": 0,
@@ -85,20 +65,24 @@
                     "cv12": 1,
                     "cv16": 1
                 },
-                "weight": "semi-bold"
+                "weight": "normal"
             },
             "scrollbarState": "hidden"
         },
         "list":
         [
             {
+                "commandline": "%PROGRAMFILES%/PowerShell/7/pwsh.exe -NoLogo",
+                "guid": "{8da5f3f5-632f-4b5d-a72a-2f8e6c5cc726}",
+                "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/pwsh.png",
+                "name": "pwsh",
+                "padding": "4,8,8,4",
+                "startingDirectory": "%USERPROFILE%"
+            },
+            {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoLogo",
                 "experimental.retroTerminalEffect": false,
-                "font":
-                {
-                    "face": "Maple Mono NF CN",
-                    "weight": "semi-bold"
-                },
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell",
@@ -152,7 +136,7 @@
     "schemes":
     [
         {
-            "background": "#0F0F0F",
+            "background": "#001E25",
             "black": "#282C34",
             "blue": "#61AFEF",
             "brightBlack": "#5A6374",
@@ -175,6 +159,7 @@
             "yellow": "#E5C07B"
         }
     ],
+    "rendering.graphicsAPI": "direct2d",
     "tabSwitcherMode": "mru",
     "themes": [],
     "useAcrylicInTabRow": false

@@ -15,7 +15,3 @@
 # others
 --path-separator=/
 --trim
-
-# unreal
---type-add
-uegen:*.{gen.cpp}*

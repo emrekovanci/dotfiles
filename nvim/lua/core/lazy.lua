@@ -27,7 +27,6 @@ require("lazy").setup({
         rtp = {
             disabled_plugins = {
                 "gzip",
-                "man",
                 "matchit",
                 "matchparen",
                 "netrwPlugin",
@@ -41,12 +40,36 @@ require("lazy").setup({
             },
         },
     },
+    ui = {
+        icons = {
+            cmd = "",
+            config = "",
+            debug = "",
+            event = "",
+            favorite = "",
+            ft = "",
+            init = "",
+            import = "",
+            keys = "",
+            lazy = "",
+            loaded = "",
+            not_loaded = "",
+            plugin = "",
+            runtime = "",
+            require = "",
+            source = "",
+            start = "",
+            task = "",
+            list = {
+                "",
+                "",
+                "",
+                "",
+            },
+        },
+    },
     change_detection = {
         enabled = false,
-    },
-    ui = {
-        border = "rounded",
-        title = " Lazy Plugin Manager ",
     },
     pkg = {
         enabled = false,

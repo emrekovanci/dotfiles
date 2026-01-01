@@ -1,8 +1,9 @@
-# profile file
+# create Profile file
 # New-Item -Path $PROFILE -Type File -Force
 
-# create symlink for profile file
-# New-Item -Path ~\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 -ItemType SymbolicLink -Value ~\Documents\GitHub\dotfiles\config\Microsoft.PowerShell_profile.ps1
+# create symlink for profile
+# Default: New-Item -Path ~\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 -ItemType SymbolicLink -Value ~\Documents\GitHub\dotfiles\config\Microsoft.PowerShell_profile.ps1
+# PWSH 7+: New-Item -Path ~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 -ItemType SymbolicLink -Value ~\Documents\GitHub\dotfiles\config\Microsoft.PowerShell_Profile.ps1
 
 # aliases
 Set-Alias -Name vi -Value nvim
@@ -13,6 +14,7 @@ Set-Alias -Name grep -Value rg
 $ENV:XDG_CONFIG_HOME = "$HOME\Documents\GitHub\dotfiles\"
 $ENV:STARSHIP_CONFIG = "$HOME\Documents\GitHub\dotfiles\config\starship.toml"
 $ENV:RIPGREP_CONFIG_PATH = "$HOME\Documents\GitHub\dotfiles\config\.ripgreprc"
+$ENV:NEOVIDE_CONFIG = "$HOME\Documents\GitHub\dotfiles\config\neovide.toml"
 
 # https://github.com/starship/starship
 Invoke-Expression (&starship init powershell)

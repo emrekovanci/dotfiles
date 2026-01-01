@@ -21,9 +21,12 @@ winget install -e --id ajeetdsouza.zoxide -s widget
 winget install -e --id AlDanial.Cloc -s winget
 winget install -e --id BurntSushi.ripgrep.MSVC -s winget
 winget install -e --id sharkdp.fd -s winget
+winget install -e --id sharkdp.bat -s winget
 winget install -e --id junegunn.fzf -s winget
 winget install -e --id chmln.sd -s winget
 winget install -e --id Clement.bottom -s winget
+winget install -e --id bootandy.dust -s winget
+winget install -e --id muesli.duf -s winget
 
 # dev tools (sublime install will not add context action)
 winget install -e --id Git.Git -s winget

@@ -6,6 +6,10 @@ return {
     },
 
     {
-        "tpope/vim-fugitive",
-    },
+        "nvzone/floaterm",
+        dependencies = "nvzone/volt",
+        opts = {},
+        cmd = "FloatermToggle",
+    }
 }
+

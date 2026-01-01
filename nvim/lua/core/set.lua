@@ -43,13 +43,11 @@ opt.pumheight = 12              -- Make popup menu smaller
 opt.background = "dark"
 opt.showmode = false            -- Lualine shows mode, so disable default
 opt.laststatus = 3              -- Global status line
-opt.winborder = "rounded"
-opt.pumborder = "rounded"
+opt.winborder = "none"
+--opt.pumborder = "rounded"
 opt.confirm = true
 opt.foldlevel = 99
 opt.fillchars = {
-    foldopen = "",
-    foldclose = "",
     fold = " ",
     foldsep = " ",
     diff = "╱",
@@ -84,3 +82,22 @@ opt.timeoutlen = 300     -- Lower than default (1000) to quickly trigger which-k
 opt.ttimeoutlen = 0      -- Key code timeout
 opt.autoread = true      -- Auto reload files changed outside vim
 opt.autowrite = true     -- Auto save
+
+if vim.g.neovide then
+    vim.g.neovide_padding_top = 0
+    vim.g.neovide_padding_bottom = 0
+    vim.g_neovide_padding_right = 0
+    vim.g_neovide_padding_left = 0
+
+    vim.g.neovide_remember_window_size = true
+
+    vim.g.neovide_cursor_animated_length = 0
+    vim.g.neovide_cursor_trail_size = 0
+
+    vim.g.neovide_floating_shadow = false
+    vim.g.neovide_floating_blur_amount_x = 0
+    vim.g.neovide_floating_blur_amount_y = 0
+
+    vim.g.neovide_title_background_color = "#0a2a2a"
+
+end

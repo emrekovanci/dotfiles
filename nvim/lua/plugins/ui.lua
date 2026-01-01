@@ -1,10 +1,5 @@
 return {
     {
-        "nvim-tree/nvim-web-devicons",
-        lazy = true,
-    },
-
-    {
         "nvim-lualine/lualine.nvim",
         event = "VeryLazy",
         init = function()
@@ -57,14 +52,14 @@ return {
                     disabled_filetypes = { statusline = { "dashboard" } },
                 },
                 sections = {
-                    lualine_a = { { "mode", padding = 0, fmt = function(s) return "[" .. mode_map[s] .. "]" or s end } },
+                    lualine_a = { { "mode", padding = { left = 1, right = 0 }, fmt = function(s) return "[" .. mode_map[s] .. "]" or s end } },
                     lualine_b = { },
                     lualine_c = {
                         {
                             "filename",
                             file_status = true,
                             newfile_status = true,
-                            symbols = { modified = "[•]", readonly = "[󰌾]" },
+                            symbols = { modified = "[•]", readonly = "[ɸ]" },
                             path = 1,
                         },
                     },
@@ -86,7 +81,6 @@ return {
 
     {
         "stevearc/oil.nvim",
-        dependencies = { "nvim-tree/nvim-web-devicons" },
         -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
         lazy = false,
         init = function()
@@ -143,6 +137,12 @@ return {
             end
 
             require("oil").setup({
+                columns = {
+                    "type",
+                    "size",
+                    "permissions",
+                    "mtime",
+                },
                 view_options = {
                     is_hidden_file = function(name, bufnr)
                         local dir = require("oil").get_current_dir(bufnr)
