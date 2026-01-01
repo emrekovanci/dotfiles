@@ -1,6 +1,12 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": [
+        {
+            "command": "toggleFocusMode",
+            "id": "User.toggleFocusMode"
+        }
+    ],
     "alwaysShowNotificationIcon": false,
     "centerOnLaunch": true,
     "copyFormatting": "none",
@@ -9,8 +15,7 @@
     "disableAnimations": false,
     "initialCols": 150,
     "initialRows": 40,
-    "keybindings":
-    [
+    "keybindings": [
         {
             "id": "User.copy.644BA8F2",
             "keys": "ctrl+shift+c"
@@ -36,26 +41,21 @@
             "keys": "ctrl+up"
         }
     ],
-    "newTabMenu":
-    [
+    "newTabMenu": [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles":
-    {
-        "defaults":
-        {
+    "profiles": {
+        "defaults": {
             "antialiasingMode": "cleartype",
             "bellStyle": "taskbar",
             "closeOnExit": "automatic",
             "colorScheme": "kovanci",
             "cursorShape": "filledBox",
-            "font":
-            {
+            "font": {
                 "face": "Lilex",
-                "features":
-                {
+                "features": {
                     "calt": 0,
                     "cv01": 1,
                     "cv02": 1,
@@ -69,8 +69,7 @@
             },
             "scrollbarState": "hidden"
         },
-        "list":
-        [
+        "list": [
             {
                 "commandline": "%PROGRAMFILES%/PowerShell/7/pwsh.exe -NoLogo",
                 "guid": "{8da5f3f5-632f-4b5d-a72a-2f8e6c5cc726}",
@@ -93,13 +92,6 @@
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt"
-            },
-            {
-                "commandline": "%PROGRAMFILES%/Git/bin/bash.exe -i -l",
-                "guid": "{00000000-0000-0000-ba54-000000000002}",
-                "icon": "%PROGRAMFILES%/Git/mingw64/share/git/git-for-windows.ico",
-                "name": "Git Bash",
-                "startingDirectory": "%USERPROFILE%"
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
@@ -133,8 +125,8 @@
             }
         ]
     },
-    "schemes":
-    [
+    "rendering.graphicsAPI": "direct2d",
+    "schemes": [
         {
             "background": "#001E25",
             "black": "#282C34",
@@ -159,7 +151,6 @@
             "yellow": "#E5C07B"
         }
     ],
-    "rendering.graphicsAPI": "direct2d",
     "tabSwitcherMode": "mru",
     "themes": [],
     "useAcrylicInTabRow": false
