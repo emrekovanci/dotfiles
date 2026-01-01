@@ -1,4 +1,4 @@
--- show cursor line only in active window
+-- Show cursor line only in active window
 vim.api.nvim_create_autocmd({ "InsertLeave", "WinEnter" }, {
     callback = function()
         if vim.w.auto_cursorline then
@@ -24,5 +24,20 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     pattern = "*",
     callback = function()
         vim.highlight.on_yank { higroup = "IncSearch", timeout = 250 }
+    end,
+})
+
+
+-- Readonly things
+vim.api.nvim_create_autocmd({ "BufRead" }, {
+    callback = function(args)
+        local buf = args.buf
+        local path = vim.api.nvim_buf_get_name(buf)
+
+        path = vim.fs.normalize(path)
+
+        if path:find("/vcpkg_installed/") then
+            vim.bo[buf].readonly = true
+        end
     end,
 })
