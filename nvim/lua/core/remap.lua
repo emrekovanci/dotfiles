@@ -15,6 +15,7 @@ map("n", "<leader>bp", ":bprev<CR>", { desc = "Previous buffer" })
 map("n", "<leader>bd", ":bd<CR>", { desc = "Delete Buffer" })
 map("n", "<C-s>", ":w<CR>")
 map("i", "<C-s>", "<ESC>:w<CR>a")
+
 -- ═════════════════
 -- WINDOW MANAGEMENT
 -- ═════════════════
@@ -46,8 +47,10 @@ map("v", "<A-Up>", ":m '<-2<CR>gv=gv", opts)
 -- COPY/PASTE
 -- ══════════
 
-map({"n", "v"}, "<leader>y", [["+y]])   -- `n` and `v` yank the selected text to the system clipboard.
-map("n", "<leader>Y", [["+Y]])          -- yank the current line to the system clipboard.
+map({"n", "v"}, "<leader>y", [["+y]])
+map({"n", "v"}, "<leader>Y", [["+Y]])
+map({"n", "v"}, "<leader>p", [["+p]])
+map({"n", "v"}, "<leader>P", [["+P]])
 
 -- ════════
 -- TEXT OPS
