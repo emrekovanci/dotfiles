@@ -143,6 +143,10 @@ return {
                     "permissions",
                     "mtime",
                 },
+                delete_to_trash = true,
+                keymaps = {
+                    ["'"] = { "actions.cd", mode = "n" },
+                },
                 view_options = {
                     is_hidden_file = function(name, bufnr)
                         local dir = require("oil").get_current_dir(bufnr)
@@ -159,6 +163,12 @@ return {
                             return git_status[dir].ignored[name]
                         end
                     end,
+                },
+                confirmation = {
+                    border = "rounded",
+                },
+                keymaps_help = {
+                    border = "rounded",
                 },
             })
         end,

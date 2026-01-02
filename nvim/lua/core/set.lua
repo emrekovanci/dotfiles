@@ -37,6 +37,7 @@ opt.splitbelow = true           -- Put new windows below current
 opt.splitkeep = "screen"
 
 -- visual
+opt.guifont = "Lilex:h14"
 opt.termguicolors = true        -- Enable 24-bit colors
 opt.signcolumn = "yes"          -- Always show the signcolumn, otherwise it would shift the text each time
 opt.pumheight = 12              -- Make popup menu smaller
@@ -98,6 +99,6 @@ if vim.g.neovide then
     vim.g.neovide_floating_blur_amount_x = 0
     vim.g.neovide_floating_blur_amount_y = 0
 
-    vim.g.neovide_title_background_color = "#0a2a2a"
+    vim.g.neovide_title_background_color = "#001e25"
 
 end
