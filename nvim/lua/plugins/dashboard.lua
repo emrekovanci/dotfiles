@@ -27,7 +27,6 @@ return {
                 center = {
                     { action = "ene | startinsert",      desc = " New File",     icon = "", key = "n" },
                     { action = "Telescope oldfiles",     desc = " Recent Files", icon = "", key = "r" },
-                    { action = "Telescope session-lens", desc = " Sessions",     icon = "", key = "s" },
                     { action = nvim_config_action,       desc = " Config",       icon = "", key = "c" },
                     { action = "qa",                     desc = " Quit",         icon = "", key = "q" },
                 },
