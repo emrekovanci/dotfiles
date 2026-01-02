@@ -4,16 +4,17 @@ local opts = { noremap = true, silent = true }
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- ═════════════════
--- BUFFER NAVIGATION
--- ═════════════════
+-- ══════
+-- BUFFER
+-- ══════
 
 map("n", "<Tab>", ":bnext<CR>", { desc = "Next buffer" })
 map("n", "<S-Tab>", ":bprevious<CR>", { desc = "Previous buffer" })
 map("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
 map("n", "<leader>bp", ":bprev<CR>", { desc = "Previous buffer" })
-map("n", "<leader>bd", ":bd<CR>", { desc = "Delete Buffer"})
-
+map("n", "<leader>bd", ":bd<CR>", { desc = "Delete Buffer" })
+map("n", "<C-s>", ":w<CR>")
+map("i", "<C-s>", "<ESC>:w<CR>a")
 -- ═════════════════
 -- WINDOW MANAGEMENT
 -- ═════════════════
