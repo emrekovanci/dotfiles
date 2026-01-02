@@ -14,6 +14,7 @@ if ($PSVersionTable.PSVersion.Major -ge 7)
 Set-Alias -Name vi -Value nvim
 Set-Alias -Name vim -Value nvim
 Set-Alias -Name grep -Value rg
+Set-Alias -Name neo -Value neovide
 
 # env variables
 $ENV:XDG_CONFIG_HOME = "$HOME\Documents\GitHub\dotfiles\"
