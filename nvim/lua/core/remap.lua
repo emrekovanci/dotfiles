@@ -8,29 +8,20 @@ vim.g.maplocalleader = " "
 -- BUFFER NAVIGATION
 -- ═════════════════
 
--- Tab/Shift-Tab
 map("n", "<Tab>", ":bnext<CR>", { desc = "Next buffer" })
 map("n", "<S-Tab>", ":bprevious<CR>", { desc = "Previous buffer" })
-
--- Alternative buffer switching
 map("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
-map("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" })
-map("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
-map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
-map("n", "[b", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
-map("n", "]b", "<cmd>bnext<cr>", { desc = "Next Buffer" })
+map("n", "<leader>bp", ":bprev<CR>", { desc = "Previous buffer" })
 
 -- ═════════════════
 -- WINDOW MANAGEMENT
 -- ═════════════════
 
--- Move between windows with Ctrl+hjkl
-map("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
-map("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
-map("n", "<C-k>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
-map("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window", remap = true })
+map("n", "<C-w><Left>", "<C-w>h", { desc = "Go to Left Window", remap = true })
+map("n", "<C-w><Down>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
+map("n", "<C-w><Up>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
+map("n", "<C-w><Right>", "<C-w>l", { desc = "Go to Right Window", remap = true })
 
--- Resize windows
 map("n", "<C-Up>", "<cmd>resize +5<CR>", opts)
 map("n", "<C-Down>", "<cmd>resize -5<CR>", opts)
 map("n", "<C-Left>", "<cmd>vertical resize -5<CR>", opts)
@@ -40,7 +31,6 @@ map("n", "<C-Right>", "<cmd>vertical resize +5<CR>", opts)
 -- LINE MOVEMENT
 -- ═════════════
 
--- Alternative line movement
 map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move Block Down" })
 map("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move Block Up" })
 map("n", "<A-Down>", ":m .+1<CR>", opts)
