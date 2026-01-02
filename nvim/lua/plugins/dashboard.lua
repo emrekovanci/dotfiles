@@ -14,7 +14,7 @@ return {
         logo = string.rep("\n", 8) .. logo .. "\n\n"
 
         local nvim_config_action = "execute 'cd " .. vim.fn.stdpath("config") .. "' | Telescope find_files"
-
+        local goto_projects_folder = "execute 'cd " .. vim.fn.expand("~/Documents/GitHub") .. "' | Oil"
         local opts = {
             theme = "doom",
             hide = {
@@ -27,6 +27,7 @@ return {
                 center = {
                     { action = "ene | startinsert",      desc = " New File",     icon = "", key = "n" },
                     { action = "Telescope oldfiles",     desc = " Recent Files", icon = "", key = "r" },
+                    { action = goto_projects_folder,     desc = " Projects",     icon = "", key = "p" },
                     { action = nvim_config_action,       desc = " Config",       icon = "", key = "c" },
                     { action = "qa",                     desc = " Quit",         icon = "", key = "q" },
                 },
