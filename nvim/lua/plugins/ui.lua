@@ -174,4 +174,20 @@ return {
         end,
     },
 
+    {
+        "voldikss/vim-floaterm",
+        config = function()
+            vim.keymap.set("n", '<C-">', function()
+                local curr = vim.fn["floaterm#buflist#curr"]()
+                if curr == -1 then
+                    local path = vim.fn.escape(vim.loop.cwd(), ' %#|"')
+                    vim.cmd("FloatermNew --width=0.9 --height=0.9 --cwd=" .. path)
+                else
+                    vim.cmd("FloatermToggle")
+                end
+            end)
+
+            vim.keymap.set("t", '<C-">', "<C-\\><C-n>:FloatermToggle<CR>")
+        end,
+    },
 }
