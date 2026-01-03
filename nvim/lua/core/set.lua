@@ -45,6 +45,7 @@ opt.pumheight = 12        -- Make popup menu smaller
 opt.showmode = false      -- Lualine shows mode, so disable default
 opt.laststatus = 3        -- Global status line
 opt.winborder = "none"
+opt.pumborder = "rounded" -- For lsp completion menu
 opt.confirm = true
 opt.foldlevel = 99
 opt.fillchars = { fold = " ", foldsep = " ", diff = "╱", eob = " " }
@@ -52,7 +53,7 @@ opt.fillchars = { fold = " ", foldsep = " ", diff = "╱", eob = " " }
 -- workflow
 opt.virtualedit = "block" -- Allow currsor to move where there is no text in visual block mode
 opt.mouse = "a"           -- Enable mouse mode
-opt.completeopt:append({ "noselect", "menuone", "popup" })
+opt.completeopt = "menu,menuone,noselect,noinsert"
 
 -- filetypes (default filetypes: <Neovim_Install_Dir>/share/nvim/runtime/lua/vim/filetype.lua)
 vim.filetype.add({
