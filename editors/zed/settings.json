@@ -1,15 +1,26 @@
 {
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+    },
+  },
+  "show_wrap_guides": false,
   "cursor_shape": "block",
   "current_line_highlight": "none",
   "theme_overrides": {
     "Solarized Dark": {
-      "panel.background": "#002b36",
-      "status_bar.background": "#002b36",
-      "ghost_element.active": "#002b36",
-      "title_bar.background": "#002b36",
-      "tab_bar.background": "#002b36",
-      "tab.active_background": "#002b36",
-      "tab.inactive_background": "#002b36",
+      "background": "#001E25",
+      "panel.background": "#001E25",
+      "editor.background": "#001E25",
+      "editor.gutter.background": "#001E25",
+      "status_bar.background": "#001E25",
+      "ghost_element.active": "#001E25",
+      "title_bar.background": "#001E25",
+      "tab_bar.background": "#001E25",
+      "tab.active_background": "#001E25",
+      "tab.inactive_background": "#001E25",
+      "hint.background": "#001E25",
+      "elevated_surface.background": "#001E25",
     },
   },
   "preview_tabs": {
@@ -35,6 +46,9 @@
     },
   },
   "project_panel": {
+    "entry_spacing": "standard",
+    "hide_root": false,
+    "auto_reveal_entries": false,
     "sticky_scroll": false,
     "indent_guides": {
       "show": "never",
@@ -50,7 +64,7 @@
   },
   "base_keymap": "VSCode",
   "icon_theme": "Material Icon Theme",
-  "ui_font_size": 16,
+  "ui_font_size": 18.0,
   "buffer_font_size": 17.0,
   "theme": {
     "mode": "dark",
@@ -63,6 +77,14 @@
         "program": "pwsh",
         "args": ["-NoLogo"],
         "title_override": "pwsh",
+      },
+    },
+  },
+  "lsp": {
+    "clangd": {
+      "binary": {
+        "path": "C:/Program Files/LLVM/bin/clangd.exe",
+        "ignore_system_version": true,
       },
     },
   },
