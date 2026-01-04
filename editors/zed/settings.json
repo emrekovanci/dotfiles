@@ -1,0 +1,69 @@
+{
+  "cursor_shape": "block",
+  "current_line_highlight": "none",
+  "theme_overrides": {
+    "Solarized Dark": {
+      "panel.background": "#002b36",
+      "status_bar.background": "#002b36",
+      "ghost_element.active": "#002b36",
+      "title_bar.background": "#002b36",
+      "tab_bar.background": "#002b36",
+      "tab.active_background": "#002b36",
+      "tab.inactive_background": "#002b36",
+    },
+  },
+  "preview_tabs": {
+    "enable_preview_file_from_code_navigation": false,
+    "enable_preview_from_multibuffer": false,
+    "enable_preview_from_project_panel": false,
+    "enabled": false,
+  },
+  "tab_bar": {
+    "show_tab_bar_buttons": false,
+    "show_nav_history_buttons": false,
+  },
+  "toolbar": {
+    "agent_review": false,
+    "selections_menu": false,
+    "quick_actions": false,
+    "breadcrumbs": false,
+  },
+  "buffer_font_family": "Lilex",
+  "outline_panel": {
+    "indent_guides": {
+      "show": "never",
+    },
+  },
+  "project_panel": {
+    "sticky_scroll": false,
+    "indent_guides": {
+      "show": "never",
+    },
+  },
+  "indent_guides": {
+    "enabled": false,
+  },
+  "disable_ai": true,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "base_keymap": "VSCode",
+  "icon_theme": "Material Icon Theme",
+  "ui_font_size": 16,
+  "buffer_font_size": 17.0,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Solarized Dark",
+  },
+  "terminal": {
+    "shell": {
+      "with_arguments": {
+        "program": "pwsh",
+        "args": ["-NoLogo"],
+        "title_override": "pwsh",
+      },
+    },
+  },
+}
