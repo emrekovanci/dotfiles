@@ -19,6 +19,7 @@
 (setq-default display-line-numbers-width 3)
 (setq-default display-line-numbers-widen t)
 (setq-default display-line-numbers-type 'relative)
+(global-display-line-numbers-mode)
 
 ;;;
 (column-number-mode t)                  ; Display column number alongside line number on status bar
@@ -28,21 +29,20 @@
 (setq scroll-step 1)                    ; Scroll one line at a time, rather than half a page
 (setq inhibit-startup-screen t)         ; Disable startup screen
 (editorconfig-mode 1)                   ; Activate editorconfig
-(global-display-line-numbers-mode)      ; Activate line numbers
 
 ;;; Auto save & backups etc.
 (setq auto-save-default nil)            ; Don't autosave
 (setq backup-inhibited 't)              ; Don't create backups of the edited file
 
-;;; Font
-(set-frame-font "Input 14")
+;;; Font & frame
+(add-to-list 'default-frame-alist '(font . "Input 14"))
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;;; Word wrap
 (setq-default word-wrap t)
 (setq-default truncate-lines t)         ; Disable wrapping by default due to its performance cost.
 
-;;;;
+;;;
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -52,7 +52,8 @@
  '(custom-safe-themes
    '("01a9797244146bbae39b18ef37e6f2ca5bebded90d9fe3a2f342a9e863aaa4fd"
      default))
- '(package-selected-packages '(cmake-mode gruber-darker-theme multiple-cursors)))
+ '(package-selected-packages
+   '(cmake-mode gruber-darker-theme multiple-cursors powershell)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

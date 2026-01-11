@@ -1,10 +1,3 @@
-# create Profile file
-# New-Item -Path $PROFILE -Type File -Force
-
-# create symlink for profile
-# Default: New-Item -Path ~\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 -ItemType SymbolicLink -Value ~\Documents\GitHub\dotfiles\config\Microsoft.PowerShell_profile.ps1
-# PWSH 7+: New-Item -Path ~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 -ItemType SymbolicLink -Value ~\Documents\GitHub\dotfiles\config\Microsoft.PowerShell_Profile.ps1
-
 if ($PSVersionTable.PSVersion.Major -ge 7)
 {
     $PSStyle.FileInfo.Directory = $PSStyle.Background.FromRgb(20, 70, 50) + $PSStyle.Foreground.White
@@ -16,16 +9,13 @@ Set-Alias -Name vim -Value nvim
 Set-Alias -Name grep -Value rg
 
 # env variables
-$ENV:XDG_CONFIG_HOME = "$HOME\Documents\GitHub\dotfiles\"
-$ENV:STARSHIP_CONFIG = "$HOME\Documents\GitHub\dotfiles\config\starship.toml"
-$ENV:RIPGREP_CONFIG_PATH = "$HOME\Documents\GitHub\dotfiles\config\.ripgreprc"
+$env:XDG_CONFIG_HOME     = "$HOME\Documents\GitHub\dotfiles\"
+$env:STARSHIP_CONFIG     = "$HOME\Documents\GitHub\dotfiles\config\starship.toml"
+$env:RIPGREP_CONFIG_PATH = "$HOME\Documents\GitHub\dotfiles\config\.ripgreprc"
 
-# https://github.com/starship/starship
+# terminal utils
 Invoke-Expression (&starship init powershell)
-
-# Install-Module -Name PowerShellGet -Force (required for PowerShell 5.1)
-# Install-Module PSReadLine
-# https://github.com/PowerShell/PSReadLine
+Invoke-Expression (& { (zoxide init powershell | Out-String) })
 $PSReadLineOptions = @{
     Colors = @{
         "Command"          = "#89ddff" # blue5
@@ -39,9 +29,7 @@ $PSReadLineOptions = @{
 }
 Set-PSReadLineOption @PSReadLineOptions
 
-# https://github.com/ajeetdsouza/zoxide
-Invoke-Expression (& { (zoxide init powershell | Out-String) })
-
+# others
 function whereis($command)
 {
     Get-Command -Name $command -ErrorAction SilentlyContinue |
