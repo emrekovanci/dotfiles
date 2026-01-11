@@ -1,8 +1,0 @@
-FontHeight=12
-Font=JetBrainsMono NFM
-ThemeFile=rosipov
-Transparency=off
-Scrollbar=none
-StatusLine=no
-CursorType=line
-Term=xterm

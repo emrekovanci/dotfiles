@@ -14,13 +14,11 @@ if ($PSVersionTable.PSVersion.Major -ge 7)
 Set-Alias -Name vi -Value nvim
 Set-Alias -Name vim -Value nvim
 Set-Alias -Name grep -Value rg
-Set-Alias -Name neo -Value neovide
 
 # env variables
 $ENV:XDG_CONFIG_HOME = "$HOME\Documents\GitHub\dotfiles\"
 $ENV:STARSHIP_CONFIG = "$HOME\Documents\GitHub\dotfiles\config\starship.toml"
 $ENV:RIPGREP_CONFIG_PATH = "$HOME\Documents\GitHub\dotfiles\config\.ripgreprc"
-$ENV:NEOVIDE_CONFIG = "$HOME\Documents\GitHub\dotfiles\config\neovide.toml"
 
 # https://github.com/starship/starship
 Invoke-Expression (&starship init powershell)

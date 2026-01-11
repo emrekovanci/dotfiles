@@ -1,8 +1,0 @@
-{
-	"extensions":
-	[
-		"clangd",
-		"clang-format",
-		"clang-tidy",
-	]
-}
