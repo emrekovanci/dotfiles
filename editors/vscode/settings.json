@@ -20,11 +20,9 @@
     "errorLens.fontSize": "12",
     "errorLens.margin": "2ch",
     "errorLens.messageTemplate": "$message [$source]",
-    //"errorLens.enabledDiagnosticLevels": [ "error", "warning", "info", "hint" ],
-    "errorLens.messageBackgroundMode": "line",
 
     // ---- Brackets ----
-    "editor.bracketPairColorization.enabled": true,
+    "editor.bracketPairColorization.enabled": false,
 
     // ---- Problems ----
     "problems.decorations.enabled": false,
@@ -57,7 +55,7 @@
 
     // ---- Editor ----
     // https://github.com/microsoft/vscode/blob/main/src/vs/editor/common/config/editorOptions.ts
-    // "editor.lineDecorationsWidth": 10, // [undocumented] removes space between editor and line numbers
+    //"editor.lineDecorationsWidth": 10, // [undocumented] removes space between editor and line numbers
     "editor.snippetSuggestions": "top",
     "editor.semanticHighlighting.enabled": false,
     "editor.inlayHints.padding": true,
@@ -78,18 +76,17 @@
     "editor.fontSize": 15,
     "editor.fontWeight": 400,
     "editor.fontLigatures": "'calt' off, 'cv01' on, 'cv02' on, 'cv03' on, 'cv06' off, 'cv07' on, 'cv12' on, 'cv16' on",
-    "editor.fontFamily": "'Maple Mono NL', 'Google Sans Code', Iosvmata, 'JetBrains Mono', Consolas, 'Courier New', monospace",
+    "editor.fontFamily": "Input, 'Maple Mono NL', 'Google Sans Code', Iosvmata, 'JetBrains Mono', Consolas, 'Courier New', monospace",
     "editor.lineHeight": 1.62,
     "editor.guides.indentation": false,
     "editor.codeLens": false,
     "editor.codeLensFontFamily": "'JetBrains Mono', Consolas",
     "editor.columnSelection": false,
-    "editor.smoothScrolling": true,
+    "editor.smoothScrolling": false,
     "editor.tabCompletion": "off",
-    "editor.cursorSmoothCaretAnimation": "on",
     "editor.suggestSelection": "first",
     "editor.cursorStyle": "block",
-    "editor.cursorBlinking": "smooth",
+    "editor.cursorBlinking": "blink",
     "editor.cursorWidth": 3,
     "editor.cursorSurroundingLines": 10,
     "editor.inlineSuggest.enabled": true,
@@ -114,7 +111,7 @@
     "workbench.activityBar.iconClickBehavior": "focus", // to disable toggle explorer side
     "workbench.navigationControl.enabled": false,
     "workbench.commandPalette.history": 10,
-    "workbench.list.smoothScrolling": true,
+    "workbench.list.smoothScrolling": false,
     "workbench.editor.decorations.badges": true, // also disables read-only decoration
     "workbench.editor.labelFormat": "default",
     "workbench.editor.tabSizing": "fixed",
@@ -136,17 +133,22 @@
     "workbench.view.alwaysShowHeaderActions": true,
     "workbench.layoutControl.enabled": false,
     "workbench.iconTheme": "a-file-icon-vscode",
-    "workbench.colorTheme": "GitHub Dark",
+    "workbench.colorTheme": "Tsoding Emacs Gruber Minimal",
+    "editor.tokenColorCustomizations": {
+        "[Tsoding Emacs Gruber Minimal]": {
+            "numbers": "#D1C7C5"
+        }
+    },
 
     // ---- Debug Console ----
     "debug.console.fontSize": 14,
-    "debug.console.fontFamily": "'JetBrainsMono Nerd Font Mono', Consolas",
+    "debug.console.fontFamily": "Input, 'JetBrainsMono Nerd Font Mono', Consolas",
     "debug.console.wordWrap": false,
     "debug.terminal.clearBeforeReusing": true,
 
     // ---- Output ----
     "[Log]": {
-        "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', 'Maple Mono NL', Consolas, 'Courier New', monospace",
+        "editor.fontFamily": "Input, 'JetBrainsMono Nerd Font Mono', 'Maple Mono NL', Consolas, 'Courier New', monospace",
         "editor.fontSize": 12,
         "editor.wordWrap": "on",
     },
@@ -167,8 +169,8 @@
     "terminal.integrated.cursorWidth": 3,
     "terminal.integrated.confirmOnExit": "hasChildProcesses",
     "terminal.integrated.lineHeight": 1.5,
-    "terminal.integrated.fontSize": 13,
-    "terminal.integrated.fontFamily": "'Maple Mono NL', 'JetBrainsMono Nerd Font Mono', Consolas",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontFamily": "Input, 'Maple Mono NL', 'JetBrainsMono Nerd Font Mono', Consolas",
     "terminal.integrated.defaultProfile.linux": "bash",
     "terminal.integrated.allowChords": false,
     "terminal.integrated.copyOnSelection": false,
@@ -214,20 +216,25 @@
     // ---- C# ----
     "csharp.debug.console": "externalTerminal",
     "[csharp]": {
-        "editor.codeLens": false,
         "editor.formatOnSave": true,
     },
 
     // ----.Net Install Tool ----
     "dotnetAcquisitionExtension.enableTelemetry": false,
-    //"dotnetAcquisitionExtension.existingDotnetPath": [
-    //    {
-    //        "extensionId": "ms-dotnettools.csharp",
-    //        "path": "${env:programfiles}\\dotnet\\dotnet.exe"
-    //    }
-    //],
+    "dotnetAcquisitionExtension.existingDotnetPath": [
+        {
+            "extensionId": "ms-dotnettools.csharp",
+            "path": "${env:programfiles}\\dotnet\\dotnet.exe"
+        }
+    ],
 
     // ---- C_Cpp ----
+    "[cpp]": {
+        "editor.wordBasedSuggestions": "off",
+        "editor.semanticHighlighting.enabled": false,
+        "editor.stickyScroll.defaultModel": "foldingProviderModel",
+        "editor.suggest.insertMode": "replace"
+    },
     "C_Cpp.autocomplete": "disabled",
     "C_Cpp.formatting": "disabled",
     "C_Cpp.intelliSenseEngine": "disabled",
@@ -270,6 +277,7 @@
     "scm.diffDecorations": "none",
 
     // ---- Git ----
+    "git.enabled": false,
     "git.enableStatusBarSync": false,
     "git.blame.editorDecoration.enabled": false,
     "git.blame.statusBarItem.enabled": true,

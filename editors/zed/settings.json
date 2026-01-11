@@ -1,9 +1,9 @@
 {
   "status_bar": {
-    "line_endings_button": true
+    "line_endings_button": true,
   },
   "scrollbar": {
-    "git_diff": false
+    "git_diff": false,
   },
   "format_on_save": "off",
   "snippet_sort_order": "top",
@@ -36,6 +36,13 @@
       "tab.inactive_background": "#001E25",
       "hint.background": "#001E25",
       "elevated_surface.background": "#001E25",
+    },
+    "Gruber Darker": {
+      "syntax": {
+        "string": {
+          "font_style": "normal",
+        },
+      },
     },
   },
   "preview_tabs": {
@@ -81,7 +88,7 @@
   "base_keymap": "VSCode",
   "icon_theme": "Material Icon Theme",
   "ui_font_size": 18.0,
-  "theme": "Solarized Dark",
+  "theme": "Gruber Darker",
   "terminal": {
     "shell": {
       "with_arguments": {
@@ -90,6 +97,11 @@
         "title_override": "pwsh",
       },
     },
+  },
+  "languages": {
+    "C++": {
+      "format_on_save": "on"
+    }
   },
   "lsp": {
     "clangd": {
