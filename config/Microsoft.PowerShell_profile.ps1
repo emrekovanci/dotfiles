@@ -1,5 +1,4 @@
-if ($PSVersionTable.PSVersion.Major -ge 7)
-{
+if ($PSVersionTable.PSVersion.Major -ge 7) {
     $PSStyle.FileInfo.Directory = $PSStyle.Background.FromRgb(20, 70, 50) + $PSStyle.Foreground.White
 }
 
@@ -15,6 +14,17 @@ $env:RIPGREP_CONFIG_PATH = "$HOME\Documents\GitHub\dotfiles\config\.ripgreprc"
 
 # terminal utils
 Invoke-Expression (&starship init powershell)
+
+# https://learn.microsoft.com/en-us/windows/terminal/tutorials/new-tab-same-directory
+function Invoke-Starship-PreCommand {
+    $loc = $executionContext.SessionState.Path.CurrentLocation;
+    $prompt = "$([char]27)]9;12$([char]7)"
+    if ($loc.Provider.Name -eq "FileSystem") {
+        $prompt += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
+    }
+    $host.ui.Write($prompt)
+}
+
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 $PSReadLineOptions = @{
     Colors = @{
@@ -30,8 +40,7 @@ $PSReadLineOptions = @{
 Set-PSReadLineOption @PSReadLineOptions
 
 # others
-function whereis($command)
-{
+function whereis($command) {
     Get-Command -Name $command -ErrorAction SilentlyContinue |
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
@@ -46,14 +55,11 @@ function sview()
     }
 }
 
-# https://learn.microsoft.com/en-us/windows/terminal/tutorials/new-tab-same-directory
-function Invoke-Starship-PreCommand
-{
-    $loc = $executionContext.SessionState.Path.CurrentLocation;
-    $prompt = "$([char]27)]9;12$([char]7)"
-    if ($loc.Provider.Name -eq "FileSystem")
-    {
-        $prompt += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
+function countdown($seconds) {
+    for ($i=$seconds; $i -ge 0; $i--) {
+        Write-Host -NoNewline "`rCountdown: $i   "
+        Start-Sleep 1
     }
-    $host.ui.Write($prompt)
+    Write-Host
+    [console]::Beep(1000, 500)
 }
