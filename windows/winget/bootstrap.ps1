@@ -27,13 +27,13 @@ winget install -e --id chmln.sd -s winget
 winget install -e --id Clement.bottom -s winget
 winget install -e --id bootandy.dust -s winget
 winget install -e --id muesli.duf -s winget
+winget install -e --id JernejSimoncic.Wget -s winget
 
 # dev tools (sublime install will not add context action)
 winget install -e --id Git.Git -s winget
 winget install -e --id GitHub.GitHubDesktop -s winget
 winget install -e --id LLVM.LLVM -s winget
 winget install -e --id Kitware.CMake -s winget
-winget install -e --id SublimeHQ.SublimeText.4 -s winget
 winget install -e --id Microsoft.VisualStudioCode -s winget
 winget install -e --id HeidiSQL.HeidiSQL -s winget
 
