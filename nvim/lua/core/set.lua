@@ -37,7 +37,6 @@ opt.splitbelow = true     -- Put new windows below current
 opt.splitkeep = "screen"
 
 -- visual
-opt.guifont = "Lilex:h14"
 opt.background = "dark"
 opt.termguicolors = true  -- Enable 24-bit colors
 opt.signcolumn = "yes"    -- Always show the signcolumn, otherwise it would shift the text each time
@@ -87,22 +86,4 @@ if vim.fn.has("win32") then
     opt.shellpipe    = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
     opt.shellquote   = ""
     opt.shellxquote  = ""
-end
-
-if vim.g.neovide then
-    vim.g.neovide_padding_top = 0
-    vim.g.neovide_padding_bottom = 0
-    vim.g_neovide_padding_right = 0
-    vim.g_neovide_padding_left = 0
-
-    vim.g.neovide_remember_window_size = true
-
-    vim.g.neovide_cursor_animated_length = 0
-    vim.g.neovide_cursor_trail_size = 0
-
-    vim.g.neovide_floating_shadow = false
-    vim.g.neovide_floating_blur_amount_x = 0
-    vim.g.neovide_floating_blur_amount_y = 0
-
-    vim.g.neovide_title_background_color = "#001e25"
 end

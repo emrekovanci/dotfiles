@@ -1,8 +1,23 @@
 {
+  "status_bar": {
+    "line_endings_button": true
+  },
+  "scrollbar": {
+    "git_diff": false
+  },
+  "format_on_save": "off",
+  "snippet_sort_order": "top",
+  "auto_signature_help": true,
+  "scroll_beyond_last_line": "off",
+  "colorize_brackets": false,
+  "show_whitespaces": "trailing",
+  "buffer_font_size": 17.0,
+  "buffer_line_height": "comfortable",
   "git": {
     "inline_blame": {
       "enabled": false,
     },
+    "git_gutter": "hide",
   },
   "show_wrap_guides": false,
   "cursor_shape": "block",
@@ -39,13 +54,14 @@
     "quick_actions": false,
     "breadcrumbs": false,
   },
-  "buffer_font_family": "Lilex",
+  "buffer_font_family": "Input",
   "outline_panel": {
     "indent_guides": {
       "show": "never",
     },
   },
   "project_panel": {
+    "auto_fold_dirs": false,
     "entry_spacing": "standard",
     "hide_root": false,
     "auto_reveal_entries": false,
@@ -65,12 +81,7 @@
   "base_keymap": "VSCode",
   "icon_theme": "Material Icon Theme",
   "ui_font_size": 18.0,
-  "buffer_font_size": 17.0,
-  "theme": {
-    "mode": "dark",
-    "light": "One Light",
-    "dark": "Solarized Dark",
-  },
+  "theme": "Solarized Dark",
   "terminal": {
     "shell": {
       "with_arguments": {
@@ -83,8 +94,8 @@
   "lsp": {
     "clangd": {
       "binary": {
-        "path": "C:/Program Files/LLVM/bin/clangd.exe",
         "ignore_system_version": true,
+        "path": "C:/Program Files/LLVM/bin/clangd.exe",
       },
     },
   },
