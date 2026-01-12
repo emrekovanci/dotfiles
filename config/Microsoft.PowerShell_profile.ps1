@@ -45,8 +45,7 @@ function whereis($command) {
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
 
-function sview()
-{
+function sview() {
     $currentStyle = (Get-PSReadLineOption).PredictionViewStyle
     if ($currentStyle -eq "InlineView") {
         Set-PSReadLineOption -PredictionViewStyle ListView
