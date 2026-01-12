@@ -44,3 +44,6 @@ New-Symlink `
   "$env:APPDATA\.emacs" `
   "$HOME\Documents\GitHub\dotfiles\config\.emacs"
 
+New-Symlink `
+  "$env:APPDATA\.emacs.custom.el" `
+  "$HOME\Documents\GitHub\dotfiles\config\.emacs.custom.el"
