@@ -19,6 +19,7 @@
 
 ;; Defaults
 (setq-default
+ create-lockfiles nil                       ;
  ring-bell-function #'ignore                ; 
  visible-bell nil                           ;
  display-line-numbers-width 3               ;
