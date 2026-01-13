@@ -7,11 +7,6 @@ Set-Alias -Name vi -Value nvim
 Set-Alias -Name vim -Value nvim
 Set-Alias -Name grep -Value rg
 
-# env variables
-$env:XDG_CONFIG_HOME     = "$HOME\Documents\GitHub\dotfiles\"
-$env:STARSHIP_CONFIG     = "$HOME\Documents\GitHub\dotfiles\config\starship.toml"
-$env:RIPGREP_CONFIG_PATH = "$HOME\Documents\GitHub\dotfiles\config\.ripgreprc"
-
 # terminal utils
 Invoke-Expression (&starship init powershell)
 

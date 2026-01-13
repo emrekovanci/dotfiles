@@ -9,9 +9,7 @@
 # case
 --smart-case
 
-# hyperlink
---hyperlink-format=vscode
-
 # others
 --path-separator=/
 --trim
+--no-heading
