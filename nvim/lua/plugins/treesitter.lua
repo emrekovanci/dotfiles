@@ -4,13 +4,13 @@ return {
     build = ":TSUpdate",
     config = function()
         local ensure_installed_list = vim.iter({
-            { "bash", "json", "jsonc", "markdown", "markdown_inline", "regex", "toml", "vimdoc", "xml", "yaml" },
+            { "bash", "json", "jsonc", "markdown", "markdown_inline", "regex", "toml", "vimdoc", "xml", "yaml", "powershell" },
             { "lua", "c", "cpp", "cmake", "c_sharp", "rust", "dockerfile", "glsl", "hlsl" },
             { "php", "css", "html", "javascript" },
         }):flatten():totable()
 
         local file_exts = vim.iter({
-            { "sh", "json", "jsonc", "md", "toml", "xml", "yaml" },
+            { "sh", "json", "jsonc", "md", "toml", "xml", "yaml", "ps1" },
             { "lua", "c", "cpp", "cmake", "cs", "rs", "glsl", "hlsl" },
             { "php", "css", "html", "js" }
         }):flatten():totable()
@@ -34,7 +34,7 @@ return {
                 vim.wo.foldmethod = "expr"
 
                 -- indentation, provided by nvim-treesitter
-                -- vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+                vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
             end,
         })
 
