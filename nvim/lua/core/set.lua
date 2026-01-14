@@ -11,8 +11,8 @@ opt.number = true         -- Print line number
 opt.relativenumber = true -- Relative line numbers
 opt.cursorline = false    -- Don't highlight current line
 opt.wrap = false          -- Disable line wrap
-opt.scrolloff = 10        -- Keep 10 lines above/below cursor
-opt.sidescrolloff = 8     -- Keep 8 columns left/right of cursor
+opt.scrolloff = 5         -- Keep 5 lines above/below cursor
+opt.sidescrolloff = 4     -- Keep 4 columns left/right of cursor
 
 -- indentation
 opt.shiftwidth = 4        -- Size of an indent

@@ -18,11 +18,6 @@ map("i", "<C-s>", "<ESC>:w<CR>a")
 -- WINDOW MANAGEMENT
 -- ═════════════════
 
-map("n", "<C-w><Left>", "<C-w>h", { desc = "Go to Left Window", remap = true })
-map("n", "<C-w><Down>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
-map("n", "<C-w><Up>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
-map("n", "<C-w><Right>", "<C-w>l", { desc = "Go to Right Window", remap = true })
-
 map("n", "<C-Up>", "<cmd>resize +5<CR>", opts)
 map("n", "<C-Down>", "<cmd>resize -5<CR>", opts)
 map("n", "<C-Left>", "<cmd>vertical resize -5<CR>", opts)
