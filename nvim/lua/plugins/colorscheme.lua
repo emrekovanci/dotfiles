@@ -5,6 +5,7 @@ return {
     opts = {
         italic = {
             strings = false,
+            comments = false,
         },
     },
     config = function(_, opts)

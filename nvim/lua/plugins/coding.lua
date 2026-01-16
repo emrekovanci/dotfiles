@@ -10,7 +10,9 @@ return {
         version = "^5.0.0",
         dependencies = { "nvim-lua/plenary.nvim" },
         config = function()
-            vim.g.compile_mode = {}
+            vim.g.compile_mode = {
+                default_command = "scripts/build.bat --no-env --no-configure",
+            }
         end,
     },
 }
