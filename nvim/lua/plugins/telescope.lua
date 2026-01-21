@@ -1,6 +1,6 @@
 return {
     "nvim-telescope/telescope.nvim",
-    version = false,
+    version = '*',
     dependencies = { "nvim-lua/plenary.nvim" },
     cmd = "Telescope",
     opts = {
@@ -45,16 +45,6 @@ return {
 
         -- grep
         { "<leader>ws",  function() require("telescope.builtin").grep_string({ search = vim.fn.expand("<cword>") }) end },
-        { "<leader>wsi", function()
-            require("telescope.builtin").grep_string({
-                  search = vim.fn.expand("<cword>"),
-                  file_ignore_patterns = {
-                      "pkgs" -- prevent double listing for vcpkg packages
-                  },
-                  path_display = { "tail" },
-                  additional_args = { "--no-ignore" } })
-                end
-        },
         { "<leader>Ws",  function() require("telescope.builtin").grep_string({ search = vim.fn.expand("<cWORD>") }) end },
 
         -- lsp
