@@ -14,6 +14,7 @@ opt.wrap = false          -- Disable line wrap
 -- opt.scrolloff = 5      -- Keep 5 lines above/below cursor
 -- opt.sidescrolloff = 4  -- Keep 4 columns left/right of cursor
 opt.sj = -50
+opt.grepprg = "rg --vimgrep"
 
 -- indentation
 opt.shiftwidth = 4        -- Size of an indent

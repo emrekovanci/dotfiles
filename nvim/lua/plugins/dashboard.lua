@@ -29,7 +29,7 @@ return {
                     { action = "Telescope oldfiles",     desc = " Recent Files", icon = "", key = "r" },
                     { action = goto_projects_folder,     desc = " Projects",     icon = "", key = "p" },
                     { action = nvim_config_action,       desc = " Config",       icon = "", key = "c" },
-                    { action = "qa",                     desc = " Quit",         icon = "", key = "q" },
+                    { action = "wincmd q",               desc = " Quit",         icon = "", key = "q" },
                 },
                 footer = {}
             },
@@ -43,6 +43,6 @@ return {
         return opts
     end,
     keys = {
-        { "<leader>d", "<cmd>Dashboard<cr>", desc = "Open Dashboard" },
+        { "<leader>d", ":enew | Dashboard<cr>", desc = "Open Dashboard" },
     },
 }

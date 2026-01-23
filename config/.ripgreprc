@@ -13,3 +13,4 @@
 --path-separator=/
 --trim
 --no-heading
+--line-number
