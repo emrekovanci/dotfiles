@@ -9,7 +9,7 @@ vim.g.maplocalleader = " "
 -- ══════
 
 map("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
-map("n", "<leader>bp", ":bprev<CR>", { desc = "Previous buffer" })
+map("n", "<leader>bp", ":b#<CR>", { desc = "Previous buffer" })
 map("n", "<leader>bd", ":bd<CR>", { desc = "Delete Buffer" })
 map("n", "<C-s>", ":w<CR>")
 map("i", "<C-s>", "<ESC>:w<CR>a")

@@ -1,6 +1,6 @@
 return {
     "nvim-telescope/telescope.nvim",
-    version = '*',
+    version = "*",
     dependencies = { "nvim-lua/plenary.nvim" },
     cmd = "Telescope",
     opts = {
@@ -23,9 +23,12 @@ return {
             results_title = false,
         },
         pickers = {
+            live_grep = {
+                preview = false,
+            },
             find_files = {
                 previewer = false,
-                find_command = { "fd", "--type", "file", "--hidden", "--no-ignore", "--exclude", ".git", "--strip-cwd-prefix=always" },
+                find_command = { "fd", "--type", "file" },
             },
             git_files = { previewer = false },
             buffers = { sort_lastused = true, sort_mru = true },
@@ -38,7 +41,7 @@ return {
         { "<leader>ff",  function() require("telescope.builtin").find_files() end, desc = "Find Files" },
         { "<leader>gf",  function() require("telescope.builtin").git_files() end, desc = "Git Files" },
         { "<leader>lg",  function() require("telescope.builtin").live_grep() end, desc = "Live Grep" },
-        { "<leader>lgi", function() require("telescope.builtin").live_grep({path_display = { "tail" }, additional_args = { "--no-ignore" }}) end, desc = "Live Grep - No Ignore" },
+        { "<leader>lgi", function() require("telescope.builtin").live_grep({ path_display = { "tail" }, additional_args = { "-u" } }) end, desc = "Live Grep - No Ignore" },
         { "<leader>fb",  function() require("telescope.builtin").buffers() end, desc = "Find Buffers" },
         { "<leader>ht",  function() require("telescope.builtin").help_tags() end, desc = "Help Tags" },
         { "<leader>.",   function() require("telescope.builtin").find_files({ cwd = vim.fn.expand("%:p:h") }) end, desc = "Find siblings" },
