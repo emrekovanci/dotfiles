@@ -13,6 +13,17 @@ return {
             vim.g.compile_mode = {
                 default_command = "scripts/build.bat --no-env --no-configure",
             }
+
+            vim.api.nvim_create_autocmd("FileType", {
+                pattern = "compilation",
+                callback = function()
+                    vim.opt_local.wrap = true
+                    vim.opt_local.linebreak = true
+                    vim.opt_local.number = false
+                    vim.opt_local.relativenumber = false
+                    vim.opt_local.signcolumn = "no"
+                end,
+            })
         end,
     },
 }
