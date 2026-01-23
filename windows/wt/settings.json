@@ -8,15 +8,6 @@
             "id": "User.toggleFocusMode"
         },
         {
-            ////////////////////////////////////////////////////////////////////
-            // I wasted 2-3 hours tring to fix that shit.......................
-            ////////////////////////////////////////////////////////////////////
-            // example issue: https://github.com/microsoft/terminal/issues/3483
-            // CSI u Protocol Specification
-            // \u001b[ + key id + ; + modifier + u
-            // https://sw.kovidgoyal.net/kitty/keyboard-protocol/
-            // escape codes like \x1b must be written as \u001b: https://learn.microsoft.com/en-us/windows/terminal/customize-settings/actions#send-input
-            // linux "showkey -a"
             "command":
             {
                 "action": "sendInput",
@@ -34,13 +25,15 @@
         }
     ],
     "alwaysShowNotificationIcon": false,
+    "alwaysShowTabs": true,
     "centerOnLaunch": true,
+    "compatibility.enableUnfocusedAcrylic": false,
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{8da5f3f5-632f-4b5d-a72a-2f8e6c5cc726}",
-    "disableAnimations": false,
+    "disableAnimations": true,
     "initialCols": 150,
-    "initialRows": 40,
+    "initialRows": 30,
     "keybindings":
     [
         {
@@ -64,16 +57,8 @@
             "keys": "alt+shift+d"
         },
         {
-            "id": "Terminal.ResizePaneDown",
-            "keys": "ctrl+down"
-        },
-        {
             "id": "User.toggleFocusMode",
             "keys": "ctrl+f12"
-        },
-        {
-            "id": "Terminal.ResizePaneUp",
-            "keys": "ctrl+up"
         }
     ],
     "newTabMenu":
@@ -89,25 +74,21 @@
             "antialiasingMode": "cleartype",
             "bellStyle": "taskbar",
             "closeOnExit": "automatic",
-            "colorScheme": "kovanci",
-            "cursorColor": "#268BD2",
+            "colorScheme": "Gruber Darker",
+            "cursorColor": null,
             "cursorShape": "filledBox",
             "font":
             {
-                "face": "Lilex",
+                "face": "CommitMono",
                 "features":
                 {
-                    "calt": 0,
-                    "cv01": 1,
-                    "cv02": 1,
-                    "cv03": 1,
-                    "cv06": 0,
                     "cv07": 1,
-                    "cv12": 1,
-                    "cv16": 1
+                    "ss19": 1
                 },
+                "size": 14,
                 "weight": "normal"
             },
+            "historySize": 5001,
             "intenseTextStyle": "bold",
             "scrollbarState": "hidden"
         },
@@ -143,58 +124,63 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
+                "commandline": "cmd.exe /k \"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\Common7\\Tools\\VsDevCmd.bat\" -startdir=none -arch=x64 -host_arch=x64",
+                "guid": "{38b777e0-c54b-43aa-9b35-c53107a08219}",
                 "hidden": false,
-                "name": "Git Bash",
-                "source": "Git"
+                "icon": "ms-appx:///ProfileIcons/vs-cmd.png",
+                "name": "Developer Command Prompt for VS 18",
+                "startingDirectory": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community"
             },
             {
-                "guid": "{267f8561-4e3e-5245-a575-8e0849401ca7}",
+                "commandline": "pwsh.exe -NoExit -Command \"&{Import-Module \"\"\"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\Common7\\Tools\\Microsoft.VisualStudio.DevShell.dll\"\"\"; Enter-VsDevShell 6a905f76 -SkipAutomaticLocation -DevCmdArguments \"\"\"-arch=x64 -host_arch=x64\"\"\"}\"",
+                "guid": "{47ae6224-58ae-4462-902d-b1ce547ed737}",
                 "hidden": false,
-                "name": "Ubuntu",
+                "icon": "ms-appx:///ProfileIcons/vs-powershell.png",
+                "name": "Developer PowerShell for VS 18",
+                "startingDirectory": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community"
+            },
+            {
+                "guid": "{38855083-b8d7-59f0-8786-7618e0febfde}",
+                "hidden": false,
+                "name": "Debian",
                 "source": "Microsoft.WSL"
             },
             {
-                "guid": "{3e7a8c12-458a-5723-8d5e-fabbfe9ce8d3}",
-                "hidden": false,
-                "name": "Developer Command Prompt for VS 18",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{081fda77-ecca-5864-ac69-dbcf1ac5fa9e}",
-                "hidden": false,
-                "name": "Developer PowerShell for VS 18",
-                "source": "Windows.Terminal.VisualStudio"
+                "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
+                "hidden": true,
+                "name": "Visual Studio Debug Console",
+                "source": "VSDebugConsole"
             }
         ]
     },
-    "rendering.graphicsAPI": "direct2d",
     "schemes":
     [
         {
-            "background": "#001E25",
-            "black": "#282C34",
-            "blue": "#61AFEF",
-            "brightBlack": "#5A6374",
-            "brightBlue": "#61AFEF",
-            "brightCyan": "#56B6C2",
-            "brightGreen": "#98C379",
-            "brightPurple": "#C678DD",
-            "brightRed": "#E06C75",
-            "brightWhite": "#DCDFE4",
-            "brightYellow": "#E5C07B",
-            "cursorColor": "#D29922",
-            "cyan": "#56B6C2",
-            "foreground": "#DCDFE4",
-            "green": "#98C379",
-            "name": "kovanci",
-            "purple": "#C678DD",
-            "red": "#E06C75",
+            "background": "#181818",
+            "black": "#181818",
+            "blue": "#96A6C8",
+            "brightBlack": "#52494E",
+            "brightBlue": "#52494E",
+            "brightCyan": "#95A99F",
+            "brightGreen": "#73D936",
+            "brightPurple": "#9E95C7",
+            "brightRed": "#FF4F58",
+            "brightWhite": "#F5F5F5",
+            "brightYellow": "#FFDD33",
+            "cursorColor": "#FFDD33",
+            "cyan": "#95A99F",
+            "foreground": "#E4E4E4",
+            "green": "#73D936",
+            "name": "Gruber Darker",
+            "purple": "#9E95C7",
+            "red": "#F43841",
             "selectionBackground": "#FFFFFF",
-            "white": "#DCDFE4",
-            "yellow": "#E5C07B"
+            "white": "#E4E4E4",
+            "yellow": "#FFDD33"
         }
     ],
+    "showTabsFullscreen": false,
+    "showTabsInTitlebar": true,
     "tabSwitcherMode": "mru",
     "themes": [],
     "useAcrylicInTabRow": false
