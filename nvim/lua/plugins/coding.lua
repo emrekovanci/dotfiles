@@ -11,7 +11,7 @@ return {
         dependencies = { "nvim-lua/plenary.nvim" },
         config = function()
             vim.g.compile_mode = {
-                default_command = "scripts/build.bat --no-env --no-configure",
+                default_command = "scripts\\build.bat --no-env --no-configure",
             }
 
             vim.api.nvim_create_autocmd("FileType", {

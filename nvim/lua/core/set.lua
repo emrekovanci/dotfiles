@@ -82,10 +82,10 @@ opt.autowrite = true    -- Auto save
 
 -- terminal
 if vim.fn.has("win32") then
-    opt.shell        = "pwsh.exe -NoLogo"
-    opt.shellcmdflag = "-ExecutionPolicy RemoteSigned -Command $PSStyle.OutputRendering = 'PlainText';"
-    opt.shellredir   = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
-    opt.shellpipe    = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
-    opt.shellquote   = ""
-    opt.shellxquote  = ""
+    -- opt.shell        = "pwsh.exe -NoLogo"
+    -- opt.shellcmdflag = "-ExecutionPolicy RemoteSigned -Command $PSStyle.OutputRendering = 'PlainText';"
+    -- opt.shellredir   = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
+    -- opt.shellpipe    = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
+    -- opt.shellquote   = ""
+    -- opt.shellxquote  = ""
 end
