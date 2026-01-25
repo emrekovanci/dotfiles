@@ -22,7 +22,7 @@ return {
                 vim.api.nvim_set_hl(0, "@punctuation.bracket", { fg = "#d1c7c5" })
                 vim.api.nvim_set_hl(0, "@type", { link = "GruberDarkerYellow" })
                 vim.api.nvim_set_hl(0, "@property", { fg = "#d1c7c5" })
-                --vim.api.nvim_set_hl(0, "@module.cpp", { fg = "#d1c7c5" })
+                vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#181818", fg = "#d1c7c5" })
             end
 
         })

@@ -71,6 +71,6 @@ return {
             end,
         })
 
-        vim.lsp.enable({ "clangd" })
+        vim.lsp.enable({ "clangd", "rust_analyzer" })
     end),
 }
