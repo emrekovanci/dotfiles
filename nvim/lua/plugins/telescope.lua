@@ -34,7 +34,7 @@ return {
             },
             find_files = {
                 previewer = false,
-                find_command = { "fd", "--type", "file" },
+                find_command = { "fd", "--type", "file", "--color", "never" },
             },
             git_files = { previewer = false },
             buffers = { sort_lastused = true, sort_mru = true },
@@ -65,6 +65,9 @@ return {
         -- grep
         { "<leader>ws",  function() require("telescope.builtin").grep_string({ search = vim.fn.expand("<cword>") }) end },
         { "<leader>Ws",  function() require("telescope.builtin").grep_string({ search = vim.fn.expand("<cWORD>") }) end },
+
+        -- others
+        { "<leader>ep", function() require("telescope.builtin").find_files({ cwd = vim.fs.joinpath(vim.fn.stdpath("data"), "lazy") }) end },
 
         -- lsp
         -- { "<leader>wd", function() require("telescope.builtin").diagnostics() end, desc = "Workspace Diagnostics" },
