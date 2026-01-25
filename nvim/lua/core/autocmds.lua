@@ -36,7 +36,7 @@ vim.api.nvim_create_autocmd({ "BufRead" }, {
 
         path = vim.fs.normalize(path)
 
-        if path:find("/vcpkg_installed/") then
+        if path:find("/_deps/") then
             vim.bo[buf].readonly = true
         end
     end,

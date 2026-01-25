@@ -11,8 +11,6 @@ return {
     },
     config = function(_, opts)
         require("gruber-darker").setup(opts)
-        vim.o.termguicolors = true
-        vim.o.background = "dark"
 
         vim.api.nvim_create_autocmd("ColorScheme", {
             pattern = "gruber-darker",
@@ -22,13 +20,14 @@ return {
                 vim.api.nvim_set_hl(0, "GruberDarkerFg1", { fg = "#d1c7c5" })
                 vim.api.nvim_set_hl(0, "GruberDarkerFg2", { fg = "#d1c7c5" })
                 vim.api.nvim_set_hl(0, "@punctuation.bracket", { fg = "#d1c7c5" })
-                vim.api.nvim_set_hl(0, "@type.cpp", { link = "GruberDarkerYellow" })
-                vim.api.nvim_set_hl(0, "@property.cpp", { fg = "#d1c7c5" })
+                vim.api.nvim_set_hl(0, "@type", { link = "GruberDarkerYellow" })
+                vim.api.nvim_set_hl(0, "@property", { fg = "#d1c7c5" })
                 --vim.api.nvim_set_hl(0, "@module.cpp", { fg = "#d1c7c5" })
             end
 
         })
 
+        vim.o.background = "dark"
         vim.cmd.colorscheme("gruber-darker")
     end,
 }
