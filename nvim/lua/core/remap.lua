@@ -18,8 +18,8 @@ map("i", "<C-s>", "<ESC>:w<CR>a")
 -- WINDOW MANAGEMENT
 -- ═════════════════
 
-map("n", "<C-Up>", "<cmd>resize +5<CR>", opts)
-map("n", "<C-Down>", "<cmd>resize -5<CR>", opts)
+map("n", "<C-Up>", "{", opts)
+map("n", "<C-Down>", "}", opts)
 map("n", "<C-Left>", "<cmd>vertical resize -5<CR>", opts)
 map("n", "<C-Right>", "<cmd>vertical resize +5<CR>", opts)
 
