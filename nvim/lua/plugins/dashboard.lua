@@ -15,6 +15,7 @@ return {
 
         local nvim_config_action = "execute 'cd " .. vim.fn.stdpath("config") .. "' | Telescope find_files"
         local goto_projects_folder = "execute 'cd " .. vim.fn.expand("~/Documents/GitHub") .. "' | Oil"
+
         local opts = {
             theme = "doom",
             hide = {

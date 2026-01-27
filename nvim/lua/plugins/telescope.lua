@@ -30,7 +30,7 @@ return {
         },
         pickers = {
             live_grep = {
-                preview = false,
+                previewer = false,
             },
             find_files = {
                 previewer = false,

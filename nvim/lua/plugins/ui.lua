@@ -60,7 +60,7 @@ return {
                             file_status = true,
                             newfile_status = true,
                             symbols = { modified = "[•]", readonly = "[ɸ]" },
-                            path = 1,
+                            path = 0,
                         },
                     },
                     lualine_x = {
