@@ -72,7 +72,7 @@ return {
                     lualine_y = { { "location" }, { "progress" } },
                     lualine_z = { },
                 },
-                extensions = { "lazy", "oil" },
+                extensions = { "lazy", "oil", require("compile-mode.extensions.lualine") },
             }
 
             return opts
