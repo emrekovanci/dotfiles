@@ -9,9 +9,9 @@ return {
             { "php", "css", "html", "javascript" },
         }):flatten():totable()
 
-        local file_exts = vim.iter({
-            { "sh", "json", "jsonc", "md", "toml", "xml", "yaml", "ps1" },
-            { "lua", "c", "cpp", "cmake", "cs", "rs", "glsl", "hlsl" },
+        local file_types = vim.iter({
+            { "bash", "json", "jsonc", "markdown", "toml", "xml", "yaml", "ps1" },
+            { "lua", "c", "cpp", "cmake", "cs", "rust", "glsl", "hlsl" },
             { "php", "css", "html", "js" }
         }):flatten():totable()
 
@@ -24,7 +24,7 @@ return {
         }
 
         vim.api.nvim_create_autocmd("FileType", {
-            pattern = file_exts,
+            pattern = file_types,
             callback = function()
                 -- syntax highlighting, provided by Neovim
                 vim.treesitter.start()
