@@ -15,6 +15,7 @@ return {
                         [vim.diagnostic.severity.HINT]  = "H",
                     },
                 },
+                virtual_text = false,
                 float = { source = "always", header = "", border = "rounded" },
             },
         }
