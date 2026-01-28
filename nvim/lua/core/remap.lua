@@ -16,8 +16,10 @@ map("n", "<leader>bd", ":bd<CR>", { desc = "Delete Buffer" })
 -- WINDOW MANAGEMENT
 -- ═════════════════
 
-map("n", "<C-Up>", "{", opts)
-map("n", "<C-Down>", "}", opts)
+map("n", "<C-M-Up>", "<cmd>resize +5<CR>", opts)
+map("n", "<C-M-Down>", "<cmd>resize -5<CR>", opts)
+map("n", "<C-M-Left>", "<cmd>vertical resize -5<CR>", opts)
+map("n", "<C-M-Right>", "<cmd>vertical resize +5<CR>", opts)
 
 -- ═════════════
 -- LINE MOVEMENT
@@ -36,10 +38,10 @@ map("v", "<A-Up>", ":m '<-2<CR>gv=gv", opts)
 -- COPY/PASTE
 -- ══════════
 
-map({"n", "v"}, "<leader>y", [["+y]])
-map({"n", "v"}, "<leader>Y", [["+Y]])
-map({"n", "v"}, "<leader>p", [["+p]])
-map({"n", "v"}, "<leader>P", [["+P]])
+map({ "n", "v" }, "<leader>y", [["+y]])
+map({ "n", "v" }, "<leader>Y", [["+Y]])
+map({ "n", "v" }, "<leader>p", [["+p]])
+map({ "n", "v" }, "<leader>P", [["+P]])
 
 -- ════════
 -- TEXT OPS
@@ -56,6 +58,9 @@ map("n", "<leader>la", "<cmd>Lazy<CR>", { desc = "Open Lazy.nvim menu" })
 map("t", "<ESC>", "<C-\\><C-n>")
 map("n", "<C-s>", ":w<CR>")
 map("i", "<C-s>", "<ESC>:w<CR>a")
+
+map("n", "<C-Up>", "{", opts)
+map("n", "<C-Down>", "}", opts)
 
 -- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua#L49-L53
 map({ "i", "n", "s" }, "<esc>", function() vim.cmd("noh") return "<esc>" end, { expr = true, desc = "Escape and Clear hlsearch" })
