@@ -11,8 +11,8 @@ return {
 
         local file_types = vim.iter({
             { "bash", "json", "jsonc", "markdown", "toml", "xml", "yaml", "ps1" },
-            { "lua", "c", "cpp", "cmake", "cs", "rust", "glsl", "hlsl" },
-            { "php", "css", "html", "js" }
+            { "lua", "c", "cpp", "cmake", "cs", "rust", "dockerfile", "glsl", "hlsl" },
+            { "php", "css", "html", "javascript" }
         }):flatten():totable()
 
         require("nvim-treesitter").setup {
