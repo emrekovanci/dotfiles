@@ -1,32 +1,28 @@
 return {
     "neovim/nvim-lspconfig",
-    enabled = false,
-    opts = function()
-        local ret = {
-            diagnostics = {
-                underline = true,
-                update_in_insert = false,
-                severity_sort = true,
-                signs = {
-                    text = {
-                        [vim.diagnostic.severity.ERROR] = "E",
-                        [vim.diagnostic.severity.WARN]  = "W",
-                        [vim.diagnostic.severity.INFO]  = "I",
-                        [vim.diagnostic.severity.HINT]  = "H",
-                    },
-                },
-                virtual_text = false,
-                float = { source = "always", header = "", border = "rounded" },
-            },
-        }
-        return ret
-    end,
-    config = vim.schedule_wrap(function(_, opts)
-        vim.diagnostic.config(vim.deepcopy(opts.diagnostics))
-
+    enabled = true,
+    config = function()
         vim.api.nvim_create_autocmd("LspAttach", {
-            group = vim.api.nvim_create_augroup("my.lsp", {}),
+            group = vim.api.nvim_create_augroup("my.lsp", { clear = true }),
             callback = function(args)
+                -- override builtin floatin func
+                local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+                function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+                    opts = opts or {}
+                    -- opts.title = ""
+                    opts.border = "rounded"
+                    opts.width = 130
+                    opts.height = 50
+                    opts.wrap = false
+                    opts.offset_x = 20
+                    opts.offset_y = 20
+                    -- opts.max_width = opts.max_width or 130
+                    -- opts.max_height = opts.max_height or 20
+                    -- opts.close_events = opts.close_events or { "CursorMoved", "CursorMovedI", "BufLeave", "WinLeave", "InsertEnter", "LSPDetach" }
+                    return orig_util_open_floating_preview(contents, syntax, opts, ...)
+                end
+
+                -- utility for key binding
                 local bufnr = args.buf
                 local map = function(mode, l, r, opts)
                     opts = opts or {}
@@ -36,14 +32,9 @@ return {
                 end
 
                 map("i", "<c-space>", vim.lsp.completion.get)
-                map("i", "<c-S>", vim.lsp.buf.signature_help)
+                -- map("i", "<c-s>", vim.lsp.buf.signature_help)
                 map("n", "<leader>K", vim.diagnostic.open_float)
-                map("n", "K", function() vim.lsp.buf.hover {
-                    border = "rounded",
-                    max_height = 20,
-                    max_width = 130,
-                    close_events = { "CursorMoved", "BufLeave", "WinLeave", "LSPDetach" },
-                } end)
+                map("n", "K", vim.lsp.buf.hover)
 
                 local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
                 if client:supports_method("textDocument/implementation") then
@@ -72,6 +63,33 @@ return {
             end,
         })
 
+        vim.diagnostic.config({
+            diagnostics = {
+                underline = true,
+                update_in_insert = false,
+                severity_sort = true,
+                signs = {
+                    text = {
+                        [vim.diagnostic.severity.ERROR] = "E",
+                        [vim.diagnostic.severity.WARN]  = "W",
+                        [vim.diagnostic.severity.INFO]  = "I",
+                        [vim.diagnostic.severity.HINT]  = "H",
+                    },
+                },
+                virtual_text = false,
+                float = { source = "always", header = "" },
+            },
+        })
+        vim.lsp.config("clangd", {
+            cmd = {
+                "clangd",
+                "--background-index",
+                "--clang-tidy",
+                "--completion-style=detailed",
+                "--header-insertion=never",
+                "--header-insertion-decorators=false",
+            },
+        })
         vim.lsp.enable({ "clangd", "rust_analyzer" })
-    end),
+    end,
 }

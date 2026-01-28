@@ -56,8 +56,6 @@ map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 map("n", "<leader>la", "<cmd>Lazy<CR>", { desc = "Open Lazy.nvim menu" })
 map("t", "<ESC>", "<C-\\><C-n>")
-map("n", "<C-s>", ":w<CR>")
-map("i", "<C-s>", "<ESC>:w<CR>a")
 
 map("n", "<C-Up>", "{", opts)
 map("n", "<C-Down>", "}", opts)
