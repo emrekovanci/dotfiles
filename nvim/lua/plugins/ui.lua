@@ -104,6 +104,7 @@ return {
         lazy = false,
         init = function()
             vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+            vim.keymap.set("n", "_", function() require("oil").open(vim.fn.getcwd()) end, { desc = "Open Oil in CWD" })
         end,
         config = function()
             -- helper function to parse output
@@ -157,9 +158,9 @@ return {
 
             require("oil").setup({
                 columns = {
+                    -- "permissions",
                     "type",
                     "size",
-                    "permissions",
                     "mtime",
                 },
                 delete_to_trash = true,

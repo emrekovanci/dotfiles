@@ -1,16 +1,13 @@
 # set "RIPGREP_CONFIG_PATH" env variable for this file
 
-# colors
---colors=path:fg:0x6C,0xB4,0xEE
---colors=path:style:underline
---colors=line:fg:0xFF,0xA7,0x00
---colors=match:fg:0x0B,0xDA,0x51
-
 # case
 --smart-case
 
+# search dot files by default
+--hidden
+--glob=!.git/*
+
 # others
---path-separator=/
---trim
 --no-heading
 --line-number
+--trim
