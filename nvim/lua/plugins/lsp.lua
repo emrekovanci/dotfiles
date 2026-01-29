@@ -3,6 +3,7 @@ return {
     enabled = true,
     opts = {},
     config = vim.schedule_wrap(function(_, opts)
+
         -- override builtin floatin func
         local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
         function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
@@ -33,6 +34,12 @@ return {
                 -- map("n", "K", vim.lsp.buf.hover)
 
                 local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
+
+                -- disable semantic tokens
+                if client:supports_method("textDocument/semanticTokens") then
+                    client.server_capabilities.semanticTokensProvider = nil
+                end
+
                 if client:supports_method("textDocument/implementation") then
                     -- Create a keymap for vim.lsp.buf.implementation ...
                 end
@@ -76,13 +83,16 @@ return {
                 float = { source = "always" },
             },
         })
+
         vim.lsp.config("clangd", {
             cmd = {
                 "clangd",
-                "--background-index",
+                "--enable-config",
+                -- "--background-index",
                 "--completion-style=detailed",
             },
         })
+
         vim.lsp.enable({ "clangd", "rust_analyzer" })
     end),
 }
