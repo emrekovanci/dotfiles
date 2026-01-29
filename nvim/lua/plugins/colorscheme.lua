@@ -20,6 +20,9 @@ return {
                 vim.api.nvim_set_hl(0, "PmenuBorder", { link = "GruberDarkerBg2" })
                 vim.api.nvim_set_hl(0, "PmenuThumb", { bg = "#52494e", fg = "none" })
 
+                -- lsp
+                vim.api.nvim_set_hl(0, "LspSignatureActiveParameter", { link = "GruberDarkerBrown" })
+
                 -- others
                 vim.api.nvim_set_hl(0, "Number", { fg = "#d1c7c5" })
                 vim.api.nvim_set_hl(0, "NormalSB", { bg = "#181818", fg = "#d1c7c5" })
