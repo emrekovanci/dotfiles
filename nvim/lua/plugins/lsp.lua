@@ -88,8 +88,9 @@ return {
             cmd = {
                 "clangd",
                 "--enable-config",
-                -- "--background-index",
+                "--background-index",
                 "--completion-style=detailed",
+                "--pch-storage=memory",
             },
         })
 
