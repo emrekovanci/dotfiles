@@ -2,34 +2,23 @@ return {
     {
         "nvim-focus/focus.nvim",
         version = false,
-        config = function()
-            require("focus").setup({
-                ui = {
-                    cursorline = false,
-                    signcolumn = false,
-                },
-            })
-        end,
+        opts = {
+            autoresize = {
+                height_quickfix = 0,
+            },
+            ui = {
+                cursorline = false,
+                signcolumn = false,
+            },
+        },
     },
 
     {
         "gelguy/wilder.nvim",
         event = "CmdlineEnter",
-        config = function()
-            local wilder = require("wilder")
-            wilder.setup({ modes = {":", "/", "?"} })
-
-            wilder.set_option("pipeline", {
-                wilder.branch(
-                    wilder.cmdline_pipeline(),
-                    wilder.search_pipeline()
-                ),
-            })
-
-            wilder.set_option("renderer", wilder.wildmenu_renderer({
-                highlighter = wilder.basic_highlighter(),
-            }))
-        end,
+        opts = {
+            modes = { ":", "/", "?" },
+        },
     },
 
     {
