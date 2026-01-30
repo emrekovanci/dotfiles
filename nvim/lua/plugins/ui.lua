@@ -1,9 +1,23 @@
 return {
     {
+        "nvim-focus/focus.nvim",
+        version = false,
+        config = function()
+            require("focus").setup({
+                ui = {
+                    cursorline = false,
+                    signcolumn = false,
+                },
+            })
+        end,
+    },
+
+    {
         "gelguy/wilder.nvim",
+        event = "CmdlineEnter",
         config = function()
             local wilder = require("wilder")
-            wilder.setup({modes = {":", "/", "?"}})
+            wilder.setup({ modes = {":", "/", "?"} })
 
             wilder.set_option("pipeline", {
                 wilder.branch(
