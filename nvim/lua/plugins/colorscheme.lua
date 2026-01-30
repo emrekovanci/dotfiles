@@ -15,25 +15,28 @@ return {
         vim.api.nvim_create_autocmd("ColorScheme", {
             pattern = "gruber-darker",
             callback = function()
+                local hl = vim.api.nvim_set_hl
+
                 -- completion menu
-                vim.api.nvim_set_hl(0, "Pmenu", { bg = "none", fg = "none" })
-                vim.api.nvim_set_hl(0, "PmenuBorder", { link = "GruberDarkerBg2" })
-                vim.api.nvim_set_hl(0, "PmenuThumb", { bg = "#52494e", fg = "none" })
+                hl(0, "Pmenu", { bg = "none", fg = "none" })
+                hl(0, "PmenuBorder", { link = "GruberDarkerBg2" })
+                hl(0, "PmenuThumb", { bg = "#52494e", fg = "none" })
 
                 -- lsp
-                vim.api.nvim_set_hl(0, "LspSignatureActiveParameter", { link = "GruberDarkerBrown" })
+                hl(0, "LspSignatureActiveParameter", { link = "GruberDarkerBrown" })
 
                 -- others
-                vim.api.nvim_set_hl(0, "Number", { fg = "#d1c7c5" })
-                vim.api.nvim_set_hl(0, "NormalSB", { bg = "#181818", fg = "#d1c7c5" })
-                vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#181818", fg = "#d1c7c5" })
-                vim.api.nvim_set_hl(0, "QuickFixLine", { link = "GruberDarkerBrown" })
-                vim.api.nvim_set_hl(0, "GruberDarkerFg0", { fg = "#d1c7c5" })
-                vim.api.nvim_set_hl(0, "GruberDarkerFg1", { fg = "#d1c7c5" })
-                vim.api.nvim_set_hl(0, "GruberDarkerFg2", { fg = "#d1c7c5" })
-                vim.api.nvim_set_hl(0, "@punctuation.bracket", { fg = "#d1c7c5" })
-                vim.api.nvim_set_hl(0, "@type", { link = "GruberDarkerYellow" })
-                vim.api.nvim_set_hl(0, "@property", { fg = "#d1c7c5" })
+                hl(0, "healthSectionDelim", { bg = "#121212" })
+                hl(0, "Number", { fg = "#d1c7c5" })
+                hl(0, "NormalSB", { bg = "#181818", fg = "#d1c7c5" })
+                hl(0, "NormalFloat", { bg = "#181818", fg = "#d1c7c5" })
+                hl(0, "QuickFixLine", { link = "GruberDarkerBrown" })
+                hl(0, "GruberDarkerFg0", { fg = "#d1c7c5" })
+                hl(0, "GruberDarkerFg1", { fg = "#d1c7c5" })
+                hl(0, "GruberDarkerFg2", { fg = "#d1c7c5" })
+                hl(0, "@punctuation.bracket", { fg = "#d1c7c5" })
+                hl(0, "@type", { link = "GruberDarkerYellow" })
+                hl(0, "@property", { fg = "#d1c7c5" })
             end
 
         })
