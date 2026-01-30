@@ -60,7 +60,7 @@ map("t", "<ESC>", "<C-\\><C-n>")
 map("n", "<C-Up>", "{", opts)
 map("n", "<C-Down>", "}", opts)
 
-map("n", "<leader>hx", "<cmd>vnew | r !xxd #<cr>", { desc = "Open buffer in hex view" })
+map("n", "<leader>hx", "<cmd>vnew %:t.hex | r !xxd #<cr>", { desc = "Open buffer in hex view" })
 
 -- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua#L49-L53
 map({ "i", "n", "s" }, "<esc>", function() vim.cmd("noh") return "<esc>" end, { expr = true, desc = "Escape and Clear hlsearch" })
