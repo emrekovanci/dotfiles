@@ -15,7 +15,7 @@ opt.wrap = false          -- Disable line wrap
 -- opt.sidescrolloff = 4  -- Keep 4 columns left/right of cursor
 opt.sj = -50
 opt.grepprg = [[rg --no-heading --trim --column --hidden --glob "!.git/**"]]
-opt.shellslash = true
+-- opt.shellslash = true  -- Breaks lualine branch component
 
 -- indentation
 opt.shiftwidth = 4        -- Size of an indent
