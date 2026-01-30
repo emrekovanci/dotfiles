@@ -25,20 +25,21 @@ return {
                 -- lsp
                 hl(0, "LspSignatureActiveParameter", { link = "GruberDarkerBrown" })
 
+                -- theme overrides
+                hl(0, "GruberDarkerFg0", { fg = "#d1c7c5" })
+                hl(0, "GruberDarkerFg1", { fg = "#d1c7c5" })
+                hl(0, "GruberDarkerFg2", { fg = "#d1c7c5" })
+
                 -- others
                 hl(0, "healthSectionDelim", { bg = "#121212" })
                 hl(0, "Number", { fg = "#d1c7c5" })
                 hl(0, "NormalSB", { bg = "#181818", fg = "#d1c7c5" })
                 hl(0, "NormalFloat", { bg = "#181818", fg = "#d1c7c5" })
                 hl(0, "QuickFixLine", { link = "GruberDarkerBrown" })
-                hl(0, "GruberDarkerFg0", { fg = "#d1c7c5" })
-                hl(0, "GruberDarkerFg1", { fg = "#d1c7c5" })
-                hl(0, "GruberDarkerFg2", { fg = "#d1c7c5" })
                 hl(0, "@punctuation.bracket", { fg = "#d1c7c5" })
                 hl(0, "@type", { link = "GruberDarkerYellow" })
                 hl(0, "@property", { fg = "#d1c7c5" })
             end
-
         })
 
         vim.o.background = "dark"
