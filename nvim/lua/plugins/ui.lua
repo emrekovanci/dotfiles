@@ -169,6 +169,7 @@ return {
                 delete_to_trash = true,
                 keymaps = {
                     ["'"] = { "actions.cd", mode = "n" },
+                    ["f"] = { "actions.select" },
                 },
                 view_options = {
                     is_hidden_file = function(name, bufnr)

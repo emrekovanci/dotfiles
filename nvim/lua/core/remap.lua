@@ -16,6 +16,11 @@ map("n", "<leader>bd", ":bd<CR>", { desc = "Delete Buffer" })
 -- WINDOW MANAGEMENT
 -- ═════════════════
 
+map("n", "<S-Left>", "<C-W>h", opts)
+map("n", "<S-Down>", "<C-W>j", opts)
+map("n", "<S-Up>", "<C-W>k", opts)
+map("n", "<S-Right>", "<C-W>l", opts)
+
 map("n", "<C-M-Up>", "<cmd>resize +5<CR>", opts)
 map("n", "<C-M-Down>", "<cmd>resize -5<CR>", opts)
 map("n", "<C-M-Left>", "<cmd>vertical resize -5<CR>", opts)
