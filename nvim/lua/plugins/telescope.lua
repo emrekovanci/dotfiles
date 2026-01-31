@@ -37,7 +37,7 @@ return {
                 find_command = { "fd", "--type", "file", "--color", "never" },
             },
             git_files = { previewer = false },
-            buffers = { sort_lastused = true, sort_mru = true },
+            buffers = { path_display = "tail", sort_lastused = true, sort_mru = true },
             colorscheme = { enable_preview = true },
         },
         extensions = {
