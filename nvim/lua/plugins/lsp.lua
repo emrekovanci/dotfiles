@@ -4,7 +4,7 @@ end
 
 return {
     "neovim/nvim-lspconfig",
-    enabled = true,
+    enabled = false,
     opts = {},
     config = vim.schedule_wrap(function(_, opts)
 

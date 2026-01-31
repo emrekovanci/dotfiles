@@ -7,12 +7,12 @@ g["loaded_python3_provider"] = 0
 g["loaded_perl_provider"] = 0
 g["loaded_ruby_provider"] = 0
 
+-- opt.scrolloff = 5      -- Keep 5 lines above/below cursor
+-- opt.sidescrolloff = 4  -- Keep 4 columns left/right of cursor
 opt.number = true         -- Print line number
 opt.relativenumber = true -- Relative line numbers
 opt.cursorline = false    -- Don't highlight current line
 opt.wrap = false          -- Disable line wrap
--- opt.scrolloff = 5      -- Keep 5 lines above/below cursor
--- opt.sidescrolloff = 4  -- Keep 4 columns left/right of cursor
 opt.sj = -50
 opt.grepprg = [[rg --no-heading --trim --column --hidden --glob "!.git/**"]]
 -- opt.shellslash = true  -- Breaks lualine branch component
@@ -46,13 +46,13 @@ opt.signcolumn = "yes"    -- Always show the signcolumn, otherwise it would shif
 opt.pumheight = 12        -- Make popup menu smaller
 opt.showmode = false      -- Lualine shows mode, so disable default
 opt.laststatus = 3        -- Global status line
+opt.confirm = true
+opt.foldlevel = 99
+opt.fillchars = { fold = " ", foldsep = " ", diff = "╱", eob = " " }
 if vim.fn.has("nvim-0.12") == 1 then
     opt.winborder = "none"
     opt.pumborder = "rounded" -- For lsp completion menu
 end
-opt.confirm = true
-opt.foldlevel = 99
-opt.fillchars = { fold = " ", foldsep = " ", diff = "╱", eob = " " }
 
 -- workflow
 opt.virtualedit = "block" -- Allow currsor to move where there is no text in visual block mode
@@ -72,9 +72,6 @@ vim.filetype.add({
 })
 
 -- file handling
-if vim.fn.has("win32") then
-    opt.shadafile = "NONE"
-end
 opt.backup = false      -- Don't create backup files
 opt.writebackup = false -- Don't create backup before writing
 opt.swapfile = false    -- Don't create swap files
@@ -85,12 +82,16 @@ opt.ttimeoutlen = 10    -- Key code timeout (dont set it to 0, it increases neov
 opt.autoread = true     -- Auto reload files changed outside vim
 opt.autowrite = true    -- Auto save
 
+-- if vim.fn.has("win32") then
+--     opt.shadafile = "NONE"
+-- end
+
 -- terminal
-if vim.fn.has("win32") then
+-- if vim.fn.has("win32") then
     -- opt.shell        = "pwsh.exe -NoLogo"
     -- opt.shellcmdflag = "-ExecutionPolicy RemoteSigned -Command $PSStyle.OutputRendering = 'PlainText';"
     -- opt.shellredir   = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
     -- opt.shellpipe    = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
     -- opt.shellquote   = ""
     -- opt.shellxquote  = ""
-end
+-- end
