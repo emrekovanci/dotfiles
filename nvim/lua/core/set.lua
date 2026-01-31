@@ -46,8 +46,10 @@ opt.signcolumn = "yes"    -- Always show the signcolumn, otherwise it would shif
 opt.pumheight = 12        -- Make popup menu smaller
 opt.showmode = false      -- Lualine shows mode, so disable default
 opt.laststatus = 3        -- Global status line
-opt.winborder = "none"
-opt.pumborder = "rounded" -- For lsp completion menu
+if vim.fn.has("nvim-0.11") then
+    opt.winborder = "none"
+    opt.pumborder = "rounded" -- For lsp completion menu
+end
 opt.confirm = true
 opt.foldlevel = 99
 opt.fillchars = { fold = " ", foldsep = " ", diff = "╱", eob = " " }
