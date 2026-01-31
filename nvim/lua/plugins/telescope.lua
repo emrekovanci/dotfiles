@@ -52,7 +52,7 @@ return {
         { "<leader>ff", function() require("telescope.builtin").find_files() end, desc = "Find Files" },
         { "<leader>gf", function() require("telescope.builtin").git_files() end, desc = "Git Files" },
         { "<leader>lg", function() require("telescope.builtin").live_grep() end, desc = "Live Grep" },
-        { "<leader>la", function() require("telescope").extensions.live_grep_args.live_grep_args({ path_display = { "tail" }}) end, desc = "Live Grep Args" },
+        { "<leader>li", function() require("telescope").extensions.live_grep_args.live_grep_args({ path_display = { "tail" }}) end, desc = "Live Grep Args" },
         { "<leader>fb", function() require("telescope.builtin").buffers() end, desc = "Find Buffers" },
         { "<leader>ht", function() require("telescope.builtin").help_tags() end, desc = "Help Tags" },
         { "<leader>.",  function() require("telescope.builtin").find_files({ cwd = vim.fn.expand("%:p:h") }) end, desc = "Find siblings" },
