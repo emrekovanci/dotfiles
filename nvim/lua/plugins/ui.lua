@@ -106,7 +106,7 @@ return {
         -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
         lazy = false,
         init = function()
-            vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+            vim.keymap.set("n", "<C-x><C-f>", "<CMD>Oil<CR>", { desc = "Open parent directory" })
             vim.keymap.set("n", "_", function() require("oil").open(vim.fn.getcwd()) end, { desc = "Open Oil in CWD" })
         end,
         config = function()
