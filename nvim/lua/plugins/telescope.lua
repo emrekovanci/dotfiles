@@ -11,6 +11,7 @@ return {
     cmd = "Telescope",
     opts = {
         defaults = {
+            path_display = { "truncate" },
             border = true,
             layout_strategy = "horizontal",
             layout_config = {
@@ -37,7 +38,7 @@ return {
                 find_command = { "fd", "--type", "file", "--color", "never" },
             },
             git_files = { previewer = false },
-            buffers = { path_display = "tail", sort_lastused = true, sort_mru = true },
+            buffers = { sort_lastused = true, sort_mru = true },
             colorscheme = { enable_preview = true },
         },
         extensions = {
