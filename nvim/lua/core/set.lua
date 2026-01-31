@@ -78,7 +78,6 @@ opt.swapfile = false    -- Don't create swap files
 opt.undofile = true     -- Persistent undo
 opt.updatetime = 200    -- Faster completion
 opt.timeoutlen = 400    -- Lower than default (1000)
-opt.ttimeoutlen = 10    -- Key code timeout (dont set it to 0, it increases neovim shutdown duration on wsl2 ubuntu somehow)
 opt.autoread = true     -- Auto reload files changed outside vim
 opt.autowrite = true    -- Auto save
 
