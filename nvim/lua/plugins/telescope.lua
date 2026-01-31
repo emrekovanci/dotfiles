@@ -11,7 +11,7 @@ return {
     cmd = "Telescope",
     opts = {
         defaults = {
-            path_display = { "truncate" },
+            vimgrep_arguments = { "rg", "--color=never", "--no-heading", "--with-filename", "--line-number", "--column", "--smart-case", "--trim" },
             border = true,
             layout_strategy = "horizontal",
             layout_config = {
@@ -30,21 +30,15 @@ return {
             results_title = false,
         },
         pickers = {
-            live_grep = {
-                previewer = false,
-            },
-            find_files = {
-                previewer = false,
-                find_command = { "fd", "--type", "file", "--color", "never" },
-            },
+            live_grep = { previewer = false },
+            find_files = { previewer = false, find_command = { "fd", "--type", "file", "--color", "never" } },
             git_files = { previewer = false },
+            oldfiles = { previewer = false },
             buffers = { sort_lastused = true, sort_mru = true },
             colorscheme = { enable_preview = true },
         },
         extensions = {
-            live_grep_args = {
-                preview = true,
-            },
+            live_grep_args = { preview = true },
         },
     },
     config = function(_, opts)
@@ -54,14 +48,14 @@ return {
     end,
     keys = {
         -- general
-        { "<leader>t",   function() require("telescope.builtin").builtin() end, desc = "Telescope" },
-        { "<leader>ff",  function() require("telescope.builtin").find_files() end, desc = "Find Files" },
-        { "<leader>gf",  function() require("telescope.builtin").git_files() end, desc = "Git Files" },
-        { "<leader>lg",  function() require("telescope.builtin").live_grep() end, desc = "Live Grep" },
-        { "<leader>lgi", function() require("telescope").extensions.live_grep_args.live_grep_args({ path_display = { "tail" }}) end, desc = "Live Grep Args" },
-        { "<leader>fb",  function() require("telescope.builtin").buffers() end, desc = "Find Buffers" },
-        { "<leader>ht",  function() require("telescope.builtin").help_tags() end, desc = "Help Tags" },
-        { "<leader>.",   function() require("telescope.builtin").find_files({ cwd = vim.fn.expand("%:p:h") }) end, desc = "Find siblings" },
+        { "<leader>tt",  function() require("telescope.builtin").builtin() end, desc = "Telescope" },
+        { "<leader>ff", function() require("telescope.builtin").find_files() end, desc = "Find Files" },
+        { "<leader>gf", function() require("telescope.builtin").git_files() end, desc = "Git Files" },
+        { "<leader>lg", function() require("telescope.builtin").live_grep() end, desc = "Live Grep" },
+        { "<leader>la", function() require("telescope").extensions.live_grep_args.live_grep_args({ path_display = { "tail" }}) end, desc = "Live Grep Args" },
+        { "<leader>fb", function() require("telescope.builtin").buffers() end, desc = "Find Buffers" },
+        { "<leader>ht", function() require("telescope.builtin").help_tags() end, desc = "Help Tags" },
+        { "<leader>.",  function() require("telescope.builtin").find_files({ cwd = vim.fn.expand("%:p:h") }) end, desc = "Find siblings" },
 
         -- grep
         { "<leader>ws",  function() require("telescope.builtin").grep_string({ search = vim.fn.expand("<cword>") }) end },
