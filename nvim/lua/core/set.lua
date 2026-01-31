@@ -31,7 +31,7 @@ opt.incsearch = true      -- Show matches as you type
 opt.hlsearch = true       -- Highlight search results
 
 -- invisible characters
-opt.list = true           -- Show some invisible characters (tabs...
+opt.list = false          -- Don't show some invisible characters (tabs...
 opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- split
