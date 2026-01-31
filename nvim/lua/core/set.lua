@@ -72,7 +72,9 @@ vim.filetype.add({
 })
 
 -- file handling
-opt.shadafile = "NONE"
+if vim.fn.has("win32") the
+    opt.shadafile = "NONE"
+end
 opt.backup = false      -- Don't create backup files
 opt.writebackup = false -- Don't create backup before writing
 opt.swapfile = false    -- Don't create swap files
