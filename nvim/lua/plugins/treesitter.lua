@@ -5,13 +5,13 @@ return {
     config = function()
         local ensure_installed_list = vim.iter({
             { "bash", "json", "jsonc", "markdown", "markdown_inline", "regex", "toml", "vimdoc", "xml", "yaml", "powershell" },
-            { "lua", "c", "cpp", "cmake", "c_sharp", "rust", "dockerfile", "glsl", "hlsl" },
+            { "asm", "lua", "c", "cpp", "cmake", "c_sharp", "rust", "dockerfile", "glsl", "hlsl" },
             { "php", "css", "html", "javascript" },
         }):flatten():totable()
 
         local file_types = vim.iter({
             { "bash", "json", "jsonc", "markdown", "toml", "xml", "yaml", "ps1" },
-            { "lua", "c", "cpp", "cmake", "cs", "rust", "dockerfile", "glsl", "hlsl" },
+            { "asm", "lua", "c", "cpp", "cmake", "cs", "rust", "dockerfile", "glsl", "hlsl" },
             { "php", "css", "html", "javascript" }
         }):flatten():totable()
 
