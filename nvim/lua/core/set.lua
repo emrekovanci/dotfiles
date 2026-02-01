@@ -7,15 +7,13 @@ g["loaded_python3_provider"] = 0
 g["loaded_perl_provider"] = 0
 g["loaded_ruby_provider"] = 0
 
--- opt.scrolloff = 5      -- Keep 5 lines above/below cursor
--- opt.sidescrolloff = 4  -- Keep 4 columns left/right of cursor
+opt.sidescrolloff = 8     -- Keep 8 columns left/right of cursor
 opt.number = true         -- Print line number
 opt.relativenumber = true -- Relative line numbers
 opt.cursorline = false    -- Don't highlight current line
 opt.wrap = false          -- Disable line wrap
 opt.sj = -50
 opt.grepprg = [[rg --no-heading --trim --column --hidden --glob "!.git/**"]]
--- opt.shellslash = true  -- Breaks lualine branch component
 
 -- indentation
 opt.shiftwidth = 4        -- Size of an indent
@@ -93,4 +91,5 @@ opt.autowrite = true    -- Auto save
     -- opt.shellpipe    = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
     -- opt.shellquote   = ""
     -- opt.shellxquote  = ""
+    -- opt.shellslash   = true  -- Breaks lualine branch component
 -- end
