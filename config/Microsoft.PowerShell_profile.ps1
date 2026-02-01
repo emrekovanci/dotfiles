@@ -1,5 +1,5 @@
 if ($PSVersionTable.PSVersion.Major -ge 7) {
-    $PSStyle.FileInfo.Directory = $PSStyle.Background.FromRgb(20, 70, 50) + $PSStyle.Foreground.White
+    $PSStyle.FileInfo.Directory = $PSStyle.Foreground.White
 }
 
 # aliases
