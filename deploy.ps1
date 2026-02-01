@@ -35,9 +35,5 @@ New-Symlink `
     "$HOME\Documents\GitHub\dotfiles\config\Microsoft.PowerShell_profile.ps1"
 
 New-Symlink `
-    "$HOME\.gitconfig" `
-    "$HOME\Documents\GitHub\dotfiles\config\.gitconfig"
-
-New-Symlink `
     "$env:APPDATA\zed\settings.json" `
     "$HOME\Documents\GitHub\dotfiles\zed\settings.json"
