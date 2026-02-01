@@ -31,6 +31,7 @@ return {
                 hl(0, "GruberDarkerFg2", { fg = "#d1c7c5" })
 
                 -- others
+                hl(0, "TabLineFill", { bg = "#181818"} )
                 hl(0, "healthSectionDelim", { bg = "#121212" })
                 hl(0, "Number", { fg = "#d1c7c5" })
                 hl(0, "NormalSB", { bg = "#181818", fg = "#d1c7c5" })
