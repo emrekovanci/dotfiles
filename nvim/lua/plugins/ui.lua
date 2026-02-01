@@ -4,6 +4,8 @@ return {
         version = false,
         opts = {
             autoresize = {
+                minwidth = 20,
+                minheight = 5,
                 height_quickfix = 0,
             },
             ui = {
