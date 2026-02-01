@@ -10,7 +10,6 @@ vim.g.maplocalleader = " "
 
 map("n", "<C-Left>", "<cmd>bprev<cr>", opts)
 map("n", "<C-Right>", "<cmd>bnext<cr>", opts)
-map("n", "<leader>bd", ":bd<CR>", { desc = "Delete Buffer" })
 
 -- ═════════════════
 -- WINDOW MANAGEMENT
