@@ -1,5 +1,5 @@
 {
-  "compile-mode.nvim": { "branch": "main", "commit": "cf1c0acca12d54157343ebe0553fb1110a6b2d93" },
+  "compile-mode.nvim": { "branch": "main", "commit": "6b41499bd782be2c213011072ce0f0eb9f7b78a2" },
   "dashboard-nvim": { "branch": "master", "commit": "0775e567b6c0be96d01a61795f7b64c1758262f6" },
   "focus.nvim": { "branch": "master", "commit": "8732b45ceef77b576e60442e768437bce7915107" },
   "gruber-darker.nvim": { "branch": "main", "commit": "aba065c3a79b58cc3863d5c9db319255abd1258a" },

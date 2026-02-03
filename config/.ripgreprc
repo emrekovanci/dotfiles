@@ -1,5 +1,4 @@
 # Replicate standard grep color output to ensure compatibility with Emacs.
 # These options are not added to the Emacs configuration to avoid modeline clutter.
---color=ansi
 --colors=match:fg:red
 --colors=match:style:bold
