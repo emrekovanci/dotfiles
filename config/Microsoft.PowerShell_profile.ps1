@@ -10,20 +10,7 @@ function vim {
     nvim --clean @args
 }
 
-# terminal utils
-Invoke-Expression (&starship init powershell)
-
-# https://learn.microsoft.com/en-us/windows/terminal/tutorials/new-tab-same-directory
-function Invoke-Starship-PreCommand {
-    $loc = $executionContext.SessionState.Path.CurrentLocation;
-    $prompt = "$([char]27)]9;12$([char]7)"
-    if ($loc.Provider.Name -eq "FileSystem") {
-        $prompt += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
-    }
-    $host.ui.Write($prompt)
-}
-
-Invoke-Expression (& { (zoxide init powershell | Out-String) })
+Set-PSReadLineOption -EditMode Emacs
 $PSReadLineOptions = @{
     Colors = @{
         "Command"          = "#89ddff" # blue5
@@ -36,6 +23,21 @@ $PSReadLineOptions = @{
     }
 }
 Set-PSReadLineOption @PSReadLineOptions
+
+# starship
+# https://learn.microsoft.com/en-us/windows/terminal/tutorials/new-tab-same-directory
+Invoke-Expression (&starship init powershell)
+function Invoke-Starship-PreCommand {
+    $loc = $executionContext.SessionState.Path.CurrentLocation;
+    $prompt = "$([char]27)]9;12$([char]7)"
+    if ($loc.Provider.Name -eq "FileSystem") {
+        $prompt += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
+    }
+    $host.ui.Write($prompt)
+}
+
+# zoxide
+Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
 # others
 function whereis($command) {
@@ -50,13 +52,4 @@ function sview() {
     } else {
         Set-PSReadLineOption -PredictionViewStyle InlineView
     }
-}
-
-function countdown($seconds) {
-    for ($i=$seconds; $i -ge 0; $i--) {
-        Write-Host -NoNewline "`rCountdown: $i   "
-        Start-Sleep 1
-    }
-    Write-Host
-    [console]::Beep(1000, 500)
 }
