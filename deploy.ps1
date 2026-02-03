@@ -26,8 +26,9 @@ function New-Symlink {
 }
 
 # Env Vars
-[System.Environment]::SetEnvironmentVariable("XDG_CONFIG_HOME", "$HOME\Documents\GitHub\dotfiles\",                     "USER")
-[System.Environment]::SetEnvironmentVariable("STARSHIP_CONFIG", "$HOME\Documents\GitHub\dotfiles\config\starship.toml", "USER")
+[System.Environment]::SetEnvironmentVariable("XDG_CONFIG_HOME",     "$HOME\Documents\GitHub\dotfiles\",                     "USER")
+[System.Environment]::SetEnvironmentVariable("STARSHIP_CONFIG",     "$HOME\Documents\GitHub\dotfiles\config\starship.toml", "USER")
+[System.Environment]::SetEnvironmentVariable("RIPGREP_CONFIG_HOME", "$HOME\Documents\GitHub\dotfiles\config\.ripgreprc",    "USER")
 
 # Symlinks
 New-Symlink `
