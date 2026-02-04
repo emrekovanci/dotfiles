@@ -19,7 +19,7 @@ winget install -e --id Cloudflare.cloudflared -s winget
 # terminal with streoids
 winget install -e --id Starship.Starship -s winget
 winget install -e --id ajeetdsouza.zoxide -s winget
-winget install -e --id AlDanial.Cloc -s winget
+winget install -e --id XAMPPRocky.tokei -s winget
 winget install -e --id BurntSushi.ripgrep.MSVC -s winget
 winget install -e --id sharkdp.fd -s winget
 winget install -e --id sharkdp.bat -s winget
