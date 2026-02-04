@@ -1,5 +1,5 @@
 ;; duplicate line or region
-(global-set-key (kbd "C-,") 'duplicate-dwim)
+(keymap-global-set "C-," 'duplicate-dwim)
 
 ;; move through windows with Shift-<arrow keys>
 (windmove-default-keybindings)
