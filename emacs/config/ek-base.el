@@ -38,3 +38,13 @@
   (keymap-global-set "C->" 'mc/mark-next-like-this)
   (keymap-global-set "C-<" 'mc/mark-previous-like-this)
   (keymap-global-set "C-c C-<" 'mc/mark-all-like-this))
+
+;; emacs
+(defun ek/reload-init-file ()
+  (interactive)
+  (load-file user-init-file)
+  (message "Init file reloaded!"))
+
+(defun ek/open-init-file ()
+  (interactive)
+  (find-file user-init-file))

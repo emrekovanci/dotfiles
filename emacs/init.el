@@ -54,6 +54,7 @@
    '(cmake-mode glsl-mode golden-ratio gruber-darker-theme lua-mode magit
                 move-text multiple-cursors php-mode powershell rg
                 rust-mode yaml-mode))
+ '(proced-tree-flag t)
  '(project-mode-line t)
  '(require-final-newline t)
  '(ring-bell-function 'ignore)
