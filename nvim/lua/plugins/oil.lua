@@ -6,7 +6,7 @@ return {
         lazy = false,
         init = function()
             vim.keymap.set("n", "<C-x><C-f>", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-            -- vim.keymap.set("n", "_", function() require("oil").open(vim.fn.getcwd()) end, { desc = "Open Oil in CWD" })
+            vim.keymap.set("n", "<C-x><C-p>", function() require("oil").open(vim.fn.getcwd()) end, { desc = "Open Oil in CWD" })
         end,
         config = function()
             -- helper function to parse output
@@ -186,12 +186,8 @@ return {
                         end
                     end,
                 },
-                confirmation = {
-                    border = "rounded",
-                },
-                keymaps_help = {
-                    border = "rounded",
-                },
+                confirmation = { border = "rounded" },
+                keymaps_help = { border = "rounded" },
             })
         end,
     },
