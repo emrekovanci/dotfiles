@@ -31,6 +31,7 @@
  '(custom-safe-themes t)
  '(delete-by-moving-to-trash t)
  '(dired-dwim-target t)
+ '(dired-kill-when-opening-new-dired-buffer t)
  '(dired-listing-switches "-lah --group-directories-first")
  '(display-line-numbers-type 'relative)
  '(display-line-numbers-width 3)
