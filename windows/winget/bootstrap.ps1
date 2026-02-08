@@ -9,6 +9,8 @@ winget install -e --id Skillbrains.Lightshot -s winget
 winget install -e --id 7zip.7zip -s winget
 winget install -e --id AntibodySoftware.WizTree -s winget
 winget install -e --id Gyan.FFmpeg -s winget
+winget install -e --id Microsoft.Sysinternals.ProcessExplorer -s winget
+winget install -e --id Microsoft.Sysinternals.Autoruns -s winget
 
 # network
 # instances of cloudflared do not automatically update on Windows

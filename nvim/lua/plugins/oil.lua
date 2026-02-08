@@ -68,7 +68,7 @@ return {
                 delete_to_trash = true,
                 keymaps = {
                     ["'"] = { "actions.cd", mode = "n" },
-
+                    ["f"] = { "actions.select" },
                     ["<leader>Z"] = {
                         desc = "Compress file or directory",
                         callback = function()
