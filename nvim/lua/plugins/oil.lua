@@ -119,7 +119,8 @@ return {
 
                             if not name:match("%.zip$") and
                                 not name:match("%.rar$") and
-                                not name:match("%.7z$") then
+                                not name:match("%.7z$") and
+                                not name:match("%.tar$") then
                                 vim.notify("Not an archive file!", vim.log.levels.WARN)
                                 return
                             end
