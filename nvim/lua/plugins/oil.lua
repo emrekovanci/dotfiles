@@ -187,6 +187,7 @@ return {
                     end,
                 },
                 confirmation = { border = "rounded" },
+                progress = { border = "rounded" },
                 keymaps_help = { border = "rounded" },
             })
         end,

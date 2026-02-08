@@ -13,7 +13,7 @@ opt.relativenumber = true -- Relative line numbers
 opt.cursorline = false    -- Don't highlight current line
 opt.wrap = false          -- Disable line wrap
 opt.sj = -50
-opt.grepprg = [[rg --no-heading --trim --column --hidden --glob "!.git/**"]]
+opt.grepprg = "rg --vimgrep"
 
 -- indentation
 opt.shiftwidth = 4        -- Size of an indent
