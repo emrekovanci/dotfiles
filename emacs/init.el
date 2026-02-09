@@ -10,7 +10,6 @@
 
 ;; win32
 (when (eq system-type 'windows-nt)
-  (load-file (expand-file-name "config/ek-w32-dired.el" user-emacs-directory))
   (load-file (expand-file-name "config/ek-w32-shell.el" user-emacs-directory)))
 
 (custom-set-variables
