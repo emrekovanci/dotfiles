@@ -28,12 +28,10 @@ return {
             selection_caret = "  ",
             entry_prefix = "  ",
             results_title = false,
+            preview = false,
         },
         pickers = {
-            live_grep = { previewer = false },
-            find_files = { previewer = false, find_command = { "fd", "--type", "file", "--color", "never" } },
-            git_files = { previewer = false },
-            oldfiles = { previewer = false },
+            find_files = { find_command = { "fd", "--type", "file", "--color", "never" } },
             buffers = { sort_lastused = true, sort_mru = true },
             colorscheme = { enable_preview = true },
         },
@@ -50,12 +48,12 @@ return {
         -- general
         { "<leader>tt",  function() require("telescope.builtin").builtin() end, desc = "Telescope" },
         { "<leader>ff", function() require("telescope.builtin").find_files() end, desc = "Find Files" },
+        { "<leader>.",  function() require("telescope.builtin").find_files({ cwd = vim.fn.expand("%:p:h") }) end, desc = "Find siblings" },
         { "<leader>gf", function() require("telescope.builtin").git_files() end, desc = "Git Files" },
         { "<leader>lg", function() require("telescope.builtin").live_grep() end, desc = "Live Grep" },
         { "<leader>li", function() require("telescope").extensions.live_grep_args.live_grep_args({ path_display = { "tail" }}) end, desc = "Live Grep Args" },
         { "<leader>fb", function() require("telescope.builtin").buffers() end, desc = "Find Buffers" },
         { "<leader>ht", function() require("telescope.builtin").help_tags() end, desc = "Help Tags" },
-        { "<leader>.",  function() require("telescope.builtin").find_files({ cwd = vim.fn.expand("%:p:h") }) end, desc = "Find siblings" },
 
         -- grep
         { "<leader>ws",  function() require("telescope.builtin").grep_string({ search = vim.fn.expand("<cword>") }) end },
