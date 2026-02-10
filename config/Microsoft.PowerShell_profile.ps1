@@ -4,7 +4,6 @@ if ($PSVersionTable.PSVersion.Major -ge 7) {
 
 # aliases
 Set-Alias -Name vi -Value nvim
-Set-Alias -Name grep -Value rg
 
 function vim {
     nvim --clean @args

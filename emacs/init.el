@@ -10,7 +10,7 @@
 
 ;; win32
 (when (eq system-type 'windows-nt)
-  (load-file (expand-file-name "config/ek-w32-shell.el" user-emacs-directory)))
+  (load-file (expand-file-name "config/ek-win32.el" user-emacs-directory)))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -29,7 +29,10 @@
  '(custom-enabled-themes '(gruber-darker))
  '(custom-safe-themes t)
  '(delete-by-moving-to-trash t)
+ '(dired-create-destination-dirs 'always)
+ '(dired-create-destination-dirs-on-trailing-dirsep t)
  '(dired-dwim-target t)
+ '(dired-isearch-filenames 'dwim)
  '(dired-kill-when-opening-new-dired-buffer t)
  '(dired-listing-switches "-lah --group-directories-first")
  '(display-line-numbers-type 'relative)
