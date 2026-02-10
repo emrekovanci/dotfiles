@@ -44,6 +44,6 @@ return {
         return opts
     end,
     keys = {
-        { "<leader>d", ":enew | Dashboard<cr>", desc = "Open Dashboard" },
+        { "<leader>d", "<cmd>enew | Dashboard<cr>", desc = "Open Dashboard" },
     },
 }
