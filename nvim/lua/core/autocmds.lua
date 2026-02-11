@@ -26,18 +26,3 @@ vim.api.nvim_create_autocmd("TextYankPost", {
         vim.highlight.on_yank { higroup = "IncSearch", timeout = 250 }
     end,
 })
-
-
--- Readonly things
-vim.api.nvim_create_autocmd({ "BufRead" }, {
-    callback = function(args)
-        local buf = args.buf
-        local path = vim.api.nvim_buf_get_name(buf)
-
-        path = vim.fs.normalize(path)
-
-        if path:find("/_deps/") then
-            vim.bo[buf].readonly = true
-        end
-    end,
-})
