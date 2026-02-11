@@ -39,11 +39,6 @@ function Invoke-Starship-PreCommand {
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
 # others
-function whereis($command) {
-    Get-Command -Name $command -ErrorAction SilentlyContinue |
-    Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
-}
-
 function sview() {
     $currentStyle = (Get-PSReadLineOption).PredictionViewStyle
     if ($currentStyle -eq "InlineView") {
