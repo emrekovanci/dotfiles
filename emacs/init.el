@@ -24,6 +24,7 @@
  '(completion-auto-select 'second-tab)
  '(completions-format 'one-column)
  '(completions-max-height 15)
+ '(context-menu-mode t)
  '(create-lockfiles nil)
  '(cursor-in-non-selected-windows nil)
  '(custom-enabled-themes '(gruber-darker))
