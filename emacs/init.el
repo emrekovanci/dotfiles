@@ -36,6 +36,8 @@
  '(dired-isearch-filenames 'dwim)
  '(dired-kill-when-opening-new-dired-buffer t)
  '(dired-listing-switches "-lah --group-directories-first")
+ '(dired-recursive-copies 'always)
+ '(dired-recursive-deletes 'always)
  '(display-line-numbers-type 'relative)
  '(display-line-numbers-width 3)
  '(duplicate-line-final-position -1)
