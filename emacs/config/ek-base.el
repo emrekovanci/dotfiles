@@ -1,7 +1,7 @@
 (keymap-global-set "C-x C-g" 'browse-url-at-point)
 
 ;; buffer
-(keymap-global-set "C-x C-b" 'ibuffer)
+(keymap-global-set "C-x C-b" 'electric-buffer-list)
 (keymap-global-set "C-c r" 'revert-buffer)
 
 ;; duplicate line or region
