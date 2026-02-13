@@ -66,7 +66,6 @@
                 move-text multiple-cursors php-mode powershell rg
                 rust-mode yaml-mode))
  '(proced-tree-flag t)
- '(project-mode-line t)
  '(require-final-newline t)
  '(ring-bell-function 'ignore)
  '(scroll-bar-mode nil)
@@ -79,7 +78,7 @@
  '(use-dialog-box nil)
  '(use-file-dialog nil)
  '(use-short-answers t)
- '(vc-handled-backends '(Git))
+ '(vc-handled-backends nil)
  '(visible-bell nil)
  '(which-key-mode t)
  '(winner-mode t))
