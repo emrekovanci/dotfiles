@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 (keymap-global-set "C-x C-g" 'browse-url-at-point)
 
 ;; buffer

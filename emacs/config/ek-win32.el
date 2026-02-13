@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 ;; msys2
 (add-to-list 'exec-path "C:\\Program Files\\Git\\usr\\bin\\")
 (when (setq bash-exec (executable-find "bash"))
