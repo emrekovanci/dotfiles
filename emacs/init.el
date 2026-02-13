@@ -8,6 +8,9 @@
 (load-file (expand-file-name "config/ek-base.el" user-emacs-directory))
 (load-file (expand-file-name "config/ek-c-cpp.el" user-emacs-directory))
 
+;; dired
+(add-hook 'dired-mode-hook 'dired-omit-mode)
+
 ;; win32
 (when (eq system-type 'windows-nt)
   (load-file (expand-file-name "config/ek-win32.el" user-emacs-directory)))
@@ -36,6 +39,8 @@
  '(dired-isearch-filenames 'dwim)
  '(dired-kill-when-opening-new-dired-buffer t)
  '(dired-listing-switches "-lah --group-directories-first")
+ '(dired-omit-files "^\\(\\.git$\\|\\.$\\)")
+ '(dired-omit-verbose nil)
  '(dired-recursive-copies 'always)
  '(dired-recursive-deletes 'always)
  '(display-line-numbers-type 'relative)
