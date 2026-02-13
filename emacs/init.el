@@ -78,7 +78,7 @@
  '(use-dialog-box nil)
  '(use-file-dialog nil)
  '(use-short-answers t)
- '(vc-handled-backends nil)
+ '(vc-handled-backends '(Git))
  '(visible-bell nil)
  '(which-key-mode t)
  '(winner-mode t))
