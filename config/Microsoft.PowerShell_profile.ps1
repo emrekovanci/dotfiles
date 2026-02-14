@@ -14,7 +14,13 @@ function fdf {
 }
 
 function vrg {
-    rg --vimgrep --trim $args | fzf --style minimal --delimiter ':' --bind 'enter:become(nvim {1} +{2})'
+    rg --vimgrep --trim --color=always $args |
+      fzf --style minimal `
+      --ansi `
+      --delimiter ':' `
+      --preview 'bat --style=numbers --color=always {1} --highlight-line {2}' `
+      --preview-window 'up,60%,border-bottom,+{2}+3/3,~3' `
+      --bind 'enter:become(nvim {1} +{2})'
 }
 
 # colors
