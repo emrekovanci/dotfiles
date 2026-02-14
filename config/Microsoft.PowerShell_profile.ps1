@@ -6,7 +6,7 @@ if ($PSVersionTable.PSVersion.Major -ge 7) {
 Set-Alias -Name vi -Value nvim
 
 function fh {
-    Get-Content (Get-PSReadLineOption).HistorySavePath | fzf | Invoke-Expression
+    Get-Content (Get-PSReadLineOption).HistorySavePath | fzf --tac --no-sort | Invoke-Expression
 }
 
 function fdf {
