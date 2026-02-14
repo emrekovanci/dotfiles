@@ -69,6 +69,7 @@
                 rust-mode yaml-mode))
  '(proced-tree-flag t)
  '(require-final-newline t)
+ '(resize-mini-windows nil)
  '(ring-bell-function 'ignore)
  '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)
