@@ -9,8 +9,15 @@ function fh {
     Get-Content (Get-PSReadLineOption).HistorySavePath | fzf --style minimal --tac --no-sort | Invoke-Expression
 }
 
-function fdf {
-    fd --type f | fzf --style minimal --preview 'bat -n --color=always {}' --multi --bind 'enter:become(nvim {+})'
+function ffd {
+    fd |
+      fzf --style minimal `
+      --prompt 'All> ' `
+      --bind 'ctrl-d:change-prompt(Directories> )+reload(fd -t d)' `
+      --bind 'ctrl-f:change-prompt(Files> )+reload(fd -t f)' `
+      --bind 'ctrl-a:change-prompt(All> )+reload(fd)' `
+      --multi `
+      --bind 'enter:become(nvim {+})'
 }
 
 function vrg {
