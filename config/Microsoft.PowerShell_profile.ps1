@@ -13,11 +13,12 @@ function ffd {
     fd |
       fzf --style minimal `
       --prompt 'All> ' `
-      --bind 'ctrl-d:change-prompt(Directories> )+reload(fd -t d)' `
-      --bind 'ctrl-f:change-prompt(Files> )+reload(fd -t f)' `
+      --bind 'ctrl-d:change-prompt(Directories> )+reload(fd -td)' `
+      --bind 'ctrl-f:change-prompt(Files> )+reload(fd -tf -tl)' `
       --bind 'ctrl-a:change-prompt(All> )+reload(fd)' `
       --multi `
-      --bind 'enter:become(nvim {+})'
+      --bind 'enter:become(nvim {+})' `
+      --preview 'bat -n --color=always {} 2>nul || eza -lah --color=always {}'
 }
 
 function vrg {
