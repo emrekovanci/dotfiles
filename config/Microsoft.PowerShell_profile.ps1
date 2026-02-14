@@ -5,10 +5,6 @@ if ($PSVersionTable.PSVersion.Major -ge 7) {
 # aliases
 Set-Alias -Name vi -Value nvim
 
-function vim {
-    nvim --clean @args
-}
-
 Set-PSReadLineOption -EditMode Emacs
 $PSReadLineOptions = @{
     Colors = @{
