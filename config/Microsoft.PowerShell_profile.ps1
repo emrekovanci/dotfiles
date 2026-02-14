@@ -6,16 +6,18 @@ if ($PSVersionTable.PSVersion.Major -ge 7) {
 Set-Alias -Name vi -Value nvim
 
 function fh {
-    Get-Content (Get-PSReadLineOption).HistorySavePath | fzf --tac --no-sort | Invoke-Expression
+    Get-Content (Get-PSReadLineOption).HistorySavePath | fzf --style minimal --tac --no-sort | Invoke-Expression
 }
 
 function fdf {
-    $file = fd --type f | fzf --preview 'bat -n --color=always {}'
-    if ($file) {
-        nvim $file
-    }
+    fd --type f | fzf --style minimal --preview 'bat -n --color=always {}' --multi --bind 'enter:become(nvim {+})'
 }
 
+function vrg {
+    rg --vimgrep --trim $args | fzf --style minimal --delimiter ':' --bind 'enter:become(nvim {1} +{2})'
+}
+
+# colors
 Set-PSReadLineOption -EditMode Emacs
 $PSReadLineOptions = @{
     Colors = @{
