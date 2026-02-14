@@ -32,6 +32,7 @@ winget install -e --id bootandy.dust -s winget
 winget install -e --id muesli.duf -s winget
 winget install -e --id JernejSimoncic.Wget -s winget
 winget install -e --id eza-community.eza -s winget
+winget install -e --id JesseDuffield.lazygit -s winget
 
 # dev tools (sublime install will not add context action)
 winget install -e --id Git.Git -s winget
