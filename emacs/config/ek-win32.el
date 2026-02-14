@@ -1,15 +1,10 @@
 ;;; -*- lexical-binding: t -*-
 
 ;; msys2
-(add-to-list 'exec-path "C:\\Program Files\\Git\\usr\\bin\\")
-(when (setq bash-exec (executable-find "bash"))
-  (setq mingw-bin-dir (file-name-directory bash-exec))
-  (setenv "PATH" (concat mingw-bin-dir ";" (getenv "PATH")))
-  (setq grep-use-null-device nil)
-  (setq xref-search-program 'ripgrep)
-  (setq find-program (shell-quote-argument (concat mingw-bin-dir "find.exe")))
-  (setq grep-program (shell-quote-argument (concat mingw-bin-dir "grep.exe"))))
+(setq find-program (shell-quote-argument "C:/Program Files/Git/usr/bin/find.exe"))
+(setq grep-program (shell-quote-argument "C:/Program Files/Git/usr/bin/grep.exe"))
+(setq grep-use-null-device nil)
+(setq xref-search-program 'ripgrep)
 
 ;; for powershell
 (add-hook 'comint-output-filter-functions #'comint-osc-process-output)
-
