@@ -5,6 +5,17 @@ if ($PSVersionTable.PSVersion.Major -ge 7) {
 # aliases
 Set-Alias -Name vi -Value nvim
 
+function fh {
+    Get-Content (Get-PSReadLineOption).HistorySavePath | fzf | Invoke-Expression
+}
+
+function fdf {
+    $file = fd --type f | fzf --preview 'bat -n --color=always {}'
+    if ($file) {
+        nvim $file
+    }
+}
+
 Set-PSReadLineOption -EditMode Emacs
 $PSReadLineOptions = @{
     Colors = @{
@@ -33,13 +44,3 @@ function Invoke-Starship-PreCommand {
 
 # zoxide
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
-
-# others
-function sview() {
-    $currentStyle = (Get-PSReadLineOption).PredictionViewStyle
-    if ($currentStyle -eq "InlineView") {
-        Set-PSReadLineOption -PredictionViewStyle ListView
-    } else {
-        Set-PSReadLineOption -PredictionViewStyle InlineView
-    }
-}
