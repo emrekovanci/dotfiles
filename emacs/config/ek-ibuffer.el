@@ -1,3 +1,7 @@
+;;; -*- lexical-binding: t -*-
+
+(setq ibuffer-display-summary nil)
+
 (setq ibuffer-saved-filter-groups
   '(("default"
      ("dired" (mode . dired-mode))
