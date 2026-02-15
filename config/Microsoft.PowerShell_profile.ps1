@@ -4,6 +4,7 @@ if ($PSVersionTable.PSVersion.Major -ge 7) {
 
 # aliases
 Set-Alias -Name vi -Value nvim
+Set-Alias -Name lg -Value lazygit
 
 function fh {
     Get-Content (Get-PSReadLineOption).HistorySavePath | fzf --style minimal --tac --no-sort | Invoke-Expression
