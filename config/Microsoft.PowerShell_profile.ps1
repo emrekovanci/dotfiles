@@ -10,6 +10,13 @@ function fh {
     Get-Content (Get-PSReadLineOption).HistorySavePath | fzf --style minimal --tac --no-sort | Invoke-Expression
 }
 
+function fal {
+    Get-Alias |
+      ForEach-Object { "{0,-20} -> {1}" -f $_.Name, $_.Definition } |
+      fzf --style minimal `
+      --prompt 'Alias> '
+}
+
 function ffd {
     fd |
       fzf --style minimal `
@@ -61,4 +68,5 @@ function Invoke-Starship-PreCommand {
 }
 
 # zoxide
+$env:_ZO_FZF_OPTS = "--style minimal"
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
