@@ -40,6 +40,7 @@ format = "([\\[$all_status$ahead_behind\\]]($style) )"
 symbol = " "
 
 [status]
+symbol = "x"
 disabled = false
 format = "[$symbol$status]($style) "
 

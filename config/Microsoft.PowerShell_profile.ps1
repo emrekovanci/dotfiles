@@ -32,8 +32,7 @@ function vrg {
 }
 
 # readline
-Set-PSReadLineOption -EditMode Emacs
-Set-PSReadLineOption -BellStyle None
+Set-PSReadLineOption -EditMode Emacs -BellStyle None
 Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 $PSReadLineOptions = @{
     Colors = @{
