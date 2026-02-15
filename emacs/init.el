@@ -4,7 +4,6 @@
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
 
 ;; configs
 (load-file (expand-file-name "config/ek-base.el" user-emacs-directory))
