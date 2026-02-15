@@ -78,7 +78,6 @@
  '(tool-bar-mode nil)
  '(tooltip-mode nil)
  '(use-dialog-box nil)
- '(use-file-dialog nil)
  '(use-short-answers t)
  '(vc-handled-backends '(Git))
  '(visible-bell nil)
