@@ -15,7 +15,7 @@
                (mode . help-mode)
                (mode . apropos-mode)
                (mode . Info-mode)
-               (mode . messages-buffer-mode))
+               (mode . messages-buffer-mode))))))
 
 (add-hook 'ibuffer-mode-hook
   (lambda ()
