@@ -64,9 +64,9 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    '(cmake-mode dockerfile-mode glsl-mode golden-ratio
-                gruber-darker-theme lua-mode magit move-text
-                multiple-cursors php-mode powershell rg rust-mode
-                yaml-mode))
+                gruber-darker-theme lua-mode magit markdown-mode
+                move-text multiple-cursors php-mode powershell rg
+                rust-mode yaml-mode))
  '(require-final-newline t)
  '(resize-mini-windows nil)
  '(ring-bell-function 'ignore)
@@ -92,4 +92,5 @@
  '(font-lock-keyword-face ((t (:foreground "#ffdd33" :weight regular))))
  '(font-lock-preprocessor-face ((t (:foreground "#ffdd33"))))
  '(font-lock-type-face ((t (:foreground "#ffdd33"))))
- '(icomplete-first-match ((t (:foreground "goldenrod" :weight bold)))))
+ '(icomplete-first-match ((t (:foreground "goldenrod" :weight bold))))
+ '(markdown-code-face ((t (:inherit ##)))))
