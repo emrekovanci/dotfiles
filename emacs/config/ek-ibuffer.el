@@ -8,7 +8,6 @@
   '(("default"
      ("dired" (mode . dired-mode))
      ("org" (mode . org-mode))
-     ("magit" (name . "^magit"))
      ("emacs" (or
                (mode . emacs-lisp-mode)
                (mode . lisp-interaction-mode)
