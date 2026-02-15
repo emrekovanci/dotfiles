@@ -63,7 +63,7 @@
  '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(package-selected-packages
-   '(cmake-mode glsl-mode golden-ratio gruber-darker-theme lua-mode
+   '(cmake-mode glsl-mode golden-ratio gruber-darker-theme lua-mode magit
                 move-text multiple-cursors php-mode powershell rg
                 rust-mode yaml-mode))
  '(require-final-newline t)
