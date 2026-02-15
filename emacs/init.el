@@ -8,6 +8,7 @@
 
 ;; configs
 (load-file (expand-file-name "config/ek-base.el" user-emacs-directory))
+(load-file (expand-file-name "config/ek-ibuffer.el" user-emacs-directory))
 (load-file (expand-file-name "config/ek-c-cpp.el" user-emacs-directory))
 
 ;; dired
