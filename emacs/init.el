@@ -67,7 +67,6 @@
    '(cmake-mode glsl-mode golden-ratio gruber-darker-theme lua-mode magit
                 move-text multiple-cursors php-mode powershell rg
                 rust-mode yaml-mode))
- '(proced-tree-flag t)
  '(require-final-newline t)
  '(resize-mini-windows nil)
  '(ring-bell-function 'ignore)
