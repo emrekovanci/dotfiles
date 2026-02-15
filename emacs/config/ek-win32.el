@@ -8,3 +8,13 @@
 
 ;; for powershell
 (add-hook 'comint-output-filter-functions #'comint-osc-process-output)
+
+;; lazygit
+(defun lazygit ()
+  "Open lazygit in pwsh"
+  (interactive)
+  (let ((default-directory
+         (if-let ((project (project-current)))
+             (project-root project)
+           default-directory)))
+    (start-process "lazygit" nil "cmd.exe" "/c" "start" "pwsh.exe" "-NoProfile" "-Command" "lazygit")))
