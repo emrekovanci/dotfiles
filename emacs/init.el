@@ -54,7 +54,6 @@
  '(global-auto-revert-non-file-buffers t)
  '(global-display-line-numbers-mode t)
  '(golden-ratio-mode t)
- '(history-length 25)
  '(icomplete-prospects-height 1)
  '(icomplete-separator " ")
  '(indent-tabs-mode nil)
