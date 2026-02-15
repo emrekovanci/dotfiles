@@ -31,8 +31,10 @@ function vrg {
       --bind 'enter:become(nvim {1} +{2})'
 }
 
-# colors
+# readline
 Set-PSReadLineOption -EditMode Emacs
+Set-PSReadLineOption -BellStyle None
+Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 $PSReadLineOptions = @{
     Colors = @{
         "Command"          = "#89ddff" # blue5
