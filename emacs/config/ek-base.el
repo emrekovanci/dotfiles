@@ -4,7 +4,6 @@
 
 ;; buffer
 (keymap-global-set "C-x C-b" 'buffer-menu)
-(keymap-global-set "C-c r" 'revert-buffer)
 
 ;; duplicate line or region
 (keymap-global-set "C-," 'duplicate-dwim)
