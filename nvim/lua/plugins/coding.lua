@@ -6,6 +6,10 @@ return {
     },
 
     {
+        "tpope/vim-surround",
+    },
+
+    {
         "ej-shafran/compile-mode.nvim",
         version = "^5.0.0",
         dependencies = { "nvim-lua/plenary.nvim" },
