@@ -1,7 +1,6 @@
 ;;; -*- lexical-binding: t -*-
 
 (keymap-global-set "C-x C-g" 'browse-url-at-point)
-(keymap-global-set "C-x C-b" 'ibuffer)
 (keymap-global-set "C-," 'duplicate-dwim)
 
 ;; insert new line below/above
