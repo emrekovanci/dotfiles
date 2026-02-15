@@ -80,7 +80,6 @@
  '(use-dialog-box nil)
  '(use-short-answers t)
  '(vc-handled-backends '(Git))
- '(visible-bell nil)
  '(which-key-mode t)
  '(winner-mode t))
 (custom-set-faces
