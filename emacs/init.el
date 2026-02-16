@@ -40,6 +40,7 @@
  '(dired-dwim-target t)
  '(dired-isearch-filenames 'dwim)
  '(dired-kill-when-opening-new-dired-buffer t)
+ '(dired-listing-switches "-alFh")
  '(dired-omit-files "^\\(\\.git$\\|\\.$\\)")
  '(dired-omit-verbose nil)
  '(dired-recursive-copies 'always)
