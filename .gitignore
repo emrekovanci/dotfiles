@@ -4,4 +4,3 @@ github_copilot/
 emacs/*
 !emacs/early-init.el
 !emacs/init.el
-!emacs/config/
