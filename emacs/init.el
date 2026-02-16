@@ -72,6 +72,8 @@
  '(require-final-newline t)
  '(resize-mini-windows nil)
  '(ring-bell-function 'ignore)
+ '(save-place-mode t)
+ '(savehist-mode t)
  '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)
  '(shell-kill-buffer-on-exit t)
