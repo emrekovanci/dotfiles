@@ -1,14 +1,14 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions":
+    "actions": 
     [
         {
             "command": "toggleFocusMode",
             "id": "User.toggleFocusMode"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "sendInput",
                 "input": "\u001b[32;5u"
@@ -16,7 +16,7 @@
             "id": "fix_neovim_ctrl_space"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "sendInput",
                 "input": "\u001b[34;5u"
@@ -32,9 +32,9 @@
     "copyOnSelect": false,
     "defaultProfile": "{8da5f3f5-632f-4b5d-a72a-2f8e6c5cc726}",
     "disableAnimations": true,
-    "initialCols": 150,
+    "initialCols": 160,
     "initialRows": 30,
-    "keybindings":
+    "keybindings": 
     [
         {
             "id": "fix_neovim_ctrl_space",
@@ -61,15 +61,15 @@
             "keys": "ctrl+f12"
         }
     ],
-    "newTabMenu":
+    "newTabMenu": 
     [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles":
+    "profiles": 
     {
-        "defaults":
+        "defaults": 
         {
             "antialiasingMode": "cleartype",
             "bellStyle": "taskbar",
@@ -77,22 +77,20 @@
             "colorScheme": "Gruber Darker",
             "cursorColor": null,
             "cursorShape": "filledBox",
-            "font":
+            "font": 
             {
                 "face": "CommitMono",
-                "features":
+                "features": 
                 {
-                    "cv07": 1,
-                    "ss19": 1
+                    "calt": 0
                 },
-                "size": 14,
-                "weight": "normal"
+                "size": 14
             },
             "historySize": 5001,
             "intenseTextStyle": "bold",
             "scrollbarState": "hidden"
         },
-        "list":
+        "list": 
         [
             {
                 "commandline": "%PROGRAMFILES%/PowerShell/7/pwsh.exe -NoLogo",
@@ -153,7 +151,7 @@
             }
         ]
     },
-    "schemes":
+    "schemes": 
     [
         {
             "background": "#181818",
@@ -182,6 +180,7 @@
     "showTabsFullscreen": false,
     "showTabsInTitlebar": true,
     "tabSwitcherMode": "mru",
+    "theme": "dark",
     "themes": [],
     "useAcrylicInTabRow": false
 }
