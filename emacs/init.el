@@ -69,22 +69,22 @@
 (setq ibuffer-display-summary nil)
 (setq ibuffer-show-empty-filter-groups nil)
 (setq ibuffer-saved-filter-groups
-  '(("default"
-     ("dired" (mode . dired-mode))
-     ("org" (mode . org-mode))
-     ("magit" (name . "^magit"))
-     ("emacs" (or
-               (mode . emacs-lisp-mode)
-               (mode . lisp-interaction-mode)
-               (mode . help-mode)
-               (mode . apropos-mode)
-               (mode . Info-mode)
-               (mode . messages-buffer-mode))))))
+      '(("default"
+         ("dired" (mode . dired-mode))
+         ("org" (mode . org-mode))
+         ("magit" (name . "^magit"))
+         ("emacs" (or
+                   (mode . emacs-lisp-mode)
+                   (mode . lisp-interaction-mode)
+                   (mode . help-mode)
+                   (mode . apropos-mode)
+                   (mode . Info-mode)
+                   (mode . messages-buffer-mode))))))
 
 (add-hook 'ibuffer-mode-hook
-  (lambda ()
-    (ibuffer-auto-mode 1)
-    (ibuffer-switch-to-saved-filter-groups "default")))
+          (lambda ()
+            (ibuffer-auto-mode 1)
+            (ibuffer-switch-to-saved-filter-groups "default")))
 
 ;; dired
 (add-hook 'dired-mode-hook 'dired-omit-mode)
@@ -108,6 +108,9 @@
                (project-root project)
              default-directory)))
       (start-process "lazygit" nil "cmd.exe" "/c" "start" "pwsh.exe" "-NoProfile" "-Command" "lazygit"))))
+
+;; very long line optimizations
+;; (setq-default bidi-inhibit-bpa t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -167,7 +170,6 @@
  '(resize-mini-windows nil)
  '(ring-bell-function 'ignore)
  '(save-place-mode t)
- '(savehist-mode t)
  '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)
  '(shell-kill-buffer-on-exit t)
