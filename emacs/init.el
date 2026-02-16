@@ -156,6 +156,8 @@
  '(ls-lisp-emulation 'UNIX)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
+ '(mouse-wheel-progressive-speed nil)
+ '(mouse-wheel-scroll-amount '(3))
  '(package-selected-packages
    '(cmake-mode dockerfile-mode glsl-mode golden-ratio
                 gruber-darker-theme lua-mode magit markdown-mode
