@@ -40,7 +40,6 @@
  '(dired-dwim-target t)
  '(dired-isearch-filenames 'dwim)
  '(dired-kill-when-opening-new-dired-buffer t)
- '(dired-listing-switches "-lah --group-directories-first")
  '(dired-omit-files "^\\(\\.git$\\|\\.$\\)")
  '(dired-omit-verbose nil)
  '(dired-recursive-copies 'always)
@@ -60,6 +59,8 @@
  '(inhibit-startup-screen t)
  '(isearch-lazy-count t)
  '(lazy-highlight-initial-delay 0)
+ '(ls-lisp-dirs-first t)
+ '(ls-lisp-emulation 'UNIX)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(package-selected-packages
