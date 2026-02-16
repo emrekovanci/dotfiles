@@ -5,18 +5,7 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
-;; emacs config things
-(defun ek/reload-init-file ()
-  (interactive)
-  (load-file user-init-file)
-  (message "Init file reloaded!"))
-
-(defun ek/open-init-file ()
-  (interactive)
-  (find-file user-init-file))
-
 ;; some mappings
-(keymap-global-set "C-x C-g" 'browse-url-at-point)
 (keymap-global-set "C-," 'duplicate-dwim)
 
 ;; insert new line above/below
@@ -66,13 +55,13 @@
 
 ;; ibuffer
 (keymap-global-set "C-x C-b" 'ibuffer)
-(setq ibuffer-display-summary nil)
 (setq ibuffer-show-empty-filter-groups nil)
 (setq ibuffer-saved-filter-groups
       '(("default"
          ("dired" (mode . dired-mode))
          ("org" (mode . org-mode))
          ("magit" (name . "^magit"))
+         ("tramp" (name . "^\\*tramp.*"))
          ("emacs" (or
                    (mode . emacs-lisp-mode)
                    (mode . lisp-interaction-mode)
@@ -109,9 +98,6 @@
              default-directory)))
       (start-process "lazygit" nil "cmd.exe" "/c" "start" "pwsh.exe" "-NoProfile" "-Command" "lazygit"))))
 
-;; very long line optimizations
-;; (setq-default bidi-inhibit-bpa t)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -133,10 +119,8 @@
  '(dired-create-destination-dirs 'always)
  '(dired-create-destination-dirs-on-trailing-dirsep t)
  '(dired-dwim-target t)
- '(dired-isearch-filenames 'dwim)
- '(dired-kill-when-opening-new-dired-buffer t)
- '(dired-listing-switches "-alFh")
- '(dired-omit-files "^\\(\\.git$\\|\\.$\\)")
+ '(dired-listing-switches "-alh")
+ '(dired-omit-files "^\\.git$")
  '(dired-omit-verbose nil)
  '(dired-recursive-copies 'always)
  '(dired-recursive-deletes 'always)
@@ -148,6 +132,7 @@
  '(global-auto-revert-mode t)
  '(global-auto-revert-non-file-buffers t)
  '(global-display-line-numbers-mode t)
+ '(global-goto-address-mode t)
  '(golden-ratio-mode t)
  '(icomplete-prospects-height 1)
  '(icomplete-separator " ")
