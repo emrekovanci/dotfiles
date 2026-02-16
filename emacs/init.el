@@ -5,17 +5,109 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
-;; configs
-(load-file (expand-file-name "config/ek-base.el" user-emacs-directory))
-(load-file (expand-file-name "config/ek-ibuffer.el" user-emacs-directory))
-(load-file (expand-file-name "config/ek-c-cpp.el" user-emacs-directory))
+;; emacs config things
+(defun ek/reload-init-file ()
+  (interactive)
+  (load-file user-init-file)
+  (message "Init file reloaded!"))
+
+(defun ek/open-init-file ()
+  (interactive)
+  (find-file user-init-file))
+
+;; some mappings
+(keymap-global-set "C-x C-g" 'browse-url-at-point)
+(keymap-global-set "C-," 'duplicate-dwim)
+
+;; insert new line above/below
+(defun open-line-below ()
+  (interactive)
+  (end-of-line)
+  (newline)
+  (indent-for-tab-command))
+
+(defun open-line-above ()
+  (interactive)
+  (beginning-of-line)
+  (newline)
+  (forward-line -1)
+  (indent-for-tab-command))
+
+(keymap-global-set "C-<return>" 'open-line-below)
+(keymap-global-set "C-S-<return>" 'open-line-above)
+
+;; move through windows with Shift-<arrow keys>
+(windmove-default-keybindings)
+
+;; move-text
+(when (require 'move-text nil 'noerror)
+  (move-text-default-bindings))
+
+;; multiple-cursors
+(when (require 'multiple-cursors nil 'noerror)
+  (keymap-global-set "C-S-<mouse-1>" 'mc/add-cursor-on-click)
+  (keymap-global-set "C-S-c C-S-c" 'mc/edit-lines)
+  (keymap-global-set "C->" 'mc/mark-next-like-this)
+  (keymap-global-set "C-<" 'mc/mark-previous-like-this)
+  (keymap-global-set "C-c C-<" 'mc/mark-all-like-this))
+
+;; c / c++ things
+(defun my-c-mode-hook ()
+  (setq c-basic-offset 4)
+  (c-set-offset 'substatement-open 0))
+
+(add-hook 'c++-mode-hook 'my-c-mode-hook)
+(add-hook 'c-mode-hook 'my-c-mode-hook)
+
+(add-to-list 'auto-mode-alist '("\\.clangd\\'" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.clang-tidy\\'" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.clang-format\\'" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.codespellrc\\'" . conf-mode))
+
+;; ibuffer
+(keymap-global-set "C-x C-b" 'ibuffer)
+(setq ibuffer-display-summary nil)
+(setq ibuffer-show-empty-filter-groups nil)
+(setq ibuffer-saved-filter-groups
+  '(("default"
+     ("dired" (mode . dired-mode))
+     ("org" (mode . org-mode))
+     ("magit" (name . "^magit"))
+     ("emacs" (or
+               (mode . emacs-lisp-mode)
+               (mode . lisp-interaction-mode)
+               (mode . help-mode)
+               (mode . apropos-mode)
+               (mode . Info-mode)
+               (mode . messages-buffer-mode))))))
+
+(add-hook 'ibuffer-mode-hook
+  (lambda ()
+    (ibuffer-auto-mode 1)
+    (ibuffer-switch-to-saved-filter-groups "default")))
 
 ;; dired
 (add-hook 'dired-mode-hook 'dired-omit-mode)
 
-;; win32
+;; windows things
 (when (eq system-type 'windows-nt)
-  (load-file (expand-file-name "config/ek-win32.el" user-emacs-directory)))
+  (setq find-program (shell-quote-argument "C:/Program Files/Git/usr/bin/find.exe"))
+  (setq grep-program (shell-quote-argument "C:/Program Files/Git/usr/bin/grep.exe"))
+  (setq grep-use-null-device nil)
+  (setq xref-search-program 'ripgrep)
+
+  ;; for powershell
+  (add-hook 'comint-output-filter-functions #'comint-osc-process-output)
+
+  ;; lazygit
+  (defun lazygit ()
+    "Open lazygit in pwsh"
+    (interactive)
+    (let ((default-directory
+           (if-let ((project (project-current)))
+               (project-root project)
+             default-directory)))
+      (start-process "lazygit" nil "cmd.exe" "/c" "start" "pwsh.exe" "-NoProfile" "-Command" "lazygit"))))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
