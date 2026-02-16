@@ -4,6 +4,7 @@ winget install -e --id Nvidia.GeForceExperience -s winget
 winget install -e --id VideoLAN.VLC -s winget
 winget install -e --id Notion.Notion -s winget
 winget install -e --id Skillbrains.Lightshot -s winget
+winget install -e --id Discord.Discord -s winget
 
 # utils
 winget install -e --id 7zip.7zip -s winget
@@ -40,13 +41,8 @@ winget install -e --id GitHub.GitHubDesktop -s winget
 winget install -e --id LLVM.LLVM -s winget
 winget install -e --id Kitware.CMake -s winget
 winget install -e --id HeidiSQL.HeidiSQL -s winget
-
-# other dev tools
-winget install -e --id Hex-Rays.IDA.Free -s winget
 winget install -e --id horsicq.DIE-engine -s winget
-
-# chat
-winget install -e --id Discord.Discord -s winget
+winget install -e --id Hex-Rays.IDA.Free -s winget
 
 # gaming
 winget install -e --id EpicGames.EpicGamesLauncher -s winget

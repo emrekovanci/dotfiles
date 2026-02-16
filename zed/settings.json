@@ -1,9 +1,20 @@
 {
+  "buffer_font_size": 20.0,
+  "wsl_connections": [],
+  "word_diff_enabled": true,
+  "diagnostics": {
+    "lsp_pull_diagnostics": {
+      "enabled": true
+    },
+    "inline": {
+      "enabled": false
+    }
+  },
   "status_bar": {
-    "line_endings_button": true,
+    "line_endings_button": true
   },
   "scrollbar": {
-    "git_diff": false,
+    "git_diff": false
   },
   "format_on_save": "off",
   "snippet_sort_order": "top",
@@ -11,61 +22,49 @@
   "scroll_beyond_last_line": "off",
   "colorize_brackets": false,
   "show_whitespaces": "trailing",
-  "buffer_font_size": 17.0,
   "buffer_line_height": "comfortable",
   "git": {
     "inline_blame": {
-      "enabled": false,
+      "enabled": false
     },
-    "git_gutter": "hide",
+    "git_gutter": "hide"
   },
   "show_wrap_guides": false,
   "cursor_shape": "block",
   "current_line_highlight": "none",
   "theme_overrides": {
-    "Solarized Dark": {
-      "background": "#001E25",
-      "panel.background": "#001E25",
-      "editor.background": "#001E25",
-      "editor.gutter.background": "#001E25",
-      "status_bar.background": "#001E25",
-      "ghost_element.active": "#001E25",
-      "title_bar.background": "#001E25",
-      "tab_bar.background": "#001E25",
-      "tab.active_background": "#001E25",
-      "tab.inactive_background": "#001E25",
-      "hint.background": "#001E25",
-      "elevated_surface.background": "#001E25",
-    },
     "Gruber Darker": {
       "syntax": {
         "string": {
-          "font_style": "normal",
+          "font_style": "normal"
         },
-      },
-    },
+        "type.builtin": {
+            "color": "#ffdd33",
+        },
+      }
+    }
   },
   "preview_tabs": {
     "enable_preview_file_from_code_navigation": false,
     "enable_preview_from_multibuffer": false,
     "enable_preview_from_project_panel": false,
-    "enabled": false,
+    "enabled": false
   },
   "tab_bar": {
     "show_tab_bar_buttons": false,
-    "show_nav_history_buttons": false,
+    "show_nav_history_buttons": false
   },
   "toolbar": {
     "agent_review": false,
     "selections_menu": false,
     "quick_actions": false,
-    "breadcrumbs": false,
+    "breadcrumbs": false
   },
-  "buffer_font_family": "Input",
+  "buffer_font_family": "CommitMono",
   "outline_panel": {
     "indent_guides": {
-      "show": "never",
-    },
+      "show": "never"
+    }
   },
   "project_panel": {
     "auto_fold_dirs": false,
@@ -74,16 +73,16 @@
     "auto_reveal_entries": false,
     "sticky_scroll": false,
     "indent_guides": {
-      "show": "never",
-    },
+      "show": "never"
+    }
   },
   "indent_guides": {
-    "enabled": false,
+    "enabled": false
   },
   "disable_ai": true,
   "telemetry": {
     "diagnostics": false,
-    "metrics": false,
+    "metrics": false
   },
   "base_keymap": "VSCode",
   "icon_theme": "Material Icon Theme",
@@ -94,13 +93,19 @@
       "with_arguments": {
         "program": "pwsh",
         "args": ["-NoLogo"],
-        "title_override": "pwsh",
-      },
-    },
+        "title_override": "pwsh"
+      }
+    }
   },
   "languages": {
     "C++": {
+      "indent_guides": {
+        "enabled": false
+      },
       "format_on_save": "on"
+    },
+    "Lua": {
+      "enable_language_server": false
     }
   },
   "enable_language_server": true,
@@ -108,8 +113,8 @@
     "clangd": {
       "binary": {
         "ignore_system_version": true,
-        "path": "C:/Program Files/LLVM/bin/clangd.exe",
-      },
-    },
-  },
+        "path": "C:/Program Files/LLVM/bin/clangd.exe"
+      }
+    }
+  }
 }

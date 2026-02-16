@@ -1,2 +1,2 @@
 [wsl2]
-guiApplications=false
+localhostforwarding=false
