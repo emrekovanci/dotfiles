@@ -1,6 +1,6 @@
 ;;; -*- lexical-binding: t -*-
 
-(setq-default buffer-file-coding-system 'utf-8-unix)
+(set-default-coding-systems 'utf-8-unix)
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
