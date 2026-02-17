@@ -158,7 +158,6 @@
  '(save-place-mode t)
  '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)
- '(shell-kill-buffer-on-exit t)
  '(show-paren-delay 0)
  '(tab-width 4)
  '(tool-bar-mode nil)
