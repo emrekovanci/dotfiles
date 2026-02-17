@@ -58,11 +58,14 @@
 (setq ibuffer-show-empty-filter-groups nil)
 (setq ibuffer-saved-filter-groups
       '(("default"
-         ("dired" (mode . dired-mode))
-         ("org" (mode . org-mode))
-         ("magit" (name . "^magit"))
-         ("tramp" (name . "^\\*tramp.*"))
-         ("emacs" (or
+         ("Dired" (mode . dired-mode))
+         ("Org" (mode . org-mode))
+         ("Magit" (name . "^magit"))
+         ("Tramp" (name . "^\\*tramp.*"))
+         ("Term" (or
+                  (mode . shell-mode)
+                  (derived-mode . compilation-mode)))
+         ("Emacs" (or
                    (mode . emacs-lisp-mode)
                    (mode . lisp-interaction-mode)
                    (mode . help-mode)
