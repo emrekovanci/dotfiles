@@ -132,7 +132,6 @@
  '(duplicate-line-final-position -1)
  '(duplicate-region-final-position -1)
  '(fido-mode t)
- '(global-auto-revert-mode t)
  '(global-display-line-numbers-mode t)
  '(global-goto-address-mode t)
  '(golden-ratio-mode t)
