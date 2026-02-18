@@ -17,6 +17,20 @@ function fal {
       --prompt 'Alias> '
 }
 
+function pfd {
+    $projectsDir = "$HOME\Documents\GitHub"
+
+    $proj = fd -t d -d 1 . $projectsDir |
+      fzf --style minimal `
+      --prompt 'Projects> ' `
+      --preview 'eza -lah --color=always {}'
+
+    if ($proj) {
+        Set-Location $proj
+        nvim .
+    }
+}
+
 function ffd {
     fd |
       fzf --style minimal `
