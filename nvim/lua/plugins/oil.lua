@@ -3,7 +3,7 @@ return {
     "stevearc/oil.nvim",
     lazy = false,
     init = function()
-        vim.keymap.set("n", "<C-x><C-j>",
+        vim.keymap.set("n", "<C-x><C-f>",
             function()
                 local oil = require("oil")
                 if vim.bo.filetype == "oil" then
