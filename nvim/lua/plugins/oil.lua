@@ -3,8 +3,16 @@ return {
     "stevearc/oil.nvim",
     lazy = false,
     init = function()
-        vim.keymap.set("n", "<C-x><C-f>", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-        vim.keymap.set("n", "<C-x><C-p>", function() require("oil").open(vim.fn.getcwd()) end, { desc = "Open Oil in CWD" })
+        vim.keymap.set("n", "<C-x><C-j>",
+            function()
+                local oil = require("oil")
+                if vim.bo.filetype == "oil" then
+                    oil.open()
+                else
+                    oil.open(vim.fn.getcwd())
+                end
+            end,
+        { desc = "Oil Jump" })
     end,
     config = function()
         require("oil").setup({
