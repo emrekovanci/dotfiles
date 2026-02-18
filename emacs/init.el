@@ -53,8 +53,9 @@
 (add-to-list 'auto-mode-alist '("\\.clang-format\\'" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.codespellrc\\'" . conf-mode))
 
-;; rust things
+;; colorized compilation & comint etc
 (setenv "CARGO_TERM_COLOR" "always")
+(setenv "GIT_CONFIG_PARAMETERS" "'color.ui=always'")
 
 ;; ibuffer
 (keymap-global-set "C-x C-b" 'ibuffer)
@@ -179,6 +180,22 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "CommitMono" :foundry "outline" :slant normal :weight regular :height 159 :width normal))))
+ '(ansi-color-black ((t (:background "#181818" :foreground "#181818"))))
+ '(ansi-color-blue ((t (:background "#96A6C8" :foreground "#96A6C8"))))
+ '(ansi-color-bright-black ((t (:background "#52494E" :foreground "#52494E"))))
+ '(ansi-color-bright-blue ((t (:background "#52494E" :foreground "#52494E"))))
+ '(ansi-color-bright-cyan ((t (:background "#95A99F" :foreground "#95A99F"))))
+ '(ansi-color-bright-green ((t (:background "#73D936" :foreground "#73D936"))))
+ '(ansi-color-bright-magenta ((t (:background "#9E95C7" :foreground "#9E95C7"))))
+ '(ansi-color-bright-red ((t (:background "#FF4F58" :foreground "#FF4F58"))))
+ '(ansi-color-bright-white ((t (:background "#F5F5F5" :foreground "#F5F5F5"))))
+ '(ansi-color-bright-yellow ((t (:background "#FFDD33" :foreground "#FFDD33"))))
+ '(ansi-color-cyan ((t (:background "#95A99F" :foreground "#95A99F"))))
+ '(ansi-color-green ((t (:background "#73D936" :foreground "#73D936"))))
+ '(ansi-color-magenta ((t (:background "#9E95C7" :foreground "#9E95C7"))))
+ '(ansi-color-red ((t (:background "#F43841" :foreground "#F43841"))))
+ '(ansi-color-white ((t (:background "#E4E4E4" :foreground "#E4E4E4"))))
+ '(ansi-color-yellow ((t (:background "#FFDD33" :foreground "#FFDD33"))))
  '(icomplete-first-match ((t (:foreground "goldenrod" :weight bold))))
  '(link ((t (:foreground "#73c936" :underline t))))
  '(markdown-code-face ((t (:inherit ##)))))
