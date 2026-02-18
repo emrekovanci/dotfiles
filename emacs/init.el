@@ -81,6 +81,11 @@
 ;; dired
 (add-hook 'dired-mode-hook 'dired-omit-mode)
 
+;; ansi color in compilation mode
+(require 'ansi-color)
+(add-hook 'compilation-filter-hook #'ansi-color-compilation-filter)
+(setenv "CARGO_TERM_COLOR" "always")
+
 ;; windows things
 (when (eq system-type 'windows-nt)
   (setq find-program (shell-quote-argument "C:/Program Files/Git/usr/bin/find.exe"))
@@ -175,7 +180,7 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "CommitMono" :foundry "outline" :slant normal :weight regular :height 142 :width normal))))
  '(font-lock-constant-face ((t (:foreground "#ffdd33"))))
- '(font-lock-keyword-face ((t (:foreground "#ffdd33" :weight regular))))
+ '(font-lock-keyword-face ((t (:foreground "#ffdd33"))))
  '(font-lock-preprocessor-face ((t (:foreground "#ffdd33"))))
  '(font-lock-type-face ((t (:foreground "#ffdd33"))))
  '(icomplete-first-match ((t (:foreground "goldenrod" :weight bold))))
