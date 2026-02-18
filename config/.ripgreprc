@@ -1,4 +1,7 @@
 # Replicate standard grep color output to ensure compatibility with Emacs.
 # These options are not added to the Emacs configuration to avoid modeline clutter.
+--color=always
 --colors=match:fg:red
---colors=match:style:bold
+--colors=path:fg:magenta
+--colors=line:fg:green
+--colors=column:none
