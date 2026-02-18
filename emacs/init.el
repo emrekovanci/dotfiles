@@ -45,8 +45,8 @@
   (setq c-basic-offset 4)
   (c-set-offset 'substatement-open 0))
 
-(add-hook 'c++-mode-hook 'my-c-mode-hook)
-(add-hook 'c-mode-hook 'my-c-mode-hook)
+(add-hook 'c++-mode-hook #'my-c-mode-hook)
+(add-hook 'c-mode-hook #'my-c-mode-hook)
 
 (add-to-list 'auto-mode-alist '("\\.clangd\\'" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.clang-tidy\\'" . yaml-mode))
@@ -79,7 +79,7 @@
             (ibuffer-switch-to-saved-filter-groups "default")))
 
 ;; dired
-(add-hook 'dired-mode-hook 'dired-omit-mode)
+(add-hook 'dired-mode-hook #'dired-omit-mode)
 
 ;; ansi color in compilation mode
 (require 'ansi-color)

@@ -65,10 +65,10 @@ return {
                 options = {
                     theme  = {
                         normal = {
-                           -- b = { bg = "#753e04", fg = "#ffffff" },
-                           -- c = { bg = "#753e04", fg = "#ffffff" },
-                           -- a = { bg = "#753e04", fg = "#ffffff" },
-                        }
+                           b = { bg = "#202020" },
+                           c = { bg = "#202020" },
+                           a = { bg = "#202020" },
+                        },
                     },
                     component_separators = { left = "", right = "" },
                     section_separators = { left = "", right = "" },
@@ -76,11 +76,21 @@ return {
                     disabled_filetypes = { statusline = { "dashboard" } },
                 },
                 sections = {
-                    lualine_a = { { "mode", padding = { left = 1, right = 0 }, fmt = function(s) return "[" .. mode_map[s] .. "]" or s end } },
+                    lualine_a = { { "mode", fmt = function(s) return "[" .. mode_map[s] .. "]" or s end } },
                     lualine_b = { },
                     lualine_c = {
                         {
-                            "filename",
+                            function()
+                                if vim.bo.filetype == "oil" then
+                                    local ok, oil = pcall(require, "oil")
+                                    if ok then
+                                        return vim.fn.fnamemodify(oil.get_current_dir(), ":~")
+                                    end
+                                    return "[Oil]"
+                                end
+
+                                return vim.fn.expand("%:t")
+                            end,
                             file_status = true,
                             newfile_status = true,
                             symbols = { modified = "[•]", readonly = "[ɸ]" },
@@ -96,7 +106,7 @@ return {
                     lualine_y = { { "location" }, { "progress" } },
                     lualine_z = { },
                 },
-                extensions = { "lazy", "oil", "quickfix", require("compile-mode.extensions.lualine") },
+                extensions = { "lazy", "quickfix", require("compile-mode.extensions.lualine") },
             }
 
             return opts
