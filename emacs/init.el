@@ -53,6 +53,9 @@
 (add-to-list 'auto-mode-alist '("\\.clang-format\\'" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.codespellrc\\'" . conf-mode))
 
+;; rust things
+(setenv "CARGO_TERM_COLOR" "always")
+
 ;; ibuffer
 (keymap-global-set "C-x C-b" 'ibuffer)
 (setq ibuffer-show-empty-filter-groups nil)
@@ -84,7 +87,6 @@
 ;; ansi color in compilation mode
 (require 'ansi-color)
 (add-hook 'compilation-filter-hook #'ansi-color-compilation-filter)
-(setenv "CARGO_TERM_COLOR" "always")
 
 ;; windows things
 (when (eq system-type 'windows-nt)
