@@ -63,13 +63,7 @@ return {
 
             local opts = {
                 options = {
-                    theme  = {
-                        normal = {
-                           b = { bg = "#202020" },
-                           c = { bg = "#202020" },
-                           a = { bg = "#202020" },
-                        },
-                    },
+                    theme  = { normal = { } },
                     component_separators = { left = "", right = "" },
                     section_separators = { left = "", right = "" },
                     globalstatus = true,
@@ -112,7 +106,6 @@ return {
             return opts
         end,
     },
-
 
     {
         "voldikss/vim-floaterm",
