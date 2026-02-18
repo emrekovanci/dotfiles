@@ -1,4 +1,15 @@
 {
+  "disable_ai": false,
+  "show_edit_predictions": false,
+  "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-6"
+    },
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "vim_mode": true,
   "buffer_font_size": 20.0,
   "wsl_connections": [],
   "word_diff_enabled": true,
@@ -79,7 +90,6 @@
   "indent_guides": {
     "enabled": false
   },
-  "disable_ai": true,
   "telemetry": {
     "diagnostics": false,
     "metrics": false
