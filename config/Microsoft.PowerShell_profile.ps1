@@ -35,7 +35,8 @@ function vrg {
       --ansi `
       --delimiter ':' `
       --preview 'bat --style=numbers --color=always {1} --highlight-line {2}' `
-      --preview-window 'up,60%,border-bottom,+{2}+3/3,~3' `
+      --preview-window 'up,60%,border-bottom,+{2}+3/3,~3,hidden' `
+      --bind 'ctrl-p:toggle-preview' `
       --bind 'enter:become(nvim {1} +{2})'
 }
 
