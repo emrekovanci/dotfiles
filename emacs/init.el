@@ -89,9 +89,6 @@
 ;; windows things
 (when (eq system-type 'windows-nt)
   (setq find-program (shell-quote-argument "C:/Program Files/Git/usr/bin/find.exe"))
-  (setq grep-program (shell-quote-argument "C:/Program Files/Git/usr/bin/grep.exe"))
-  (setq grep-use-null-device nil)
-  (setq xref-search-program 'ripgrep)
 
   ;; for powershell
   (add-hook 'comint-output-filter-functions #'comint-osc-process-output)
@@ -172,7 +169,8 @@
  '(use-short-answers t)
  '(vc-handled-backends '(Git))
  '(which-key-mode t)
- '(winner-mode t))
+ '(winner-mode t)
+ '(xref-search-program 'ripgrep))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
