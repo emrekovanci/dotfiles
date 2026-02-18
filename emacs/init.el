@@ -184,4 +184,5 @@
  '(font-lock-preprocessor-face ((t (:foreground "#ffdd33"))))
  '(font-lock-type-face ((t (:foreground "#ffdd33"))))
  '(icomplete-first-match ((t (:foreground "goldenrod" :weight bold))))
+ '(link ((t (:foreground "#73c936" :underline t))))
  '(markdown-code-face ((t (:inherit ##)))))

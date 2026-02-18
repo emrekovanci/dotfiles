@@ -41,6 +41,7 @@ return {
                 hl(0, "@type", { link = "GruberDarkerYellow" })
                 hl(0, "@property", { fg = "#d1c7c5" })
                 hl(0, "@number.float", { fg = "#d1c7c5" })
+                hl(0, "Special", { fg = "#d1c7c5" })
             end
         })
 
