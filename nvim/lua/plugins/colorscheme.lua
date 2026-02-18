@@ -3,7 +3,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-        bold = false,
+        bold = true,
         italic = {
             strings = false,
             comments = false,
@@ -40,6 +40,7 @@ return {
                 hl(0, "@punctuation.bracket", { fg = "#d1c7c5" })
                 hl(0, "@type", { link = "GruberDarkerYellow" })
                 hl(0, "@property", { fg = "#d1c7c5" })
+                hl(0, "@number.float", { fg = "#d1c7c5" })
             end
         })
 
