@@ -38,10 +38,17 @@ return {
                 hl(0, "NormalFloat", { bg = "#181818", fg = "#d1c7c5" })
                 hl(0, "QuickFixLine", { link = "GruberDarkerBrown" })
                 hl(0, "@punctuation.bracket", { fg = "#d1c7c5" })
+                hl(0, "@punctuation.special", { fg = "#d1c7c5" })
                 hl(0, "@type", { link = "GruberDarkerYellow" })
                 hl(0, "@property", { fg = "#d1c7c5" })
                 hl(0, "@number.float", { fg = "#d1c7c5" })
                 hl(0, "Special", { fg = "#d1c7c5" })
+
+                -- rust
+                hl(0, "@rust.attribute.all", { link = "GruberDarkerQuartz" })
+                hl(0, "@rust.attribute.name", { link = "GruberDarkerQuartz" })
+                hl(0, "@function.macro.rust", { link = "GruberDarkerNiagara" })
+                hl(0, "@keyword.exception.rust", { link = "GruberDarkerNiagara" })
             end
         })
 

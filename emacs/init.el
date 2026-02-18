@@ -178,11 +178,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "CommitMono" :foundry "outline" :slant normal :weight regular :height 142 :width normal))))
- '(font-lock-constant-face ((t (:foreground "#ffdd33"))))
- '(font-lock-keyword-face ((t (:foreground "#ffdd33"))))
- '(font-lock-preprocessor-face ((t (:foreground "#ffdd33"))))
- '(font-lock-type-face ((t (:foreground "#ffdd33"))))
+ '(default ((t (:family "CommitMono" :foundry "outline" :slant normal :weight regular :height 159 :width normal))))
  '(icomplete-first-match ((t (:foreground "goldenrod" :weight bold))))
  '(link ((t (:foreground "#73c936" :underline t))))
  '(markdown-code-face ((t (:inherit ##)))))
