@@ -149,7 +149,6 @@
  '(global-goto-address-mode t)
  '(golden-ratio-mode t)
  '(icomplete-prospects-height 1)
- '(icomplete-separator " ")
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(isearch-lazy-count t)
@@ -166,7 +165,6 @@
                 move-text multiple-cursors php-mode powershell rg
                 rust-mode yaml-mode))
  '(require-final-newline t)
- '(resize-mini-windows nil)
  '(ring-bell-function 'ignore)
  '(save-place-mode t)
  '(scroll-bar-mode nil)
