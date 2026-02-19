@@ -97,13 +97,13 @@
 
   ;; lazygit
   (defun lazygit ()
-    "Open lazygit in pwsh"
+    "Open lazygit in Windows Terminal (wt.exe) using pwsh"
     (interactive)
     (let ((default-directory
            (if-let ((project (project-current)))
                (project-root project)
              default-directory)))
-      (start-process "lazygit" nil "cmd.exe" "/c" "start" "pwsh.exe" "-NoProfile" "-Command" "lazygit"))))
+      (shell-command (concat "wt.exe -d \"" (expand-file-name default-directory) "\" pwsh -NoProfile -Command lazygit")))))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
