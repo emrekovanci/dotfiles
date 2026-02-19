@@ -72,12 +72,11 @@
       '(("default"
          ("Dired" (mode . dired-mode))
          ("Magit" (name . "^magit"))
+         ("Special" (derived-mode . special-mode))
          ("Tramp" (name . "^\\*tramp.*"))
          ("Term" (or
                   (derived-mode . comint-mode)
-                  (derived-mode . compilation-mode)))
-         ("Special" (or
-                     (derived-mode . special-mode))))))
+                  (derived-mode . compilation-mode))))))
 
 (add-hook 'ibuffer-mode-hook
           (lambda ()
