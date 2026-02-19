@@ -71,19 +71,13 @@
 (setq ibuffer-saved-filter-groups
       '(("default"
          ("Dired" (mode . dired-mode))
-         ("Org" (mode . org-mode))
          ("Magit" (name . "^magit"))
          ("Tramp" (name . "^\\*tramp.*"))
          ("Term" (or
-                  (mode . shell-mode)
+                  (derived-mode . comint-mode)
                   (derived-mode . compilation-mode)))
-         ("Emacs" (or
-                   (mode . emacs-lisp-mode)
-                   (mode . lisp-interaction-mode)
-                   (mode . help-mode)
-                   (mode . apropos-mode)
-                   (mode . Info-mode)
-                   (mode . messages-buffer-mode))))))
+         ("Special" (or
+                     (derived-mode . special-mode))))))
 
 (add-hook 'ibuffer-mode-hook
           (lambda ()
