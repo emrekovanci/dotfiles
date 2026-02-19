@@ -147,7 +147,7 @@
  '(mouse-wheel-progressive-speed nil)
  '(mouse-wheel-scroll-amount '(3))
  '(package-selected-packages
-   '(cmake-mode dockerfile-mode glsl-mode golden-ratio
+   '(cmake-mode dockerfile-mode glsl-mode go-mode golden-ratio
                 gruber-darker-theme lua-mode magit markdown-mode
                 move-text multiple-cursors php-mode powershell rg
                 rust-mode yaml-mode))
