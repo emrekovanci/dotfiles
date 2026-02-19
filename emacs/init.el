@@ -90,9 +90,6 @@
             (ibuffer-auto-mode 1)
             (ibuffer-switch-to-saved-filter-groups "default")))
 
-;; dired
-(add-hook 'dired-mode-hook #'dired-omit-mode)
-
 ;; ansi color in compilation mode
 (add-hook 'compilation-filter-hook #'ansi-color-compilation-filter)
 
@@ -134,8 +131,6 @@
  '(dired-create-destination-dirs-on-trailing-dirsep t)
  '(dired-dwim-target t)
  '(dired-listing-switches "-alh")
- '(dired-omit-files "^\\.git$")
- '(dired-omit-verbose nil)
  '(dired-recursive-copies 'always)
  '(dired-recursive-deletes 'always)
  '(display-line-numbers-type 'relative)
