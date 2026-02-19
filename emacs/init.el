@@ -29,16 +29,25 @@
 (windmove-default-keybindings)
 
 ;; move-text
-(when (require 'move-text nil 'noerror)
-  (move-text-default-bindings))
+(use-package move-text
+  :bind (("M-<up>" . move-text-up)
+         ("M-<down>" . move-text-down)))
 
-;; multiple-cursors
-(when (require 'multiple-cursors nil 'noerror)
-  (keymap-global-set "C-S-<mouse-1>" 'mc/add-cursor-on-click)
-  (keymap-global-set "C-S-c C-S-c" 'mc/edit-lines)
-  (keymap-global-set "C->" 'mc/mark-next-like-this)
-  (keymap-global-set "C-<" 'mc/mark-previous-like-this)
-  (keymap-global-set "C-c C-<" 'mc/mark-all-like-this))
+;; multiple cursors
+(use-package multiple-cursors
+  :bind (("C-S-<mouse-1>" . mc/add-cursor-on-click)
+         ("C-S-c C-S-c"   . mc/edit-lines)
+         ("C->"           . mc/mark-next-like-this)
+         ("C-<"           . mc/mark-previous-like-this)
+         ("C-c C-<"       . mc/mark-all-like-this)))
+
+;; magit
+(use-package magit
+  :bind (("C-x g" . magit-status))
+  :custom
+  (magit-refresh-status-buffer nil)     ; g
+  (magit-commit-show-diff nil)          ; C-c C-d
+  (magit-branch-direct-configure nil))
 
 ;; c / c++ things
 (defun my-c-mode-hook ()
@@ -85,7 +94,6 @@
 (add-hook 'dired-mode-hook #'dired-omit-mode)
 
 ;; ansi color in compilation mode
-(require 'ansi-color)
 (add-hook 'compilation-filter-hook #'ansi-color-compilation-filter)
 
 ;; windows things
