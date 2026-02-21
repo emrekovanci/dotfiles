@@ -34,6 +34,7 @@ winget install -e --id muesli.duf -s winget
 winget install -e --id JernejSimoncic.Wget -s winget
 winget install -e --id eza-community.eza -s winget
 winget install -e --id JesseDuffield.lazygit -s winget
+winget install -e --id nushell -s winget
 
 # dev tools
 winget install -e --id Git.Git -s winget
