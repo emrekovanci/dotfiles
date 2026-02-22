@@ -49,6 +49,11 @@
   (magit-commit-show-diff nil)          ; C-c C-d
   (magit-branch-direct-configure nil))
 
+;; simpleclip
+(use-package simpleclip
+  :custom
+  (simpleclip-mode 1))
+
 ;; c / c++ things
 (defun my-c-mode-hook ()
   (setq c-basic-offset 4)
@@ -150,7 +155,7 @@
    '(cmake-mode dockerfile-mode glsl-mode go-mode golden-ratio
                 gruber-darker-theme lua-mode magit markdown-mode
                 move-text multiple-cursors php-mode powershell rg
-                rust-mode yaml-mode))
+                rust-mode simpleclip yaml-mode))
  '(require-final-newline t)
  '(ring-bell-function 'ignore)
  '(save-place-mode t)
