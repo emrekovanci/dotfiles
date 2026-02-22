@@ -2,6 +2,16 @@
   "disable_ai": false,
   "show_edit_predictions": false,
   "agent": {
+    "tool_permissions": {
+      "tools": {
+        "fetch": {
+          "default": "allow"
+        },
+        "terminal": {
+          "default": "allow"
+        }
+      }
+    },
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4-6"
@@ -9,10 +19,7 @@
     "favorite_models": [],
     "model_parameters": []
   },
-  "vim_mode": true,
   "buffer_font_size": 20.0,
-  "wsl_connections": [],
-  "word_diff_enabled": true,
   "diagnostics": {
     "lsp_pull_diagnostics": {
       "enabled": true
@@ -99,6 +106,7 @@
   "ui_font_size": 18.0,
   "theme": "Gruber Darker",
   "terminal": {
+    "line_height": "comfortable",
     "shell": {
       "with_arguments": {
         "program": "pwsh",
