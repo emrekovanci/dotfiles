@@ -4,13 +4,13 @@ return {
     build = ":TSUpdate",
     config = function()
         local ensure_installed_list = vim.iter({
-            { "bash", "json", "markdown", "markdown_inline", "regex", "toml", "vimdoc", "xml", "yaml", "powershell" },
+            { "bash", "json", "markdown", "markdown_inline", "regex", "toml", "vimdoc", "xml", "yaml", "powershell", "editorconfig" },
             { "asm", "lua", "c", "cpp", "cmake", "c_sharp", "rust", "dockerfile", "glsl", "hlsl" },
             { "php", "css", "html", "javascript" },
         }):flatten():totable()
 
         local file_types = vim.iter({
-            { "bash", "json", "markdown", "toml", "xml", "yaml", "ps1" },
+            { "bash", "json", "markdown", "toml", "xml", "yaml", "ps1", "editorconfig" },
             { "asm", "lua", "c", "cpp", "cmake", "cs", "rust", "dockerfile", "glsl", "hlsl" },
             { "php", "css", "html", "javascript" }
         }):flatten():totable()
