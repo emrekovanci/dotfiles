@@ -135,6 +135,7 @@
  '(display-line-numbers-width 3)
  '(duplicate-line-final-position -1)
  '(duplicate-region-final-position -1)
+ '(electric-pair-mode t)
  '(fido-mode t)
  '(global-auto-revert-mode t)
  '(global-display-line-numbers-mode t)
