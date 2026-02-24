@@ -60,11 +60,10 @@ map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 map("n", "<leader>la", "<cmd>Lazy<CR>", { desc = "Open Lazy.nvim menu" })
 map("t", "<ESC>", "<C-\\><C-n>")
+map("n", "<ESC>", "<cmd>nohlsearch<CR>")
 
 map({ "n", "v" }, "<C-Up>", "{", opts)
 map({ "n", "v" }, "<C-Down>", "}", opts)
 
 map("n", "<leader>hx", "<cmd>vnew %:t.hex | r !xxd #<cr>", { desc = "Open buffer in hex view" })
 
--- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua#L49-L53
-map({ "i", "n", "s" }, "<esc>", function() vim.cmd("noh") return "<esc>" end, { expr = true, desc = "Escape and Clear hlsearch" })
