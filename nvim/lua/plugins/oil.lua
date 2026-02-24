@@ -11,8 +11,11 @@ return {
             columns = {
                 -- "permissions",
                 "type",
-                "size",
                 "mtime",
+                "size",
+            },
+            win_options = {
+                signcolumn = "yes",
             },
             delete_to_trash = true,
             keymaps = {
