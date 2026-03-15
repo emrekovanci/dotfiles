@@ -41,14 +41,6 @@
          ("C-<"           . mc/mark-previous-like-this)
          ("C-c C-<"       . mc/mark-all-like-this)))
 
-;; magit
-(use-package magit
-  :bind (("C-x g" . magit-status))
-  :custom
-  (magit-refresh-status-buffer nil)     ; g
-  (magit-commit-show-diff nil)          ; C-c C-d
-  (magit-branch-direct-configure nil))
-
 ;; simpleclip
 (use-package simpleclip
   :custom
@@ -76,7 +68,6 @@
 (setq ibuffer-saved-filter-groups
       '(("default"
          ("Dired" (mode . dired-mode))
-         ("Magit" (name . "^magit"))
          ("Special" (derived-mode . special-mode))
          ("Tramp" (name . "^\\*tramp.*"))
          ("Term" (or
@@ -156,9 +147,9 @@
  '(mouse-wheel-scroll-amount '(3))
  '(package-selected-packages
    '(cmake-mode dockerfile-mode glsl-mode go-mode golden-ratio
-                gruber-darker-theme lua-mode magit markdown-mode
-                move-text multiple-cursors php-mode powershell rg
-                rust-mode simpleclip yaml-mode))
+                gruber-darker-theme lua-mode markdown-mode move-text
+                multiple-cursors php-mode powershell rg rust-mode
+                simpleclip yaml-mode))
  '(require-final-newline t)
  '(ring-bell-function 'ignore)
  '(save-place-mode t)
