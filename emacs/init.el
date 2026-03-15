@@ -116,6 +116,7 @@
  '(auto-save-default nil)
  '(blink-cursor-mode nil)
  '(column-number-mode t)
+ '(comment-empty-lines t)
  '(compilation-ask-about-save nil)
  '(completion-auto-select 'second-tab)
  '(completions-format 'one-column)
