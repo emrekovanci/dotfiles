@@ -160,6 +160,7 @@
  '(require-final-newline t)
  '(ring-bell-function 'ignore)
  '(save-place-mode t)
+ '(savehist-mode t)
  '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)
  '(show-paren-delay 0)
