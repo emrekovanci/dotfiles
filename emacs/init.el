@@ -118,6 +118,7 @@
  '(column-number-mode t)
  '(comment-empty-lines t)
  '(compilation-ask-about-save nil)
+ '(compilation-scroll-output 'first-error)
  '(completion-auto-select 'second-tab)
  '(completions-format 'one-column)
  '(context-menu-mode t)
