@@ -68,7 +68,9 @@
 (setq ibuffer-saved-filter-groups
       '(("default"
          ("Dired" (mode . dired-mode))
-         ("Special" (derived-mode . special-mode))
+         ("Special" (or
+                     (derived-mode . special-mode)
+                     (derived-mode . lisp-interaction-mode)))
          ("Tramp" (name . "^\\*tramp.*"))
          ("Term" (or
                   (derived-mode . comint-mode)
