@@ -155,6 +155,7 @@
  '(save-place-mode t)
  '(savehist-mode t)
  '(scroll-bar-mode nil)
+ '(scroll-preserve-screen-position t)
  '(sentence-end-double-space nil)
  '(show-paren-delay 0)
  '(tab-width 4)

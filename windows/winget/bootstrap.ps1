@@ -34,7 +34,6 @@ winget install -e --id muesli.duf -s winget
 winget install -e --id JernejSimoncic.Wget -s winget
 winget install -e --id eza-community.eza -s winget
 winget install -e --id JesseDuffield.lazygit -s winget
-winget install -e --id nushell -s winget
 
 # dev tools
 winget install -e --id Git.Git -s winget
@@ -44,6 +43,9 @@ winget install -e --id Kitware.CMake -s winget
 winget install -e --id HeidiSQL.HeidiSQL -s winget
 winget install -e --id horsicq.DIE-engine -s winget
 winget install -e --id Hex-Rays.IDA.Free -s winget
+
+# coding
+winget install -e --id UniversalCtags.Ctags -s winget
 
 # gaming
 winget install -e --id EpicGames.EpicGamesLauncher -s winget
