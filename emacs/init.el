@@ -7,6 +7,9 @@
 
 ;; some mappings
 (keymap-global-set "C-," 'duplicate-dwim)
+(keymap-global-set "M-c" 'capitalize-dwim)
+(keymap-global-set "M-l" 'downcase-dwim)
+(keymap-global-set "M-u" 'upcase-dwim)
 
 ;; insert new line above/below
 (defun open-line-below ()
