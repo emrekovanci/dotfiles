@@ -1,6 +1,6 @@
 ;;; -*- lexical-binding: t -*-
 
-(set-default-coding-systems 'utf-8-unix)
+;; (set-default-coding-systems 'utf-8-unix)
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
@@ -132,6 +132,7 @@
  '(duplicate-region-final-position -1)
  '(fido-mode t)
  '(global-auto-revert-mode t)
+ '(global-auto-revert-non-file-buffers t)
  '(global-display-line-numbers-mode t)
  '(global-goto-address-mode t)
  '(golden-ratio-mode t)
