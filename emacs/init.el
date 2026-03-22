@@ -49,6 +49,13 @@
   :custom
   (simpleclip-mode 1))
 
+;; prog-mode hooks
+(defun my-prog-mode-hook ()
+  (toggle-truncate-lines)
+  (electric-pair-local-mode))
+
+(add-hook 'prog-mode-hook #'my-prog-mode-hook)
+
 ;; c / c++ things
 (defun my-c-mode-hook ()
   (setq c-basic-offset 4)
