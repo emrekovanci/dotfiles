@@ -149,6 +149,7 @@
  '(icomplete-prospects-height 1)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
+ '(isearch-allow-scroll t)
  '(isearch-lazy-count t)
  '(lazy-highlight-initial-delay 0)
  '(ls-lisp-dirs-first t)
