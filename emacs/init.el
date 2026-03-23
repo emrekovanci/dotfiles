@@ -79,6 +79,7 @@
       '(("default"
          ("Dired" (mode . dired-mode))
          ("Special" (or
+                     (derived-mode . completion-list-mode)
                      (derived-mode . special-mode)
                      (derived-mode . lisp-interaction-mode)))
          ("Tramp" (name . "^\\*tramp.*"))
@@ -86,10 +87,11 @@
                   (derived-mode . comint-mode)
                   (derived-mode . compilation-mode))))))
 
-(add-hook 'ibuffer-mode-hook
-          (lambda ()
-            (ibuffer-auto-mode 1)
-            (ibuffer-switch-to-saved-filter-groups "default")))
+(defun my-ibuffer-hook ()
+  (ibuffer-auto-mode 1)
+  (ibuffer-switch-to-saved-filter-groups "default"))
+
+(add-hook 'ibuffer-mode-hook #'my-ibuffer-hook)
 
 ;; ansi color in compilation mode
 (add-hook 'compilation-filter-hook #'ansi-color-compilation-filter)
@@ -128,7 +130,6 @@
  '(cursor-in-non-selected-windows nil)
  '(custom-enabled-themes '(gruber-darker))
  '(custom-safe-themes t)
- '(delete-by-moving-to-trash t)
  '(delete-selection-mode t)
  '(dired-create-destination-dirs 'always)
  '(dired-create-destination-dirs-on-trailing-dirsep t)
@@ -147,6 +148,7 @@
  '(global-goto-address-mode t)
  '(golden-ratio-mode t)
  '(icomplete-prospects-height 1)
+ '(imenu-auto-rescan t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(isearch-allow-scroll 'unlimited)
