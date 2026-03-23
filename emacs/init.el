@@ -139,7 +139,6 @@
  '(dired-dwim-target t)
  '(dired-listing-switches "-alh")
  '(dired-recursive-copies 'always)
- '(dired-recursive-deletes 'always)
  '(display-line-numbers-type 'relative)
  '(display-line-numbers-width 3)
  '(duplicate-line-final-position -1)
