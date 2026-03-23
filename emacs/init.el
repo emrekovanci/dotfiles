@@ -59,7 +59,10 @@
 ;; c / c++ things
 (defun my-c-mode-hook ()
   (setq c-basic-offset 4)
-  (c-set-offset 'substatement-open 0))
+  (c-set-offset 'substatement-open 0)
+  (c-set-offset 'brace-list-intro 0)
+  (c-set-offset 'brace-list-entry 0)
+  (c-set-offset 'case-label 4))
 
 (add-hook 'c++-mode-hook #'my-c-mode-hook)
 (add-hook 'c-mode-hook #'my-c-mode-hook)
@@ -147,6 +150,7 @@
  '(global-display-line-numbers-mode t)
  '(global-goto-address-mode t)
  '(golden-ratio-mode t)
+ '(history-delete-duplicates t)
  '(icomplete-prospects-height 1)
  '(imenu-auto-rescan t)
  '(indent-tabs-mode nil)
