@@ -179,7 +179,6 @@
  '(use-short-answers t)
  '(vc-handled-backends '(Git))
  '(which-key-mode t)
- '(winner-mode t)
  '(xref-search-program 'ripgrep))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
