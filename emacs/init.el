@@ -120,7 +120,6 @@
  '(dired-create-destination-dirs-on-trailing-dirsep t)
  '(dired-dwim-target t)
  '(dired-listing-switches "-alh")
- '(dired-recursive-copies 'always)
  '(display-line-numbers-type 'relative)
  '(display-line-numbers-width 3)
  '(duplicate-line-final-position -1)
