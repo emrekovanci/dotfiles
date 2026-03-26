@@ -1,7 +1,5 @@
 ;;; -*- lexical-binding: t -*-
 
-;; (set-default-coding-systems 'utf-8-unix)
-
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
