@@ -86,7 +86,6 @@
 (when (eq system-type 'windows-nt)
   (setq find-program (shell-quote-argument "C:/Program Files/Git/usr/bin/find.exe"))
 
-  ;; lazygit
   (defun lazygit ()
     "Open lazygit in Windows Terminal (wt.exe) using pwsh"
     (interactive)
