@@ -49,45 +49,8 @@
   :custom
   (simpleclip-mode 1))
 
-;; prog-mode hooks
-(defun my-prog-mode-hook ()
-  (toggle-truncate-lines)
-  (electric-pair-local-mode))
-
-(add-hook 'prog-mode-hook #'my-prog-mode-hook)
-
-;; c / c++ things
-(defun my-c-mode-hook ()
-  (setq c-default-style "k&r"
-        c-basic-offset 4)
-  (c-set-offset 'substatement-open 0))
-
-(add-hook 'c-mode-common-hook #'my-c-mode-hook)
-
-(add-to-list 'auto-mode-alist '("\\.clangd\\'" . yaml-mode))
-(add-to-list 'auto-mode-alist '("\\.clang-tidy\\'" . yaml-mode))
-(add-to-list 'auto-mode-alist '("\\.clang-format\\'" . yaml-mode))
-(add-to-list 'auto-mode-alist '("\\.codespellrc\\'" . conf-mode))
-
-;; rust things
-(setenv "CARGO_TERM_COLOR" "always")
-
 ;; ibuffer
 (keymap-global-set "C-x C-b" 'ibuffer)
-(setq ibuffer-show-empty-filter-groups nil)
-(setq ibuffer-saved-filter-groups
-      '(("default"
-         ("Dired" (mode . dired-mode))
-         ("Special" (or
-                     (derived-mode . diff-mode)
-                     (derived-mode . fundamental-mode)
-                     (derived-mode . completion-list-mode)
-                     (derived-mode . special-mode)
-                     (derived-mode . lisp-interaction-mode)))
-         ("Tramp" (name . "^\\*tramp.*"))
-         ("Term" (or
-                  (derived-mode . comint-mode)
-                  (derived-mode . compilation-mode))))))
 
 (defun my-ibuffer-hook ()
   (ibuffer-auto-mode 1)
@@ -95,15 +58,34 @@
 
 (add-hook 'ibuffer-mode-hook #'my-ibuffer-hook)
 
-;; ansi color in compilation mode
+;; prog-mode
+(defun my-prog-mode-hook ()
+  (toggle-truncate-lines)
+  (electric-pair-local-mode))
+
+(add-hook 'prog-mode-hook #'my-prog-mode-hook)
+
+;; c / c++
+(defun my-c-mode-hook ()
+  (setq c-default-style "k&r"
+        c-basic-offset 4)
+  (c-set-offset 'substatement-open 0))
+
+(add-hook 'c-mode-common-hook #'my-c-mode-hook)
+
+;; rust
+(defun my-rust-mode-hook ()
+  (setenv "CARGO_TERM_COLOR" "always"))
+
+(add-hook 'rust-mode-hook #'my-rust-mode-hook)
+
+;; comint
 (add-hook 'compilation-filter-hook #'ansi-color-compilation-filter)
+(add-hook 'comint-output-filter-functions #'comint-osc-process-output)
 
 ;; windows things
 (when (eq system-type 'windows-nt)
   (setq find-program (shell-quote-argument "C:/Program Files/Git/usr/bin/find.exe"))
-
-  ;; for powershell
-  (add-hook 'comint-output-filter-functions #'comint-osc-process-output)
 
   ;; lazygit
   (defun lazygit ()
@@ -149,6 +131,19 @@
  '(global-goto-address-mode t)
  '(golden-ratio-mode t)
  '(history-delete-duplicates t)
+ '(ibuffer-saved-filter-groups
+   '(("default" ("Dired" (mode . dired-mode))
+      ("Special"
+       (or (derived-mode . diff-mode)
+           (derived-mode . fundamental-mode)
+           (derived-mode . completion-list-mode)
+           (derived-mode . special-mode)
+           (derived-mode . lisp-interaction-mode)))
+      ("Tramp" (name . "^\\*tramp.*"))
+      ("Term"
+       (or (derived-mode . comint-mode)
+           (derived-mode . compilation-mode))))))
+ '(ibuffer-show-empty-filter-groups nil)
  '(icomplete-prospects-height 1)
  '(imenu-auto-rescan t)
  '(indent-tabs-mode nil)
