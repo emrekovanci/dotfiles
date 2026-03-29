@@ -38,7 +38,7 @@ winget install -e --id JesseDuffield.lazygit -s winget
 # dev tools
 winget install -e --id Git.Git -s winget
 winget install -e --id GitHub.GitHubDesktop -s winget
-winget install -e --id LLVM.LLVM -s winget
+winget install -i -e --id LLVM.LLVM -s winget
 winget install -e --id Kitware.CMake -s winget
 winget install -e --id HeidiSQL.HeidiSQL -s winget
 winget install -e --id horsicq.DIE-engine -s winget
