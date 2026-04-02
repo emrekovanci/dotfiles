@@ -42,6 +42,11 @@
          ("C-<"           . mc/mark-previous-like-this)
          ("C-c C-<"       . mc/mark-all-like-this)))
 
+;; golden ratio
+(use-package golden-ratio
+  :custom
+  (golden-ratio-mode 1))
+
 ;; simpleclip
 (use-package simpleclip
   :custom
@@ -125,13 +130,13 @@
  '(global-auto-revert-mode t)
  '(global-auto-revert-non-file-buffers t)
  '(global-display-line-numbers-mode t)
- '(golden-ratio-mode t)
  '(history-delete-duplicates t)
  '(ibuffer-saved-filter-groups
    '(("default" ("Dired" (mode . dired-mode))
       ("Special"
        (or (derived-mode . diff-mode)
            (derived-mode . fundamental-mode)
+           (derived-mode . Custom-mode)
            (derived-mode . completion-list-mode)
            (derived-mode . special-mode)
            (derived-mode . lisp-interaction-mode)))
@@ -157,7 +162,7 @@
        ((control) . text-scale)))
  '(package-selected-packages
    '(cmake-mode dockerfile-mode glsl-mode go-mode golden-ratio
-                gruber-darker-theme lua-mode markdown-mode move-text
+                gruber-darker-theme markdown-mode move-text
                 multiple-cursors php-mode powershell rg rust-mode
                 simpleclip yaml-mode))
  '(require-final-newline t)
