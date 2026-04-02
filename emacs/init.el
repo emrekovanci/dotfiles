@@ -134,8 +134,7 @@
  '(ibuffer-saved-filter-groups
    '(("default" ("Dired" (mode . dired-mode))
       ("Special"
-       (or (derived-mode . diff-mode)
-           (derived-mode . Custom-mode)
+       (or (derived-mode . diff-mode) (derived-mode . Custom-mode)
            (derived-mode . completion-list-mode)
            (derived-mode . special-mode)
            (derived-mode . lisp-interaction-mode)))
