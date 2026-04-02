@@ -135,7 +135,6 @@
    '(("default" ("Dired" (mode . dired-mode))
       ("Special"
        (or (derived-mode . diff-mode)
-           (derived-mode . fundamental-mode)
            (derived-mode . Custom-mode)
            (derived-mode . completion-list-mode)
            (derived-mode . special-mode)
