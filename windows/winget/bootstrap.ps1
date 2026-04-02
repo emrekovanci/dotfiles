@@ -45,7 +45,9 @@ winget install -e --id horsicq.DIE-engine -s winget
 winget install -e --id Hex-Rays.IDA.Free -s winget
 
 # coding
+winget install -e --id GnuPG.Gpg4win -s winget
 winget install -e --id UniversalCtags.Ctags -s winget
+winget install -e --id GNU.Emacs -s winget
 
 # gaming
 winget install -e --id EpicGames.EpicGamesLauncher -s winget
