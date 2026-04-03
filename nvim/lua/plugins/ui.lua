@@ -128,7 +128,7 @@ return {
                     lualine_y = { { "location" }, { "progress" } },
                     lualine_z = { },
                 },
-                extensions = { "lazy", "quickfix", require("compile-mode.extensions.lualine") },
+                extensions = { "lazy", "quickfix" },
             }
 
             return opts
