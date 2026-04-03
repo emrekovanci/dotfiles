@@ -52,15 +52,6 @@
   :custom
   (simpleclip-mode 1))
 
-;; ibuffer
-(keymap-global-set "C-x C-b" 'ibuffer)
-
-(defun my-ibuffer-hook ()
-  (ibuffer-auto-mode 1)
-  (ibuffer-switch-to-saved-filter-groups "default"))
-
-(add-hook 'ibuffer-mode-hook #'my-ibuffer-hook)
-
 ;; prog-mode
 (defun my-prog-mode-hook ()
   (toggle-truncate-lines)
@@ -130,18 +121,6 @@
  '(global-auto-revert-non-file-buffers t)
  '(global-display-line-numbers-mode t)
  '(history-delete-duplicates t)
- '(ibuffer-saved-filter-groups
-   '(("default" ("Dired" (mode . dired-mode))
-      ("Special"
-       (or (derived-mode . diff-mode) (derived-mode . Custom-mode)
-           (derived-mode . completion-list-mode)
-           (derived-mode . special-mode)
-           (derived-mode . lisp-interaction-mode)))
-      ("Tramp" (name . "^\\*tramp.*"))
-      ("Term"
-       (or (derived-mode . comint-mode)
-           (derived-mode . compilation-mode))))))
- '(ibuffer-show-empty-filter-groups nil)
  '(icomplete-prospects-height 1)
  '(imenu-auto-rescan t)
  '(indent-tabs-mode nil)
