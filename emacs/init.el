@@ -114,7 +114,6 @@
  '(completions-format 'one-column)
  '(context-menu-mode t)
  '(create-lockfiles nil)
- '(cursor-in-non-selected-windows nil)
  '(custom-enabled-themes '(gruber-darker))
  '(custom-safe-themes t)
  '(delete-selection-mode t)
