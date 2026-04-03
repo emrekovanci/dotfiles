@@ -23,6 +23,7 @@ return {
                 ["f"] = { "actions.select" },
             },
             view_options = {
+                show_hidden = true,
                 is_hidden_file = function(name, bufnr)
                     local m = name:match("^.git$")
                     return m ~= nil
