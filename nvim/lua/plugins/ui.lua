@@ -74,17 +74,7 @@ return {
                     lualine_b = { },
                     lualine_c = {
                         {
-                            function()
-                                if vim.bo.filetype == "oil" then
-                                    local ok, oil = pcall(require, "oil")
-                                    if ok then
-                                        return vim.fn.fnamemodify(oil.get_current_dir(), ":~")
-                                    end
-                                    return "[Oil]"
-                                end
-
-                                return vim.fn.expand("%:t")
-                            end,
+                            "filename",
                             file_status = true,
                             newfile_status = true,
                             symbols = { modified = "[•]", readonly = "[ɸ]" },
