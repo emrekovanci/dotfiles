@@ -68,12 +68,6 @@
 
 (add-hook 'c-mode-common-hook #'my-c-mode-hook)
 
-;; rust
-(defun my-rust-mode-hook ()
-  (setenv "CARGO_TERM_COLOR" "always"))
-
-(add-hook 'rust-mode-hook #'my-rust-mode-hook)
-
 ;; comint
 (add-hook 'compilation-filter-hook #'ansi-color-compilation-filter)
 (add-hook 'comint-output-filter-functions #'comint-osc-process-output)
