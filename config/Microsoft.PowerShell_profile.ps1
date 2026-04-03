@@ -6,6 +6,12 @@ if ($PSVersionTable.PSVersion.Major -ge 7) {
 Set-Alias -Name vi -Value nvim
 Set-Alias -Name lg -Value lazygit
 
+function vsenv {
+    $vsPath = "${env:programfiles}\Microsoft Visual Studio\18\Community"
+    Import-Module "$vsPath\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"
+    Enter-VsDevShell -VsInstallPath $vsPath -SkipAutomaticLocation -Arch amd64
+}
+
 function fh {
     Get-Content (Get-PSReadLineOption).HistorySavePath | fzf --style minimal --tac --no-sort | Invoke-Expression
 }

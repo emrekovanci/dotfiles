@@ -47,10 +47,8 @@ opt.laststatus = 3        -- Global status line
 opt.confirm = true
 opt.foldlevel = 99
 opt.fillchars = { fold = " ", foldsep = " ", diff = "╱", eob = " " }
-if vim.fn.has("nvim-0.12") == 1 then
-    opt.winborder = "none"
-    opt.pumborder = "rounded" -- For lsp completion menu
-end
+opt.winborder = "none"
+opt.pumborder = "rounded" -- For lsp completion menu
 
 -- workflow
 opt.virtualedit = "block" -- Allow currsor to move where there is no text in visual block mode

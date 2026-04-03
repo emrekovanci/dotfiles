@@ -1,7 +1,3 @@
-if vim.fn.has("nvim-0.12") ~= 1 then
-    return {}
-end
-
 return {
     "neovim/nvim-lspconfig",
     enabled = false,
