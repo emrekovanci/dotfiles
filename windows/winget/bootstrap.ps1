@@ -44,7 +44,7 @@ winget install -e --id HeidiSQL.HeidiSQL -s winget
 winget install -e --id horsicq.DIE-engine -s winget
 winget install -e --id Hex-Rays.IDA.Free -s winget
 
-# coding
+# emacs
 winget install -e --id GnuPG.Gpg4win -s winget
 winget install -e --id UniversalCtags.Ctags -s winget
 winget install -e --id GNU.Emacs -s winget
