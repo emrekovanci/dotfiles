@@ -6,7 +6,8 @@
     defaultBranch = main
 
 [core]
-    autocrlf = false
+    # https://docs.github.com/en/get-started/git-basics/configuring-git-to-handle-line-endings
+    autocrlf = true
 
 [branch]
     sort = -committerdate
