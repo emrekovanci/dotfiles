@@ -12,6 +12,13 @@ function vsenv {
     Enter-VsDevShell -VsInstallPath $vsPath -SkipAutomaticLocation -Arch amd64
 }
 
+function fenv {
+    Get-ChildItem Env: |
+      ForEach-Object { "{0,-35} = {1}" -f $_.Name, $_.Value } |
+      fzf --style minimal `
+      --prompt 'Env> '
+}
+
 function fh {
     Get-Content (Get-PSReadLineOption).HistorySavePath | fzf --style minimal --tac --no-sort | Invoke-Expression
 }
