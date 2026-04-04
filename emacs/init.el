@@ -157,6 +157,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :extend nil :stipple nil :background "#181818" :foreground "#d1c7c5" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight regular :height 159 :width normal :foundry "outline" :family "CommitMono"))))
+ '(font-lock-function-name-face ((t (:foreground "#d1c7c5"))))
  '(icomplete-first-match ((t (:foreground "goldenrod" :weight bold))))
  '(link ((t (:foreground "#73c936" :underline t))))
  '(markdown-code-face ((t (:inherit ##)))))
