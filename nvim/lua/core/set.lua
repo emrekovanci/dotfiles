@@ -55,18 +55,6 @@ opt.virtualedit = "block" -- Allow currsor to move where there is no text in vis
 opt.mouse = "a"           -- Enable mouse mode
 opt.completeopt = "menu,menuone,noselect,noinsert"
 
--- filetypes (default filetypes: <Neovim_Install_Dir>/share/nvim/runtime/lua/vim/filetype.lua)
-vim.filetype.add({
-    extension = {
-        uproject    = "json",   -- Unreal Engine
-        uplugin     = "json",   -- Unreal Engine
-        codespellrc = "dosini", -- C++ Codespell
-    },
-    pattern = {
-        [".*%.blade%.php"] = "html",
-    }
-})
-
 -- file handling
 opt.backup = false      -- Don't create backup files
 opt.writebackup = false -- Don't create backup before writing
@@ -76,18 +64,3 @@ opt.updatetime = 200    -- Faster completion
 opt.timeoutlen = 400    -- Lower than default (1000)
 opt.autoread = true     -- Auto reload files changed outside vim
 opt.autowrite = true    -- Auto save
-
--- if vim.fn.has("win32") then
---     opt.shadafile = "NONE"
--- end
-
--- terminal
--- if vim.fn.has("win32") then
-    -- opt.shell        = "pwsh.exe -NoLogo"
-    -- opt.shellcmdflag = "-ExecutionPolicy RemoteSigned -Command $PSStyle.OutputRendering = 'PlainText';"
-    -- opt.shellredir   = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
-    -- opt.shellpipe    = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
-    -- opt.shellquote   = ""
-    -- opt.shellxquote  = ""
-    -- opt.shellslash   = true  -- Breaks lualine branch component
--- end
