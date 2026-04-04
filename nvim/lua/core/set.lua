@@ -25,8 +25,6 @@ opt.smartindent = true    -- Smart auto-indenting
 -- search
 opt.ignorecase = true     -- Ignore case
 opt.smartcase = true      -- Don't ignore case with capitals
-opt.incsearch = true      -- Show matches as you type
-opt.hlsearch = true       -- Highlight search results
 
 -- invisible characters
 opt.list = true          -- Show some invisible characters (tabs...
@@ -62,5 +60,4 @@ opt.swapfile = false    -- Don't create swap files
 opt.undofile = true     -- Persistent undo
 opt.updatetime = 200    -- Faster completion
 opt.timeoutlen = 400    -- Lower than default (1000)
-opt.autoread = true     -- Auto reload files changed outside vim
 opt.autowrite = true    -- Auto save
