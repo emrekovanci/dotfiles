@@ -2,7 +2,6 @@
 winget install -e --id Mozilla.Firefox -s winget
 winget install -e --id Nvidia.GeForceExperience -s winget
 winget install -e --id VideoLAN.VLC -s winget
-winget install -e --id Notion.Notion -s winget
 winget install -e --id Skillbrains.Lightshot -s winget
 winget install -e --id Discord.Discord -s winget
 
