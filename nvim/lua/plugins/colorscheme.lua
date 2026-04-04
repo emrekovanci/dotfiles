@@ -39,6 +39,7 @@ return {
                 hl(0, "NormalFloat", { bg = "#181818", fg = "#d1c7c5" })
                 hl(0, "QuickFixLine", { link = "GruberDarkerBrown" })
                 hl(0, "qfWarning", { bg = "#3d2e00" })
+                hl(0, "cFloat", { link = "Number" })
                 hl(0, "@punctuation.bracket", { fg = "#d1c7c5" })
                 hl(0, "@punctuation.special", { fg = "#d1c7c5" })
                 hl(0, "@type", { link = "GruberDarkerYellow" })
