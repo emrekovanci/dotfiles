@@ -54,7 +54,6 @@
 
 ;; prog-mode
 (defun my-prog-mode-hook ()
-  (toggle-truncate-lines)
   (electric-pair-local-mode))
 
 (add-hook 'prog-mode-hook #'my-prog-mode-hook)
@@ -106,14 +105,11 @@
  '(dired-create-destination-dirs-on-trailing-dirsep t)
  '(dired-dwim-target t)
  '(dired-listing-switches "-alh")
- '(display-line-numbers-type 'relative)
- '(display-line-numbers-width 3)
  '(duplicate-line-final-position -1)
  '(duplicate-region-final-position -1)
  '(fido-mode t)
  '(global-auto-revert-mode t)
  '(global-auto-revert-non-file-buffers t)
- '(global-display-line-numbers-mode t)
  '(history-delete-duplicates t)
  '(icomplete-prospects-height 1)
  '(imenu-auto-rescan t)
