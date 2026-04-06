@@ -54,6 +54,7 @@
 
 ;; prog-mode
 (defun my-prog-mode-hook ()
+  (toggle-truncate-lines)
   (electric-pair-local-mode))
 
 (add-hook 'prog-mode-hook #'my-prog-mode-hook)
