@@ -55,7 +55,8 @@
 ;; prog-mode
 (defun my-prog-mode-hook ()
   (toggle-truncate-lines)
-  (electric-pair-local-mode))
+  (electric-pair-local-mode)
+  (display-line-numbers-mode))
 
 (add-hook 'prog-mode-hook #'my-prog-mode-hook)
 
@@ -106,6 +107,8 @@
  '(dired-create-destination-dirs-on-trailing-dirsep t)
  '(dired-dwim-target t)
  '(dired-listing-switches "-alh")
+ '(display-line-numbers-type 'relative)
+ '(display-line-numbers-width-start t)
  '(duplicate-line-final-position -1)
  '(duplicate-region-final-position -1)
  '(fido-mode t)
@@ -152,7 +155,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :extend nil :stipple nil :background "#181818" :foreground "#d1c7c5" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight regular :height 159 :width normal :foundry "outline" :family "CommitMono"))))
+ '(default ((t (:inherit nil :extend nil :stipple nil :background "#181818" :foreground "#d1c7c5" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight regular :height 160 :width normal :foundry "outline" :family "CommitMono"))))
  '(font-lock-function-name-face ((t (:foreground "#d1c7c5"))))
  '(font-lock-variable-name-face ((t (:foreground "#d1c7c5"))))
  '(icomplete-first-match ((t (:foreground "goldenrod" :weight bold))))
