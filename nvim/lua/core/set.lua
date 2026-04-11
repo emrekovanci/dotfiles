@@ -36,14 +36,12 @@ opt.splitbelow = true     -- Put new windows below current
 opt.splitkeep = "screen"
 
 -- visual
-opt.background = "dark"
 opt.termguicolors = true  -- Enable 24-bit colors
 opt.signcolumn = "yes"    -- Always show the signcolumn, otherwise it would shift the text each time
 opt.pumheight = 12        -- Make popup menu smaller
 opt.showmode = false      -- Lualine shows mode, so disable default
 opt.laststatus = 3        -- Global status line
 opt.confirm = true
-opt.foldlevel = 99
 opt.fillchars = { fold = " ", foldsep = " ", diff = "╱", eob = " " }
 opt.winborder = "none"
 opt.pumborder = "rounded" -- For lsp completion menu

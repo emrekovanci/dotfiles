@@ -33,7 +33,6 @@ return {
         },
     },
     keys = {
-        -- general
         { "<leader>tt", function() require("telescope.builtin").builtin() end, desc = "Telescope" },
         { "<leader>ff", function() require("telescope.builtin").find_files() end, desc = "Find Files" },
         { "<leader>.",  function() require("telescope.builtin").find_files({ cwd = vim.fn.expand("%:p:h") }) end, desc = "Find siblings" },
@@ -41,9 +40,7 @@ return {
         { "<leader>gf", function() require("telescope.builtin").git_files() end, desc = "Git Files" },
         { "<leader>lg", function() require("telescope.builtin").live_grep() end, desc = "Live Grep" },
         { "<leader>fb", function() require("telescope.builtin").buffers() end, desc = "Find Buffers" },
-
-        -- grep
-        { "<leader>ws",  function() require("telescope.builtin").grep_string({ search = vim.fn.expand("<cword>") }) end },
-        { "<leader>Ws",  function() require("telescope.builtin").grep_string({ search = vim.fn.expand("<cWORD>") }) end },
+        { "<leader>ws", function() require("telescope.builtin").grep_string({ search = vim.fn.expand("<cword>") }) end },
+        { "<leader>Ws", function() require("telescope.builtin").grep_string({ search = vim.fn.expand("<cWORD>") }) end },
     },
 }
