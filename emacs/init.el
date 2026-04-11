@@ -108,7 +108,7 @@
  '(dired-dwim-target t)
  '(dired-listing-switches "-alh")
  '(display-line-numbers-type 'relative)
- '(display-line-numbers-width-start t)
+ '(display-line-numbers-width 3)
  '(duplicate-line-final-position -1)
  '(duplicate-region-final-position -1)
  '(fido-mode t)
