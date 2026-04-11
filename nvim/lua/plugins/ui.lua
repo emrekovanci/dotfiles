@@ -79,26 +79,6 @@ return {
             local lualine_require = require("lualine_require")
             lualine_require.require = require
 
-            local mode_map = {
-                ["NORMAL"]    = "N",
-                ["O-PENDING"] = "N?",
-                ["INSERT"]    = "I",
-                ["VISUAL"]    = "V",
-                ["V-BLOCK"]   = "VB",
-                ["V-LINE"]    = "VL",
-                ["V-REPLACE"] = "VR",
-                ["REPLACE"]   = "R",
-                ["COMMAND"]   = "!",
-                ["SHELL"]     = "SH",
-                ["TERMINAL"]  = "T",
-                ["EX"]        = "X",
-                ["S-BLOCK"]   = "SB",
-                ["S-LINE"]    = "SL",
-                ["SELECT"]    = "S",
-                ["CONFIRM"]   = "Y?",
-                ["MORE"]      = "M",
-            }
-
             local opts = {
                 options = {
                     theme  = { normal = { } },
@@ -108,7 +88,7 @@ return {
                     disabled_filetypes = { statusline = { "dashboard" } },
                 },
                 sections = {
-                    lualine_a = { { "mode", fmt = function(s) return "[" .. mode_map[s] .. "]" or s end } },
+                    lualine_a = { },
                     lualine_b = { },
                     lualine_c = {
                         {
