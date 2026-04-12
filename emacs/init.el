@@ -102,7 +102,7 @@
  '(custom-enabled-themes '(gruber-darker))
  '(custom-safe-themes t)
  '(delete-selection-mode t)
- '(dired-create-destination-dirs 'always)
+ '(dired-create-destination-dirs 'ask)
  '(dired-create-destination-dirs-on-trailing-dirsep t)
  '(dired-dwim-target t)
  '(dired-listing-switches "-alh")
