@@ -77,7 +77,7 @@
   (setq find-program (shell-quote-argument "C:/Program Files/Git/usr/bin/find.exe"))
 
   (defun lazygit ()
-    "Open lazygit in Windows Terminal (wt.exe) using pwsh"
+    "Open lazygit in Windows Terminal (wt.exe)"
     (interactive)
     (let ((default-directory
            (if-let ((project (project-current)))
