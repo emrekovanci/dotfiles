@@ -31,7 +31,7 @@
 
 ;; move-text
 (use-package move-text
-  :bind (("M-<up>" . move-text-up)
+  :bind (("M-<up>"   . move-text-up)
          ("M-<down>" . move-text-down)))
 
 ;; multiple cursors
@@ -55,8 +55,7 @@
 ;; prog-mode
 (defun my-prog-mode-hook ()
   (toggle-truncate-lines)
-  (electric-pair-local-mode)
-  (display-line-numbers-mode))
+  (electric-pair-local-mode))
 
 (add-hook 'prog-mode-hook #'my-prog-mode-hook)
 
@@ -114,6 +113,7 @@
  '(fido-mode t)
  '(global-auto-revert-mode t)
  '(global-auto-revert-non-file-buffers t)
+ '(global-display-line-numbers-mode t)
  '(history-delete-duplicates t)
  '(icomplete-prospects-height 1)
  '(imenu-auto-rescan t)
