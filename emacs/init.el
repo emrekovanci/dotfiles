@@ -68,10 +68,6 @@
 
 (add-hook 'c-mode-common-hook #'my-c-mode-hook)
 
-;; comint
-(add-hook 'compilation-filter-hook #'ansi-color-compilation-filter)
-(add-hook 'comint-output-filter-functions #'comint-osc-process-output)
-
 ;; windows things
 (when (eq system-type 'windows-nt)
   (setq find-program (shell-quote-argument "C:/Program Files/Git/usr/bin/find.exe"))
