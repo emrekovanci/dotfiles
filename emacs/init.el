@@ -102,7 +102,6 @@
  '(dired-create-destination-dirs-on-trailing-dirsep t)
  '(dired-dwim-target t)
  '(dired-listing-switches "-alh")
- '(display-line-numbers-type 'relative)
  '(display-line-numbers-width 3)
  '(duplicate-line-final-position -1)
  '(duplicate-region-final-position -1)
