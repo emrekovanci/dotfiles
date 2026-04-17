@@ -92,7 +92,6 @@
  '(comment-empty-lines t)
  '(compilation-ask-about-save nil)
  '(completion-auto-select 'second-tab)
- '(completions-format 'one-column)
  '(context-menu-mode t)
  '(create-lockfiles nil)
  '(custom-enabled-themes '(gruber-darker))
