@@ -1,24 +1,14 @@
 {
-  "disable_ai": false,
-  "show_edit_predictions": false,
-  "agent": {
-    "tool_permissions": {
-      "tools": {
-        "fetch": {
-          "default": "allow"
-        },
-        "terminal": {
-          "default": "allow"
-        }
-      }
-    },
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-6"
-    },
-    "favorite_models": [],
-    "model_parameters": []
+  "restore_on_startup": "launchpad",
+  "notification_panel": {
+    "show_count_badge": true
   },
+  "git_panel": {
+    "show_count_badge": true
+  },
+  "cursor_blink": false,
+  "disable_ai": true,
+  "show_edit_predictions": false,
   "buffer_font_size": 20.0,
   "diagnostics": {
     "lsp_pull_diagnostics": {
@@ -44,8 +34,7 @@
   "git": {
     "inline_blame": {
       "enabled": false
-    },
-    "git_gutter": "hide"
+    }
   },
   "show_wrap_guides": false,
   "cursor_shape": "block",
@@ -85,6 +74,7 @@
     }
   },
   "project_panel": {
+    "diagnostic_badges": true,
     "auto_fold_dirs": false,
     "entry_spacing": "standard",
     "hide_root": false,
@@ -106,6 +96,7 @@
   "ui_font_size": 18.0,
   "theme": "Gruber Darker",
   "terminal": {
+    "show_count_badge": true,
     "line_height": "comfortable",
     "shell": {
       "with_arguments": {
