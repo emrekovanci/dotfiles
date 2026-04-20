@@ -94,7 +94,7 @@
  '(completion-auto-select 'second-tab)
  '(context-menu-mode t)
  '(create-lockfiles nil)
- '(custom-enabled-themes '(gruber-darker))
+ '(custom-enabled-themes '(tok))
  '(custom-safe-themes t)
  '(delete-selection-mode t)
  '(dired-create-destination-dirs 'ask)
@@ -128,7 +128,7 @@
    '(cmake-mode dockerfile-mode glsl-mode go-mode golden-ratio
                 gruber-darker-theme markdown-mode move-text
                 multiple-cursors php-mode powershell rg rust-mode
-                simpleclip yaml-mode))
+                simpleclip tok-theme yaml-mode))
  '(require-final-newline t)
  '(ring-bell-function 'ignore)
  '(save-place-mode t)
@@ -149,9 +149,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :extend nil :stipple nil :background "#181818" :foreground "#d1c7c5" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight regular :height 160 :width normal :foundry "outline" :family "CommitMono"))))
- '(font-lock-function-name-face ((t (:foreground "#d1c7c5"))))
- '(font-lock-variable-name-face ((t (:foreground "#d1c7c5"))))
- '(icomplete-first-match ((t (:foreground "goldenrod" :weight bold))))
- '(link ((t (:foreground "#73c936" :underline t))))
+ '(default ((t (:family "LMMono8" :foundry "outline" :slant normal :weight regular :height 160 :width normal))))
  '(markdown-code-face ((t (:inherit ##)))))
