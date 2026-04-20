@@ -149,5 +149,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "LMMono8" :foundry "outline" :slant normal :weight regular :height 160 :width normal))))
+ '(default ((t (:family "LMMono9" :foundry "outline" :slant normal :weight regular :height 180 :width normal))))
  '(markdown-code-face ((t (:inherit ##)))))
