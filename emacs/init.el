@@ -118,9 +118,8 @@
        ((control) . text-scale)))
  '(package-selected-packages
    '(cmake-mode dockerfile-mode glsl-mode go-mode golden-ratio
-                gruber-darker-theme markdown-mode move-text
-                multiple-cursors php-mode powershell rg rust-mode
-                simpleclip tok-theme yaml-mode))
+                markdown-mode move-text multiple-cursors php-mode
+                powershell rg rust-mode simpleclip tok-theme yaml-mode))
  '(require-final-newline t)
  '(ring-bell-function 'ignore)
  '(save-place-mode t)
