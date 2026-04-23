@@ -52,13 +52,6 @@
   :custom
   (simpleclip-mode 1))
 
-;; prog-mode
-(defun my-prog-mode-hook ()
-  (toggle-truncate-lines)
-  (electric-pair-local-mode))
-
-(add-hook 'prog-mode-hook #'my-prog-mode-hook)
-
 ;; c / c++
 (defun my-c-mode-hook ()
   (setq c-default-style "k&r"
@@ -103,6 +96,7 @@
  '(display-line-numbers-width 3)
  '(duplicate-line-final-position -1)
  '(duplicate-region-final-position -1)
+ '(electric-pair-mode t)
  '(fido-mode t)
  '(global-auto-revert-mode t)
  '(global-display-line-numbers-mode t)
