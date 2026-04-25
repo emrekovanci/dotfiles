@@ -54,9 +54,9 @@
 
 ;; c / c++
 (defun my-c-mode-hook ()
-  (keymap-local-set "C-c o" #'ff-find-other-file)
-  (setq c-default-style "k&r"
-        c-basic-offset 4)
+  (keymap-local-set "M-o" #'ff-find-other-file)
+  (c-set-style "k&r")
+  (setq c-basic-offset 4)
   (c-set-offset 'substatement-open 0)
   (c-toggle-comment-style -1))
 
@@ -141,7 +141,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "LMMono9" :foundry "outline" :slant normal :weight regular :height 180 :width normal))))
+ '(default ((t (:family "Rec Mono Casual" :foundry "outline" :slant normal :weight regular :height 142 :width normal))))
+ '(font-lock-comment-face ((t (:foreground "forest green" :slant italic :weight bold))))
+ '(font-lock-string-face ((t (:foreground "grey30" :slant normal))))
  '(markdown-code-face ((t (:inherit ##))))
  '(success ((t (:foreground "forest green" :weight bold))))
  '(warning ((t (:foreground "dark orange" :weight bold)))))
