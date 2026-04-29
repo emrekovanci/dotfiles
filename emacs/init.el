@@ -58,6 +58,7 @@
   (c-set-style "k&r")
   (setq c-basic-offset 4)
   (c-set-offset 'substatement-open 0)
+  (c-set-offset 'case-label '+)
   (c-toggle-comment-style -1))
 
 (add-hook 'c-mode-common-hook #'my-c-mode-hook)
