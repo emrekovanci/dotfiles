@@ -136,14 +136,18 @@
  '(use-dialog-box nil)
  '(use-short-answers t)
  '(vc-handled-backends '(Git))
+ '(word-wrap t)
  '(xref-search-program 'ripgrep))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "LMMono8" :foundry "outline" :slant normal :weight regular :height 160 :width normal))))
+ '(default ((t (:family "Lilex" :foundry "outline" :slant normal :weight regular :height 142 :width normal))))
  '(font-lock-string-face ((t (:foreground "grey30" :slant normal))))
+ '(line-number-current-line ((t (:background "white" :foreground "black"))))
  '(markdown-code-face ((t (:inherit ##))))
+ '(mode-line ((t (:background "white" :foreground "black" :box (:line-width (2 . 2) :color "black" :style released-button)))))
+ '(mode-line-inactive ((t (:background "grey90" :foreground "grey50" :box (:line-width (2 . 2) :color "gray50") :weight light))))
  '(success ((t (:foreground "forest green" :weight bold))))
  '(warning ((t (:foreground "dark orange" :weight bold)))))
