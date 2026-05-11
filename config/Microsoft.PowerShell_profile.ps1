@@ -2,8 +2,6 @@ if ($PSVersionTable.PSVersion.Major -ge 7) {
     $PSStyle.FileInfo.Directory = $PSStyle.Foreground.White
 }
 
-# aliases
-Set-Alias -Name vi -Value nvim
 Set-Alias -Name lg -Value lazygit
 
 function vsenv {
@@ -40,7 +38,7 @@ function pfd {
 
     if ($proj) {
         Set-Location $proj
-        nvim .
+        runemacs .
     }
 }
 
@@ -52,7 +50,7 @@ function ffd {
       --bind 'ctrl-f:change-prompt(Files> )+reload(fd -tf -tl)' `
       --bind 'ctrl-a:change-prompt(All> )+reload(fd)' `
       --multi `
-      --bind 'enter:become(nvim {+})' `
+      --bind 'enter:become(runemacs {+})' `
       --preview 'bat -n --color=always {} 2>nul || eza -lah --color=always {}'
 }
 
@@ -64,7 +62,7 @@ function vrg {
       --preview 'bat --style=numbers --color=always {1} --highlight-line {2}' `
       --preview-window 'up,60%,border-bottom,+{2}+3/3,~3,hidden' `
       --bind 'ctrl-p:toggle-preview' `
-      --bind 'enter:become(nvim {1} +{2})'
+      --bind 'enter:become(runemacs +{2}:{3} {1})'
 }
 
 # readline
