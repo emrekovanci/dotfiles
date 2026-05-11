@@ -119,7 +119,7 @@
    '(3 ((shift) . hscroll) ((meta)) ((control meta) . global-text-scale)
        ((control) . text-scale)))
  '(package-selected-packages
-   '(cmake-mode dockerfile-mode glsl-mode go-mode golden-ratio
+   '(cmake-mode csv-mode dockerfile-mode glsl-mode go-mode golden-ratio
                 markdown-mode move-text multiple-cursors php-mode
                 powershell rg rust-mode simpleclip tok-theme yaml-mode))
  '(require-final-newline t)
@@ -143,7 +143,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Lilex" :foundry "outline" :slant normal :weight regular :height 142 :width normal))))
+ '(default ((t (:family "LMMono8" :foundry "outline" :slant normal :weight regular :height 160 :width normal))))
  '(font-lock-string-face ((t (:foreground "grey30" :slant normal))))
  '(line-number-current-line ((t (:background "white" :foreground "black"))))
  '(markdown-code-face ((t (:inherit ##))))
