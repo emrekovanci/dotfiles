@@ -47,6 +47,7 @@ winget install -e --id Hex-Rays.IDA.Free -s winget
 winget install -e --id GnuPG.Gpg4win -s winget
 winget install -e --id UniversalCtags.Ctags -s winget
 winget install -e --id GNU.Emacs -s winget
+winget install -e --id JohnMacFarlane.Pandoc
 
 # gaming
 winget install -e --id EpicGames.EpicGamesLauncher -s winget
