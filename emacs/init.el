@@ -74,7 +74,7 @@
            (if-let ((project (project-current)))
                (project-root project)
              default-directory)))
-      (shell-command (format "wt.exe -w 0 -d \"%s\" lazygit" (expand-file-name default-directory))))))
+      (shell-command (concat "wt.exe -w 0 -d \"" (expand-file-name default-directory) "\" lazygit")))))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
