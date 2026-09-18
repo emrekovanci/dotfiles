@@ -4,10 +4,10 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
 ;; some mappings
-(keymap-global-set "C-," 'duplicate-dwim)
-(keymap-global-set "M-c" 'capitalize-dwim)
-(keymap-global-set "M-l" 'downcase-dwim)
-(keymap-global-set "M-u" 'upcase-dwim)
+(keymap-global-set "C-," #'duplicate-dwim)
+(keymap-global-set "M-c" #'capitalize-dwim)
+(keymap-global-set "M-l" #'downcase-dwim)
+(keymap-global-set "M-u" #'upcase-dwim)
 
 ;; insert new line above/below
 (defun open-line-below ()
