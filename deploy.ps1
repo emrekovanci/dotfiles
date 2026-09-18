@@ -34,7 +34,3 @@ function New-Symlink {
 New-Symlink `
     "$HOME\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" `
     "$HOME\Documents\GitHub\dotfiles\config\Microsoft.PowerShell_profile.ps1"
-
-New-Symlink `
-    "$env:APPDATA\zed\settings.json" `
-    "$HOME\Documents\GitHub\dotfiles\zed\settings.json"
