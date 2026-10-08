@@ -23,8 +23,8 @@
   (forward-line -1)
   (indent-for-tab-command))
 
-(keymap-global-set "C-<return>" 'open-line-below)
-(keymap-global-set "C-S-<return>" 'open-line-above)
+(keymap-global-set "C-<return>" #'open-line-below)
+(keymap-global-set "C-S-<return>" #'open-line-above)
 
 ;; move through windows with Shift-<arrow keys>
 (windmove-default-keybindings)
