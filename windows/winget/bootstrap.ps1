@@ -19,6 +19,7 @@ winget install -e --id Cloudflare.Warp -s winget
 winget install -e --id Cloudflare.cloudflared -s winget
 
 # terminal with streoids
+winget install -e --id Microsoft.PowerShell -s winget
 winget install -e --id Starship.Starship -s winget
 winget install -e --id ajeetdsouza.zoxide -s winget
 winget install -e --id XAMPPRocky.Tokei -s winget
